@@ -1,13 +1,13 @@
 @use '../vars/vars' as *;
 
 @mixin xs {
-	@media (min-width: $md) {
+	@media (min-width: $xs) {
 		@content;
 	}
 }
 
 @mixin sm {
-	@media (min-width: $md) {
+	@media (min-width: $sm) {
 		@content;
 	}
 }
@@ -19,7 +19,7 @@
 }
 
 @mixin lg {
-	@media (min-width: $md) {
+	@media (min-width: $lg) {
 		@content;
 	}
 }
@@ -28,4 +28,11 @@
 	@media (min-width: $xl) {
 		@content;
 	}
+}
+
+@mixin bgBtn() {
+	background: #FFFFFF1A;
+	backdrop-filter: blur($blur3);
+	box-shadow: $bs-main;
+	border-radius: $br36;
 }

@@ -1,0 +1,188 @@
+@use '../common/mixins' as *;
+@use '../vars/vars' as *;
+
+.header {
+	position: fixed;
+	left: 0;
+	top: 44px;
+	width: 100%;
+	z-index: 100;
+
+	@media(min-width: $md) {
+		top: 54px;
+	}
+
+	&-wrapper {
+		width: 100%;
+		height: 50px;
+
+		@media(min-width: $md) {
+			height: 59px;
+		}
+	}
+
+	&-logo {
+		width: 72px;
+		height: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		transition: opacity ease $tr;
+
+
+		img {
+			width: auto;
+			height: 27px;
+			transition: filter ease $tr;
+		}
+
+		@include bgBtn();
+
+		@media(min-width: $md) {
+			width: 72px;
+			height: 100%;
+
+			img {
+				height: 32px;
+			}
+		}
+
+		&:hover {
+			opacity: $op;
+
+			img {
+				filter: brightness(120%);
+			}
+		}
+	}
+
+	&-left, &-right {
+		width: 50%;
+		height: 100%;
+	}
+
+	&-left {
+		margin-left: 52px;
+
+		@media(min-width: $md) {
+			margin-right: 48px;
+			margin-left: 0;
+		}
+
+		&-inner {
+			height: 100%;
+			padding: 0 15px;
+
+			@include bgBtn();
+
+			@media(min-width: $md) {
+				padding: 0 30px;
+			}
+
+			button{
+				width: 30px;
+				height: 30px;
+
+				img {
+					width: 100%;
+					height: 4px;
+				}
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				img {
+					width: auto;
+					height: 19px;
+				}
+			}
+		}
+
+		.header-nav {
+			height: 100%;
+			padding: 0 30px;
+			display: none;
+			@include bgBtn();
+
+			.header-menu {
+				height: 100%;
+			}
+
+			.menu-item  a{
+				color: $black8;
+				font-size: $fs-xs;
+				font-style: normal;
+				font-weight: $fw-medium;
+				line-height: normal;
+				letter-spacing: 1.8px;
+				text-transform: uppercase;
+			}
+
+			@media(min-width: $lg) {
+				display: flex;
+			}
+		}
+	}
+
+	&-right {
+		margin-right: 52px;
+		height: 100%;
+
+		.theme-button {
+			height: 100%;
+			padding: 0 30px;
+
+			@include bgBtn();
+
+			span {
+				color: $black8;
+				font-size: $fs-xs;
+				font-style: normal;
+				font-weight: $fw-medium;
+				line-height: normal;
+				letter-spacing: 1.8px;
+				text-transform: uppercase;
+			}
+
+			img {
+				width: auto;
+				height: 20px;
+			}
+
+			&:active {
+				box-shadow: $bs-active;
+			}
+		}
+
+		@media(min-width: $md) {
+			margin-left: 48px;
+			margin-right: 0;
+		}
+
+		&-buttons {
+			height: 100%;
+			padding: 0 15px;
+
+			@include bgBtn();
+
+			@media(min-width: $md) {
+				padding: 0 30px;
+			}
+
+			button {
+				width: 20px;
+				height: 20px;
+
+				img {
+					width: 100%;
+					height: 100%;
+					aspect-ratio: 1;
+				}
+			}
+		}
+	}
+}

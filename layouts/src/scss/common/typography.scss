@@ -44,6 +44,11 @@ h6, .h6 {
 a {
 	display: inline-block;
 	text-decoration: none;
+	transition: opacity ease $tr;
+
+	&:hover {
+		opacity: $op;
+	}
 }
 
 p {

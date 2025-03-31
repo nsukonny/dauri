@@ -1,32 +1,41 @@
-const pathSrc   = './src';
-const pathDest  = './public';
+const pathSrc = './src';
+const pathDest = './public';
+const pathAssets = '/dauri/assets';
+const pathAssetsImgSrc = pathSrc + '/img';
+const pathAssetsImgDest = `${pathDest}${pathAssets}/img`;
+
 
 export default {
-	root	: pathDest,
+	root: pathDest,
 
-	html	: {
-		src		: [pathSrc + '/html/*.html'],
-		watch	: pathSrc + '/html/**/*.html',
-		dest	: pathDest
+	html: {
+		src: [pathSrc + '/html/*.html'],
+		watch: pathSrc + '/html/**/*.html',
+		dest: pathDest
 	},
 
-	scss	: {
-		src		: pathSrc + '/scss/main.scss',
-		watch	: pathSrc + '/scss/**/*.scss',
-		dest	: pathDest + '/css'
+	scss: {
+		src: pathSrc + '/scss/main.scss',
+		watch: pathSrc + '/scss/**/*.scss',
+		dest: pathDest + '/css'
 	},
 
-	js		: {
-		src		: pathSrc + '/js/main.js',
-		watch	: pathSrc + '/js/**/*.js',
-		dest	: pathDest + '/js'
+	js: {
+		src: pathSrc + '/js/main.js',
+		watch: pathSrc + '/js/**/*.js',
+		dest: pathDest + '/js'
 	},
 
-	del		: {
-		clean	: [
+	del: {
+		clean: [
 			`${pathDest}/*.html`,
 			`${pathDest}/js/**/*`,
 			`${pathDest}/scss/**/*`,
 		]
+	},
+
+	assets: {
+		src: pathAssetsImgSrc + '/**/*',
+		dest: pathAssetsImgDest
 	}
 };
