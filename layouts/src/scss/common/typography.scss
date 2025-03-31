@@ -13,16 +13,8 @@ h6, .h6 {
 	padding: 0;
 }
 
-h1, .h1 {
+h1, .h1, h2, .h2 {
 	font-size: 32px;
-
-	@media all and (min-width: $lg) {
-		font-size: 36px
-	}
-}
-
-h2, .h2 {
-	font-size: 24px;
 
 	@media all and (min-width: $lg) {
 		font-size: 36px
