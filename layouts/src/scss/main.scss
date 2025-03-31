@@ -1,0 +1,15 @@
+// Defaults styles.
+@forward 'common/fonts';
+@forward 'common/vars';
+@forward 'common/typography';
+@forward 'common/grid';
+@forward 'common/base';
+
+// Header styles.
+@forward 'header/header';
+
+// Footer styles.
+@forward 'footer/footer';
+
+// Home page sections styles.
+@forward 'sections/home/hero';
