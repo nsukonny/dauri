@@ -1,0 +1,155 @@
+@use '../mixins.scss' as *;
+
+@include sm {
+	.sm\:j-c {
+		justify-content: center;
+	}
+
+	.sm\:j-s {
+		justify-content: flex-start;
+	}
+
+	.sm\:j-e {
+		justify-content: flex-end;
+	}
+
+	.sm\:j-sb {
+		justify-content: space-between;
+	}
+
+	.sm\:j-sa {
+		justify-content: space-around;
+	}
+
+	.sm\:j-se {
+		justify-content: space-evenly;
+	}
+
+	.sm\:a-c {
+		align-items: center;
+	}
+
+	.sm\:a-s {
+		align-items: flex-start;
+	}
+
+	.sm\:a-e {
+		align-items: flex-end;
+	}
+
+	.sm\:a-stretch {
+		align-items: stretch;
+	}
+
+	.sm\:flex-row {
+		flex-direction: row;
+	}
+
+	.sm\:flex-col {
+		flex-direction: column;
+	}
+
+	.sm\:flex-row-reverse {
+		flex-direction: row-reverse;
+	}
+
+	.sm\:flex-col-reverse {
+		flex-direction: column-reverse;
+	}
+
+	.sm\:flex-wrap {
+		flex-wrap: wrap;
+	}
+
+	.sm\:flex-nowrap {
+		flex-wrap: nowrap;
+	}
+
+	.sm\:flex-wrap-reverse {
+		flex-wrap: wrap-reverse;
+	}
+
+	.sm\:a-cnt-c {
+		align-content: center;
+	}
+
+	.sm\:a-cnt-s {
+		align-content: flex-start;
+	}
+
+	.sm\:a-cnt-e {
+		align-content: flex-end;
+	}
+
+	.sm\:a-cnt-sb {
+		align-content: space-between;
+	}
+
+	.sm\:a-cnt-sa {
+		align-content: space-around;
+	}
+
+	.sm\:a-cnt-se {
+		align-content: space-evenly;
+	}
+
+	.sm\:o-0 {
+		order: 0;
+	}
+
+	.sm\:o-1 {
+		order: 1;
+	}
+
+	.sm\:o-2 {
+		order: 2;
+	}
+
+	.sm\:o-3 {
+		order: 3;
+	}
+
+	.sm\:o-4 {
+		order: 4;
+	}
+
+	.sm\:o-5 {
+		order: 5;
+	}
+
+	.sm\:o-6 {
+		order: 6;
+	}
+
+	.sm\:o-7 {
+		order: 7;
+	}
+
+	.sm\:o-8 {
+		order: 8;
+	}
+
+	.sm\:o-9 {
+		order: 9;
+	}
+
+	.sm\:o-last {
+		order: 9999;
+	}
+
+	.sm\:flex-grow {
+		flex-grow: 1;
+	}
+
+	.sm\:flex-shrink {
+		flex-shrink: 1;
+	}
+
+	.sm\:gap-8 {
+		gap: 8px;
+	}
+
+	.sm\:gap-16 {
+		gap: 16px;
+	}
+}

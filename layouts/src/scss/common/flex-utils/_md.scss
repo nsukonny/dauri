@@ -1,0 +1,155 @@
+@use '../mixins.scss' as *;
+
+@include md {
+	.md\:j-c {
+		justify-content: center;
+	}
+
+	.md\:j-s {
+		justify-content: flex-start;
+	}
+
+	.md\:j-e {
+		justify-content: flex-end;
+	}
+
+	.md\:j-sb {
+		justify-content: space-between;
+	}
+
+	.md\:j-sa {
+		justify-content: space-around;
+	}
+
+	.md\:j-se {
+		justify-content: space-evenly;
+	}
+
+	.md\:a-c {
+		align-items: center;
+	}
+
+	.md\:a-s {
+		align-items: flex-start;
+	}
+
+	.md\:a-e {
+		align-items: flex-end;
+	}
+
+	.md\:a-stretch {
+		align-items: stretch;
+	}
+
+	.md\:flex-row {
+		flex-direction: row;
+	}
+
+	.md\:flex-col {
+		flex-direction: column;
+	}
+
+	.md\:flex-row-reverse {
+		flex-direction: row-reverse;
+	}
+
+	.md\:flex-col-reverse {
+		flex-direction: column-reverse;
+	}
+
+	.md\:flex-wrap {
+		flex-wrap: wrap;
+	}
+
+	.md\:flex-nowrap {
+		flex-wrap: nowrap;
+	}
+
+	.md\:flex-wrap-reverse {
+		flex-wrap: wrap-reverse;
+	}
+
+	.md\:a-cnt-c {
+		align-content: center;
+	}
+
+	.md\:a-cnt-s {
+		align-content: flex-start;
+	}
+
+	.md\:a-cnt-e {
+		align-content: flex-end;
+	}
+
+	.md\:a-cnt-sb {
+		align-content: space-between;
+	}
+
+	.md\:a-cnt-sa {
+		align-content: space-around;
+	}
+
+	.md\:a-cnt-se {
+		align-content: space-evenly;
+	}
+
+	.md\:o-0 {
+		order: 0;
+	}
+
+	.md\:o-1 {
+		order: 1;
+	}
+
+	.md\:o-2 {
+		order: 2;
+	}
+
+	.md\:o-3 {
+		order: 3;
+	}
+
+	.md\:o-4 {
+		order: 4;
+	}
+
+	.md\:o-5 {
+		order: 5;
+	}
+
+	.md\:o-6 {
+		order: 6;
+	}
+
+	.md\:o-7 {
+		order: 7;
+	}
+
+	.md\:o-8 {
+		order: 8;
+	}
+
+	.md\:o-9 {
+		order: 9;
+	}
+
+	.md\:o-last {
+		order: 9999;
+	}
+
+	.md\:flex-grow {
+		flex-grow: 1;
+	}
+
+	.md\:flex-shrink {
+		flex-shrink: 1;
+	}
+
+	.md\:gap-8 {
+		gap: 8px;
+	}
+
+	.md\:gap-16 {
+		gap: 16px;
+	}
+}
