@@ -1,10 +1,12 @@
 // Defaults styles.
 @forward 'common/fonts';
-@forward 'common/vars';
+@forward 'vars/vars';
 @forward 'common/typography';
 @forward 'common/grid';
 @forward 'common/base';
-@forward 'common/flex-utils/flex';
+
+// Layout utils
+@forward 'layout-utils/layout-utils';
 
 // Header styles.
 @forward 'header/header';

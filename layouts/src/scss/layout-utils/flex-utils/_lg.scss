@@ -1,157 +1,155 @@
-@use '../vars' as *;
+@use '../../common/mixins' as *;
 
-.flex {
-	display: flex;
-
-	&.j-c {
+@include lg {
+	.lg\:j-c {
 		justify-content: center;
 	}
 
-	&.j-s {
+	.lg\:j-s {
 		justify-content: flex-start;
 	}
 
-	&.j-e {
+	.lg\:j-e {
 		justify-content: flex-end;
 	}
 
-	&.j-sb {
+	.lg\:j-sb {
 		justify-content: space-between;
 	}
 
-	&.j-sa {
+	.lg\:j-sa {
 		justify-content: space-around;
 	}
 
-	&.j-se {
+	.lg\:j-se {
 		justify-content: space-evenly;
 	}
 
-	&.a-c {
+	.lg\:a-c {
 		align-items: center;
 	}
 
-	&.a-s {
+	.lg\:a-s {
 		align-items: flex-start;
 	}
 
-	&.a-e {
+	.lg\:a-e {
 		align-items: flex-end;
 	}
 
-	&.a-stretch {
+	.lg\:a-stretch {
 		align-items: stretch;
 	}
 
-	&.flex-row {
+	.lg\:flex-row {
 		flex-direction: row;
 	}
 
-	&.flex-col {
+	.lg\:flex-col {
 		flex-direction: column;
 	}
 
-	&.flex-row-reverse {
+	.lg\:flex-row-reverse {
 		flex-direction: row-reverse;
 	}
 
-	&.flex-col-reverse {
+	.lg\:flex-col-reverse {
 		flex-direction: column-reverse;
 	}
 
-	&.flex-wrap {
+	.lg\:flex-wrap {
 		flex-wrap: wrap;
 	}
 
-	&.flex-nowrap {
+	.lg\:flex-nowrap {
 		flex-wrap: nowrap;
 	}
 
-	&.flex-wrap-reverse {
+	.lg\:flex-wrap-reverse {
 		flex-wrap: wrap-reverse;
 	}
 
-	&.a-cnt-c {
+	.lg\:a-cnt-c {
 		align-content: center;
 	}
 
-	&.a-cnt-s {
+	.lg\:a-cnt-s {
 		align-content: flex-start;
 	}
 
-	&.a-cnt-e {
+	.lg\:a-cnt-e {
 		align-content: flex-end;
 	}
 
-	&.a-cnt-sb {
+	.lg\:a-cnt-sb {
 		align-content: space-between;
 	}
 
-	&.a-cnt-sa {
+	.lg\:a-cnt-sa {
 		align-content: space-around;
 	}
 
-	&.a-cnt-se {
+	.lg\:a-cnt-se {
 		align-content: space-evenly;
 	}
 
-	&.o-0 {
+	.lg\:o-0 {
 		order: 0;
 	}
 
-	&.o-1 {
+	.lg\:o-1 {
 		order: 1;
 	}
 
-	&.o-2 {
+	.lg\:o-2 {
 		order: 2;
 	}
 
-	&.o-3 {
+	.lg\:o-3 {
 		order: 3;
 	}
 
-	&.o-4 {
+	.lg\:o-4 {
 		order: 4;
 	}
 
-	&.o-5 {
+	.lg\:o-5 {
 		order: 5;
 	}
 
-	&.o-6 {
+	.lg\:o-6 {
 		order: 6;
 	}
 
-	&.o-7 {
+	.lg\:o-7 {
 		order: 7;
 	}
 
-	&.o-8 {
+	.lg\:o-8 {
 		order: 8;
 	}
 
-	&.o-9 {
+	.lg\:o-9 {
 		order: 9;
 	}
 
-	&.o-last {
+	.lg\:o-last {
 		order: 9999;
 	}
 
-	&.flex-grow {
+	.lg\:flex-grow {
 		flex-grow: 1;
 	}
 
-	&.flex-shrink {
+	.lg\:flex-shrink {
 		flex-shrink: 1;
 	}
 
-	&.gap-8 {
+	.lg\:gap-8 {
 		gap: 8px;
 	}
 
-	&.gap-16 {
+	.lg\:gap-16 {
 		gap: 16px;
 	}
 }

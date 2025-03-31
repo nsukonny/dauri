@@ -1,155 +1,155 @@
-@use '../mixins.scss' as *;
+@use '../../common/mixins' as *;
 
-@include xs {
-	.xs\:j-c {
+@include xl {
+	.xl\:j-c {
 		justify-content: center;
 	}
 
-	.xs\:j-s {
+	.xl\:j-s {
 		justify-content: flex-start;
 	}
 
-	.xs\:j-e {
+	.xl\:j-e {
 		justify-content: flex-end;
 	}
 
-	.xs\:j-sb {
+	.xl\:j-sb {
 		justify-content: space-between;
 	}
 
-	.xs\:j-sa {
+	.xl\:j-sa {
 		justify-content: space-around;
 	}
 
-	.xs\:j-se {
+	.xl\:j-se {
 		justify-content: space-evenly;
 	}
 
-	.xs\:a-c {
+	.xl\:a-c {
 		align-items: center;
 	}
 
-	.xs\:a-s {
+	.xl\:a-s {
 		align-items: flex-start;
 	}
 
-	.xs\:a-e {
+	.xl\:a-e {
 		align-items: flex-end;
 	}
 
-	.xs\:a-stretch {
+	.xl\:a-stretch {
 		align-items: stretch;
 	}
 
-	.xs\:flex-row {
+	.xl\:flex-row {
 		flex-direction: row;
 	}
 
-	.xs\:flex-col {
+	.xl\:flex-col {
 		flex-direction: column;
 	}
 
-	.xs\:flex-row-reverse {
+	.xl\:flex-row-reverse {
 		flex-direction: row-reverse;
 	}
 
-	.xs\:flex-col-reverse {
+	.xl\:flex-col-reverse {
 		flex-direction: column-reverse;
 	}
 
-	.xs\:flex-wrap {
+	.xl\:flex-wrap {
 		flex-wrap: wrap;
 	}
 
-	.xs\:flex-nowrap {
+	.xl\:flex-nowrap {
 		flex-wrap: nowrap;
 	}
 
-	.xs\:flex-wrap-reverse {
+	.xl\:flex-wrap-reverse {
 		flex-wrap: wrap-reverse;
 	}
 
-	.xs\:a-cnt-c {
+	.xl\:a-cnt-c {
 		align-content: center;
 	}
 
-	.xs\:a-cnt-s {
+	.xl\:a-cnt-s {
 		align-content: flex-start;
 	}
 
-	.xs\:a-cnt-e {
+	.xl\:a-cnt-e {
 		align-content: flex-end;
 	}
 
-	.xs\:a-cnt-sb {
+	.xl\:a-cnt-sb {
 		align-content: space-between;
 	}
 
-	.xs\:a-cnt-sa {
+	.xl\:a-cnt-sa {
 		align-content: space-around;
 	}
 
-	.xs\:a-cnt-se {
+	.xl\:a-cnt-se {
 		align-content: space-evenly;
 	}
 
-	.xs\:o-0 {
+	.xl\:o-0 {
 		order: 0;
 	}
 
-	.xs\:o-1 {
+	.xl\:o-1 {
 		order: 1;
 	}
 
-	.xs\:o-2 {
+	.xl\:o-2 {
 		order: 2;
 	}
 
-	.xs\:o-3 {
+	.xl\:o-3 {
 		order: 3;
 	}
 
-	.xs\:o-4 {
+	.xl\:o-4 {
 		order: 4;
 	}
 
-	.xs\:o-5 {
+	.xl\:o-5 {
 		order: 5;
 	}
 
-	.xs\:o-6 {
+	.xl\:o-6 {
 		order: 6;
 	}
 
-	.xs\:o-7 {
+	.xl\:o-7 {
 		order: 7;
 	}
 
-	.xs\:o-8 {
+	.xl\:o-8 {
 		order: 8;
 	}
 
-	.xs\:o-9 {
+	.xl\:o-9 {
 		order: 9;
 	}
 
-	.xs\:o-last {
+	.xl\:o-last {
 		order: 9999;
 	}
 
-	.xs\:flex-grow {
+	.xl\:flex-grow {
 		flex-grow: 1;
 	}
 
-	.xs\:flex-shrink {
+	.xl\:flex-shrink {
 		flex-shrink: 1;
 	}
 
-	.xs\:gap-8 {
+	.xl\:gap-8 {
 		gap: 8px;
 	}
 
-	.xs\:gap-16 {
+	.xl\:gap-16 {
 		gap: 16px;
 	}
 }
