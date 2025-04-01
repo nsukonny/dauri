@@ -51,8 +51,7 @@
 
 		@media(min-width: $md) {
 			width: 100%;
-			max-width: 156px;
-			padding-right: 5px;
+			max-width: 166px;
 		}
 
 		.col-title {
@@ -99,6 +98,10 @@
 		padding-top: 20px;
 		margin-bottom: 55px;
 
+		button {
+			min-width: 166px;
+		}
+
 		@media(min-width: $md) {
 			margin-bottom: 36px;
 		}
@@ -133,7 +136,7 @@
 		max-width: 180px;
 		margin-left: auto;
 
-		@media(min-width: $md) {
+		@media(min-width: $xl) {
 			max-width: 90px;
 		}
 
@@ -188,6 +191,7 @@
 				line-height: normal;
 				letter-spacing: -0.24px;
 				text-transform: uppercase;
+				padding-right: 5px;
 			}
 		}
 	}

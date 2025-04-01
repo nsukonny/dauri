@@ -1,0 +1,51 @@
+@use '../../common/mixins' as *;
+@use '../../vars/vars' as *;
+
+.theme-button {
+	min-height: 50px;
+	padding: 0 15px;
+	@include bgBtn();
+
+	&.header-btn {
+		height: 100%;
+		padding: 0 30px;
+		display: none;
+
+		@media(min-width: $lg) {
+			display: flex;
+			min-width: 196px;
+		}
+	}
+
+
+	span {
+		color: $black8;
+		font-size: $fs-xs;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: normal;
+		letter-spacing: 1.8px;
+		text-transform: uppercase;
+	}
+
+	img {
+		max-width: 22px;
+		max-height: 22px;
+	}
+
+	&.dark {
+		background: $transparent10;
+
+		span {
+			color: $greyTransparent;
+		}
+	}
+
+	&.hidden {
+		display: none;
+	}
+
+	&:active {
+		box-shadow: $bs-active;
+	}
+}

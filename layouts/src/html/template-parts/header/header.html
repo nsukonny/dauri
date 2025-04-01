@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru" data-theme="light">
 
 <head>
 	<meta charset="UTF-8">
@@ -50,10 +50,7 @@
 						<img src="/dauri/assets/img/logo.svg" alt="">
 					</a>
 					<div class="header-right flex o-1 j-s md:j-e md:a-c gap-20">
-						<button id="theme-button" class="theme-button hidden-m flex a-c j-c gap-16">
-							<img src="/dauri/assets/img/moon.svg" alt="">
-							<span>НОЧНОЙ СТИЛЬ</span>
-						</button>
+						@@include('../../components/theme-button/theme-button.html', {'class': 'header-btn'})
 						<div class="header-right-buttons flex a-c j-c gap-20 xl:gap-30">
 							<button class="flex a-c j-c hidden-m">
 								<img src="/dauri/assets/img/heart.svg" alt="">

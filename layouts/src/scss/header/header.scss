@@ -127,32 +127,6 @@
 		margin-right: 52px;
 		height: 100%;
 
-		.theme-button {
-			height: 100%;
-			padding: 0 30px;
-
-			@include bgBtn();
-
-			span {
-				color: $black8;
-				font-size: $fs-xs;
-				font-style: normal;
-				font-weight: $fw-medium;
-				line-height: normal;
-				letter-spacing: 1.8px;
-				text-transform: uppercase;
-			}
-
-			img {
-				width: auto;
-				height: 20px;
-			}
-
-			&:active {
-				box-shadow: $bs-active;
-			}
-		}
-
 		@media(min-width: $md) {
 			margin-left: 48px;
 			margin-right: 0;

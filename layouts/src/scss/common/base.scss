@@ -2,7 +2,8 @@
 
 * {
 	outline: none;
-	box-sizing: border-box
+	box-sizing: border-box;
+	transition: background-color ease $tr, color ease $tr; 
 }
 
 body,
@@ -21,7 +22,7 @@ body {
 	font-size: $fs-md;
 	line-height: $lh;
 	color: $black;
-	background-color: $white
+	background-color: var(--body)
 }
 
 button {
