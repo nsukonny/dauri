@@ -1,0 +1,18 @@
+@use '../../vars/vars' as *;
+@use '../../common/mixins.scss' as *;
+
+.button {
+	&.gold {
+		color: $white;
+		text-align: center;
+		font-size: $fs-md;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		border-radius: $br20;
+		padding: 10px 33px;
+	
+		@include buttonGrad();
+		@include glare();
+	}
+}

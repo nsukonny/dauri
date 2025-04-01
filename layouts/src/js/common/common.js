@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	themeToggle()
 	footerDropdowns()
+	cookiesBanner()
 })
 
 const footerDropdowns = () => {
@@ -52,4 +53,21 @@ const themeToggle = () => {
 			}
 		})
 	}
+}
+
+const cookiesBanner = () => {
+	const cookieBanner = document.getElementById('cookie-banner')
+	const cookieBtn = document.getElementById('cookie-btn')
+
+	const cookieAccepted = localStorage.getItem('cookieAccepted')
+	if (cookieAccepted === 'true') {
+		cookieBanner.style.display = 'none'
+	}
+
+	cookieBtn.addEventListener('click', () => {
+		cookieBanner.classList.add('accepted');
+		localStorage.setItem('cookieAccepted', 'true')
+
+		setTimeout(() => cookieBanner.style.display = 'none', 1000)
+	})
 }

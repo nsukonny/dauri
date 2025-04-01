@@ -62,8 +62,8 @@
 				</div>
 				<div class="footer-col flex flex-col a-c j-c o-5 md:a-c md:j-s md:o-3">
 					<div class="footer-buttons flex flex-wrap a-c j-c gap-10 md:flex-col">
-						@@include('../../components/theme-button/theme-button.html', {'type': 'dark'})
-						@@include('../../components/button-ico/button-ico.html', {'class': 'dark', 'src':
+						@@include('../../components/buttons/theme-button/theme-button.html', {'type': 'dark'})
+						@@include('../../components/buttons/button-ico/button-ico.html', {'class': 'dark', 'src':
 						'/dauri/assets/img/world.svg', 'text': 'ЯЗЫК/РЕГИОН'})
 					</div>
 					<div class="footer-socials flex flex-wrap a-c j-c gap-10">
@@ -150,6 +150,8 @@
 		</div>
 	</div>
 </footer>
+<!-- Global modals and banners -->
+@@include('../../components/banners/cookie-banner/cookie-banner.html')
 </div><!-- .wrapper -->
 
 <script src="js/main.min.js"></script>

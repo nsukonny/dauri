@@ -1,0 +1,65 @@
+@use '../../vars/vars' as *;
+
+.cookie-banner {
+	padding: 0 20px;
+	width: 100%;
+	max-width: 773px;
+	position: fixed;
+	left: 50%;
+	bottom: 35px;
+	transform: translateX(-50%);
+	animation: transYIn 1s forwards ease;
+
+	@keyframes transYIn {
+		0% {
+			opacity: 0;
+			transform: translate(-50%, 200%);
+		}
+
+		100% {
+			opacity: 1;
+			transform: translate(-50%, 0);
+		}
+	}
+
+	&-wrapper {
+		border-radius: $br40;
+		background: $white8;
+		box-shadow: $bs-main;
+		backdrop-filter: $blur8;
+		padding: 15px 20px;
+		z-index: 100;
+
+		p {
+			color: $black6;
+			text-align: center;
+			font-size: $fs-md;
+			font-style: normal;
+			font-weight: $fw-regular;
+			line-height: 100%;
+			letter-spacing: -0.64px;
+
+			a {
+				color: $black6;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&.accepted {
+		animation: transYOut 1s forwards ease;
+
+		@keyframes transYOut {
+			0% {
+				opacity: 1;
+
+				transform: translate(-50%, 0);
+			}
+
+			100% {
+				transform: translate(-50%, 200%);
+				opacity: 0;
+			}
+		}
+	}
+}
