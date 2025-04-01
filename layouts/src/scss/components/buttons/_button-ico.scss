@@ -1,0 +1,30 @@
+@use '../../common/mixins' as *;
+@use '../../vars/vars' as *;
+
+.button-ico {
+	min-height: 50px;
+	padding: 0 15px;
+	border-radius: $br36;
+	box-shadow: $bs-main-2;
+
+	img {
+		max-width: 22px;
+		max-height: 22px;
+	}
+
+	span {
+		font-size: $fs-xs;
+		font-style: normal;
+		font-weight: $fw-regular;
+		line-height: normal;
+		letter-spacing: 0.72px;
+	}
+
+	&.dark {
+		background: $transparent10;
+
+		span {
+			color: $greyTransparent;
+		}
+	}
+}

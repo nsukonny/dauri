@@ -1,9 +1,16 @@
 // Colors.
-$white	: #FFFFFF;
-$black	: #1f1f1f;
-$black8	: #1A1A1ACC;
+$white	 		: #FFFFFF;
+$white8			:  rgba(255, 255, 255, 0.80);
+$black	 		: #1f1f1f;
+$black8	 		: #1A1A1ACC;
+$darkBlue       : #0F111F;
+$greyTransparent:  rgba(255, 255, 255, 0.50);
+
+//Backgrounds
+$transparent10: rgba(255, 255, 255, 0.10);
 
 //Box-shadows
 
 $bs-main: 0px -2.434px 24.335px 0px rgba(0, 0, 0, 0.15);
+$bs-main-2: 0px -2.454px 24.541px 0px rgba(0, 0, 0, 0.15);
 $bs-active: 0px -2.434px 12.335px 0px rgba(0, 0, 0, 0.15);

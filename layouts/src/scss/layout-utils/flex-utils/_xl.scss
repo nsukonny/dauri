@@ -146,24 +146,10 @@
 			flex-shrink: 1;
 		}
 
-		&.xl\:gap-2 {
-			gap: 2px;
-		}
-
-		&.xl\:gap-8 {
-			gap: 8px;
-		}
-
-		&.xl\:gap-16 {
-			gap: 16px;
-		}
-
-		&.xl\:gap-20 {
-			gap: 20px;
-		}
-
-		&.xl\:gap-30 {
-			gap: 30px;
+		@for $i from 1 through 200 {
+			&.xl\:gap-#{$i} {
+				gap: #{$i}px;
+			}
 		}
 	}
 }

@@ -31,8 +31,14 @@
 }
 
 @mixin bgBtn() {
-	background: #FFFFFF1A;
-	backdrop-filter: blur($blur3);
+	background: $white8;
+	backdrop-filter: blur($blur8);
 	box-shadow: $bs-main;
 	border-radius: $br36;
+}
+
+@mixin textGrad() {
+	background: linear-gradient(164deg, #F6BA83 22.09%, #915D47 83.07%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

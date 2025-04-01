@@ -34,7 +34,6 @@
 		img {
 			width: auto;
 			height: 27px;
-			transition: filter ease $tr;
 		}
 
 		@include bgBtn();
@@ -50,10 +49,6 @@
 
 		&:hover {
 			opacity: $op;
-
-			img {
-				filter: brightness(120%);
-			}
 		}
 	}
 

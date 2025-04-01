@@ -146,24 +146,10 @@
 			flex-shrink: 1;
 		}
 
-		&.md\:gap-2 {
-			gap: 2px;
-		}
-
-		&.md\:gap-8 {
-			gap: 8px;
-		}
-
-		&.md\:gap-16 {
-			gap: 16px;
-		}
-
-		&.md\:gap-20 {
-			gap: 20px;
-		}
-
-		&.md\:gap-30 {
-			gap: 30px;
+		@for $i from 1 through 200 {
+			&.md\:gap-#{$i} {
+				gap: #{$i}px;
+			}
 		}
 	}
 }
