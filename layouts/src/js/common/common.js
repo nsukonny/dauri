@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
 	const DOM = initDOM()
-	const { header, cookieBanner, cookieBtn } = DOM
+	const { header } = DOM
 
 	headerScroll(header)
 	themeToggle()
 	footerDropdowns()
-	cookiesBanner(cookieBanner, cookieBtn)
+	cookiesBanner()
 })
 
 const headerScroll = (header) => {
@@ -81,7 +81,12 @@ const themeToggle = () => {
 	}
 }
 
-const cookiesBanner = (cookieBanner, cookieBtn) => {
+const cookiesBanner = () => {
+	const cookieBanner = document.getElementById('cookie-banner')
+	const cookieBtn = document.getElementById('cookie-btn')
+
+	if(!cookieBanner && !cookieBtn ) return
+
 	const cookieAccepted = localStorage.getItem('cookieAccepted')
 	if (cookieAccepted === 'true') {
 		cookieBanner.style.display = 'none'

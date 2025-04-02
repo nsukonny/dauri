@@ -5,6 +5,4 @@ export const WINDOW_WIDTH = {
 
 export const initDOM = () => ({
 	header: document.querySelector('header'),
-	cookieBanner: document.getElementById('cookie-banner'),
-	cookieBtn: document.getElementById('cookie-btn')
 })

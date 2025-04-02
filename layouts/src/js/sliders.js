@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const initHeroSwiper = () => {
 	const swiper = new Swiper('.swiper', {
 		modules: [Autoplay, Pagination, EffectFade],
+		loop: true,
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: false

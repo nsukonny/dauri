@@ -32,9 +32,11 @@
 						object-fit: cover;
 						object-position: center;
 						transition: opacity ease $tr, transform linear 3s, scale 1s linear;
+						border-bottom-left-radius: $br5;
 						border-bottom-right-radius: $br5;
 
 						@media(min-width: $lg) {
+							border-bottom-left-radius: 0;
 							width: 98%;
 						}
 					}
