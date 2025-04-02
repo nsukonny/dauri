@@ -7,9 +7,37 @@
 	top: 44px;
 	width: 100%;
 	z-index: 100;
+	transition: top ease $tr;
 
 	@media(min-width: $md) {
 		top: 54px;
+	}
+
+	&.scrolled {
+		top: 20px;
+
+		.header-left, .header-right {
+			transform: translateY(-200%);
+			opacity: 0;
+		}
+
+		.header-logo {
+			animation: br $tr forwards ease;
+
+			@keyframes br {
+				0% {
+					filter: brightness(100%);
+				}
+
+				50% {
+					filter: brightness(120%);
+				}
+
+				100% {
+					filter: brightness(100%);
+				}
+			}
+		}
 	}
 
 	&-wrapper {
@@ -55,6 +83,7 @@
 	&-left, &-right {
 		width: 50%;
 		height: 100%;
+		transition: opacity ease $tr, transform ease $tr;
 	}
 
 	&-left {
@@ -126,6 +155,7 @@
 	&-right {
 		margin-right: 52px;
 		height: 100%;
+		transition-delay: 0.2s;
 
 		@media(min-width: $md) {
 			margin-left: 48px;
