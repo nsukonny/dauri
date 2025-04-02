@@ -1,0 +1,151 @@
+@use '../../vars/vars' as *;
+
+.hero {
+	&-wrapper {
+		.swiper {
+			&-slide {
+				width: 100vw;
+				height: calc(100vh - 52px);
+
+				&-img {
+					width: 63%;
+					height: 100%;
+					overflow: hidden;
+					position: relative;
+
+					img {
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 98%;
+						height: 100%;
+						opacity: 1;
+						scale: 1.05;
+						object-fit: cover;
+						object-position: center;
+						transition: opacity ease $tr, transform linear 3s, scale 1s linear;
+						border-bottom-right-radius: $br5;
+					}
+				}
+
+				&-info {
+					width: 37%;
+					height: 100%;
+				}
+
+				.slide-info-img {
+					margin-bottom: 26px;
+
+					img {
+						width: 305px;
+						height: auto;
+						border-radius: $br20;
+						opacity: 0;
+						scale: 0.85;
+						transition: opacity ease 1s, scale ease 1s;
+					}
+				}
+
+				.slide-info-brand {
+					margin-bottom: 30px;
+
+					img {
+						width: auto;
+						height: 14px;
+						opacity: 0;	
+						transition: opacity ease 1s;
+					}
+				}
+
+				.slide-info-desc {
+					max-width: 322px;
+					color: var(--blackA);
+					text-align: center;
+					font-family: $ff-corm;
+					font-size: 24px;
+					font-style: normal;
+					font-weight: $fw-regular;
+					line-height: normal;
+					letter-spacing: 1.2px;
+					margin-bottom: 50px;
+					scale: 0.7;
+					transition: scale ease $tr;
+				}
+
+				&-prev {
+					.swiper-slide-img {
+						img {
+							scale: 1.05;
+						}
+					}
+				}
+
+				&-next {
+					.swiper-slide-img {
+						img {
+							scale: 1.05;
+						}
+					}
+				}
+
+				&-active {
+					.swiper-slide-img {
+						img {
+							scale: 1;
+						}
+					}
+
+					.slide-info-img {
+						img {
+							opacity: 1;
+							scale: 1;
+						}
+					}
+
+					.slide-info-brand {
+						img {
+							opacity: 1;
+						}
+					}
+
+					.slide-info-desc {
+						scale: 1;
+					}
+				}
+			}
+
+			.pagination-wrapper {
+				button {
+					width: 52px;
+					height: 52px;
+
+					svg {
+						width: 16px;
+						height: 16px;
+					}
+				}
+			}
+
+			&-pagination {
+				width: auto;
+				position: static;
+
+				&-bullet {
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					background-color: $grey;
+					opacity: 1;
+					transition: width ease $tr height ease $tr;
+
+					&-active {
+						width: 12px;
+						height: 12px;
+						background: url('/dauri/assets/img/grad-circle.svg') no-repeat center center;
+						background-size: contain;
+					}
+				}
+			}
+		}
+	}
+}

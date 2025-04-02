@@ -9,6 +9,7 @@
 	bottom: 35px;
 	transform: translateX(-50%);
 	animation: transYIn 1s forwards ease;
+	z-index: 100;
 
 	@keyframes transYIn {
 		0% {
