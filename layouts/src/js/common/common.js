@@ -1,18 +1,44 @@
-import { WINDOW_WIDTH_MD } from "./global"
+import { WINDOW_WIDTH } from "./global"
+import { initDOM } from "./global"
 
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
+	const DOM = initDOM()
+	const { header, cookieBanner, cookieBtn } = DOM
+
+	headerScroll(header)
 	themeToggle()
 	footerDropdowns()
-	cookiesBanner()
+	cookiesBanner(cookieBanner, cookieBtn)
 })
+
+const headerScroll = (header) => {
+	if (!header) return
+
+	let lastScrollY = window.pageYOffset
+
+	const handleScroll = () => {
+		const currentScrollY = window.pageYOffset
+
+		if (currentScrollY > lastScrollY) {
+			header.classList.add('scrolled')
+		} else {
+			header.classList.remove('scrolled')
+		}
+
+		lastScrollY = currentScrollY
+	}
+
+	window.addEventListener('scroll', handleScroll)
+}
 
 const footerDropdowns = () => {
 	document.addEventListener('click', e => {
+		const { MD } = WINDOW_WIDTH
 		const target = e.target
-		if (target.closest('.col-title') && window.innerWidth < WINDOW_WIDTH_MD) {
-			const footerCol = e.target.closest('.footer-col')
+		if (target.closest('.col-title') && window.innerWidth < MD) {
+			const footerCol = target.closest('.footer-col')
 			if (footerCol) footerCol.classList.toggle('active')
 		}
 	})
@@ -55,17 +81,14 @@ const themeToggle = () => {
 	}
 }
 
-const cookiesBanner = () => {
-	const cookieBanner = document.getElementById('cookie-banner')
-	const cookieBtn = document.getElementById('cookie-btn')
-
+const cookiesBanner = (cookieBanner, cookieBtn) => {
 	const cookieAccepted = localStorage.getItem('cookieAccepted')
 	if (cookieAccepted === 'true') {
 		cookieBanner.style.display = 'none'
 	}
 
 	cookieBtn.addEventListener('click', () => {
-		cookieBanner.classList.add('accepted');
+		cookieBanner.classList.add('accepted')
 		localStorage.setItem('cookieAccepted', 'true')
 
 		setTimeout(() => cookieBanner.style.display = 'none', 1000)

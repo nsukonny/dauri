@@ -1,9 +1,13 @@
 import Swiper from 'swiper'
 import { Pagination, Autoplay, EffectFade } from 'swiper/modules'
-import { WINDOW_WIDTH_XL } from './common/global'
 
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
+
+	initHeroSwiper()
+})
+
+const initHeroSwiper = () => {
 	const swiper = new Swiper('.swiper', {
 		modules: [Autoplay, Pagination, EffectFade],
 		autoplay: {
@@ -17,9 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			el: '.swiper-pagination',
 			clickable: true
 		},
-		simulateTouch: window.innerWidth < WINDOW_WIDTH_XL
 	})
-	
+
 	const autoplayBtn = document.getElementById('autoplayToggle')
 	let isAutoplayRunning = true
 	autoplayBtn.addEventListener('click', () => {
@@ -41,4 +44,4 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 		isAutoplayRunning = !isAutoplayRunning
 	})
-})
+}

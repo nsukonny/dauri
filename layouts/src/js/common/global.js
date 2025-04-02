@@ -1,2 +1,10 @@
-export const WINDOW_WIDTH_MD = 768
-export const WINDOW_WIDTH_XL = 1200
+export const WINDOW_WIDTH = {
+	MD: 768,
+	XL: 1200
+}
+
+export const initDOM = () => ({
+	header: document.querySelector('header'),
+	cookieBanner: document.getElementById('cookie-banner'),
+	cookieBtn: document.getElementById('cookie-btn')
+})
