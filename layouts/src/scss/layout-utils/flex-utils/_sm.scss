@@ -2,6 +2,14 @@
 
 @include sm {
 	.flex {
+		&.sm\:off {
+			display: none;
+		}
+
+		&.sm\:on {
+			display: flex;
+		}
+
 		&.sm\:j-c {
 			justify-content: center;
 		}

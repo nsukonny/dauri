@@ -2,6 +2,14 @@
 
 @include lg {
 	.flex {
+		&.lg\:off {
+			display: none;
+		}
+
+		&.lg\:on {
+			display: flex;
+		}
+
 		&.lg\:j-c {
 			justify-content: center;
 		}

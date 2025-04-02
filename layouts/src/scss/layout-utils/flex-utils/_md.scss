@@ -2,6 +2,14 @@
 
 @include md {
 	.flex {
+		&.md\:off {
+			display: none;
+		}
+
+		&.md\:on {
+			display: flex;
+		}
+
 		&.md\:j-c {
 			justify-content: center;
 		}

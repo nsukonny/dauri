@@ -1,6 +1,14 @@
 .flex {
 	display: flex;
 
+	&.off {
+		display: none;
+	}
+
+	&.on {
+		display: flex;
+	}
+
 	&.j-c {
 		justify-content: center;
 	}

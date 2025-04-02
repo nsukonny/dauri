@@ -2,6 +2,14 @@
 
 @include xl {
 	.flex {
+		&.xl\:off {
+			display: none;
+		}
+
+		&.xl\:on {
+			display: flex;
+		}
+
 		&.xl\:j-c {
 			justify-content: center;
 		}
