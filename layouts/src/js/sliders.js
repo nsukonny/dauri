@@ -2,7 +2,7 @@ import Swiper from 'swiper'
 import { Pagination, Autoplay, Navigation, EffectFade } from 'swiper/modules'
 
 document.addEventListener('DOMContentLoaded', () => {
-	initFadeSwiper('.swiper.hero-swiper', {
+	initFadeSwiper('.swiper.hero-swiper', 2000, {
 		hasPagination: true,
 		hasNavigation: false,
 		autoplayToggleBtnId: 'autoplayToggle'
@@ -10,20 +10,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	initDefaultSwiper('.swiper.slides-half-swiper')
 
-	initFadeSwiper('.swiper.exclusive-swiper', {
+	initFadeSwiper('.swiper.exclusive-swiper', 800, {
 		hasPagination: false,
 		hasNavigation: true
 	})
 })
 
-const initFadeSwiper = (selector, { hasPagination, hasNavigation, autoplayToggleBtnId }) => {
+const initFadeSwiper = (selector, speed, { hasPagination, hasNavigation, autoplayToggleBtnId }) => {
 	const container = document.querySelector(selector)
 	if (!container) return
 
 	const config = {
 		modules: [Autoplay, EffectFade],
 		loop: true,
-		speed: 2000,
+		speed: speed,
 		effect: 'fade',
 		fadeEffect: { crossFade: true },
 		autoplay: { delay: 5000, disableOnInteraction: false },
