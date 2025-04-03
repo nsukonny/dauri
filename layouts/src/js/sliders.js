@@ -1,14 +1,17 @@
 import Swiper from 'swiper'
-import { Pagination, Autoplay, EffectFade } from 'swiper/modules'
+import { Pagination, Autoplay, Navigation, EffectFade } from 'swiper/modules'
 
 document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
-	initHeroSwiper()
+	initHeroSwiper('.swiper.hero-swiper')
+	initDefaultSwiper('.swiper.slides-half-swiper')
 })
 
-const initHeroSwiper = () => {
-	const swiper = new Swiper('.swiper', {
+const initHeroSwiper = (selector) => {
+	const container = document.querySelector(selector)
+    if (!container) return
+	const swiper = new Swiper(selector, {
 		modules: [Autoplay, Pagination, EffectFade],
 		loop: true,
 		autoplay: {
@@ -19,7 +22,7 @@ const initHeroSwiper = () => {
 		effect: 'fade',
 		fadeEffect: { crossFade: true },
 		pagination: {
-			el: '.swiper-pagination',
+			el: container.querySelector(".swiper-pagination"),
 			clickable: true
 		},
 	})
@@ -45,4 +48,32 @@ const initHeroSwiper = () => {
 		}
 		isAutoplayRunning = !isAutoplayRunning
 	})
+}
+
+const initDefaultSwiper = (selector) => {
+    const swiperContainers = document.querySelectorAll(selector)
+
+    swiperContainers.forEach(container => {
+        const swiper = new Swiper(container, {
+            modules: [Autoplay, Navigation],
+			spaceBetween: 20,
+			speed: 1000,
+            slidesPerView: 1,
+            navigation: {
+                nextEl: container.querySelector('.swiper-next'),
+                prevEl: container.querySelector('.swiper-prev')
+            },
+
+			breakpoints: {
+				480: {
+					spaceBetween: 20,
+					slidesPerView: 2,
+				},
+
+				768: {
+					slidesPerView: 3,
+				}
+			}
+        })
+    })
 }

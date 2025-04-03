@@ -1,0 +1,57 @@
+@use '../../vars/vars.scss' as *;
+
+.swiper-prev, .swiper-next {
+	&.circle {
+		width: 50px;
+		height: 50px;
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background-color: $transparent10;
+		box-shadow: $bs-btns;
+		background-color: $white8;
+		backdrop-filter: $blur8;
+		position: relative;
+		transition: opacity ease $tr, visibility ease $tr;
+
+		&:after {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: $grad-main;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			border-radius: 50%;
+			opacity: 0;
+			transition: opacity ease $tr;
+		}
+
+		svg path {
+			fill: $black8;
+		}
+	
+		&:hover {
+			&::after {
+				opacity: 1;
+			}
+
+			svg path {
+				fill: $white;
+			}
+		}
+
+		&[disabled] {
+			opacity: 0;
+			visibility: hidden;
+			z-index: -1;
+		}
+	}
+}
+
+.swiper-prev {
+	svg {
+		transform: scaleX(-1);
+	}
+}

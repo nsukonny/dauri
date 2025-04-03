@@ -1,31 +1,56 @@
 @use '../vars/vars' as *;
+@use '../common/mixins' as *;
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-	font-family: $ff-title;
-	font-weight: $fw-bold;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: $ff-corm;
+	font-weight: $fw-light;
 	line-height: $lh-title;
 	margin: 0;
 	padding: 0;
 }
 
-h1, .h1, h2, .h2 {
+h1,
+.h1,
+h2,
+.h2 {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	font-family: $ff-corm;
 	font-size: 32px;
+	font-style: normal;
+	font-weight: $fw-light;
+	line-height: normal;
+	letter-spacing: -0.96px;
+	@include textGrad();
+
+	span {
+		font-family: $ff-title;
+	}
 
 	@media all and (min-width: $lg) {
-		font-size: 36px
+		font-size: 48px
 	}
 }
 
-h3, .h3 {
+h3,
+.h3 {
 	font-size: 30px
 }
 
-h4, .h4 {
+h4,
+.h4 {
 	font-size: $fs-xl;
 
 	@media all and (min-width: $lg) {
@@ -33,11 +58,13 @@ h4, .h4 {
 	}
 }
 
-h5, .h5 {
+h5,
+.h5 {
 	font-size: $fs-xl
 }
 
-h6, .h6 {
+h6,
+.h6 {
 	font-size: $fs-lg
 }
 
@@ -55,6 +82,7 @@ p {
 	margin: 0
 }
 
-b, strong {
+b,
+strong {
 	font-weight: $fw-bold
 }

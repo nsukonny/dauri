@@ -62,7 +62,7 @@
 				</div>
 				<div class="footer-col flex flex-col a-c j-c o-5 md:a-c md:j-s md:o-3">
 					<div class="footer-buttons flex flex-wrap a-c j-c gap-10 md:flex-col">
-						@@include('../../components/buttons/theme-button/theme-button.html', {'type': 'dark'})
+						@@include('../../components/buttons/theme-button/theme-button.html', {'class': 'dark'})
 						@@include('../../components/buttons/button-ico/button-ico.html', {'class': 'dark', 'src':
 						'/dauri/assets/img/world.svg', 'text': 'ЯЗЫК/РЕГИОН'})
 					</div>
@@ -134,24 +134,36 @@
 									<img src="/dauri/assets/img/instagram.svg" alt="">
 								</a>
 							</li>
-						</div>
 					</div>
 				</div>
 			</div>
-			<div class="copyright flex flex-col a-c j-c gap-16">
-				<p>
-					© 2010-2025, <span>DAURI CLUB</span>. Все права защищены.
-				</p>
-				<p>
-					DESIGNED BY <br>
-					<span>KHAMOKOV AGENCY</span>
-				</p>
-			</div>
+		</div>
+		<div class="copyright flex flex-col a-c j-c gap-16">
+			<p>
+				© 2010-2025, <span>DAURI CLUB</span>. Все права защищены.
+			</p>
+			<p>
+				DESIGNED BY <br>
+				<span>KHAMOKOV AGENCY</span>
+			</p>
 		</div>
 	</div>
+	</div>
 </footer>
-<!-- Global modals and banners -->
+<!-- Global modals, banners, toasts -->
 @@include('../../components/banners/cookie-banner/cookie-banner.html')
+@@include('../../components/toast/toast.html')
+<!-- SVG GRADIENT DEFS FOR HEART. Don't REMOVE IT -->
+<svg xmlns="http://www.w3.org/2000/svg" style="opacity: 0; position: absolute; z-index:-10" width="0" height="0"
+	viewBox="0 0 39 39" fill="none">
+	<defs>
+		<linearGradient id="heart-grad" x1="21.7442" y1="2.89462" x2="34.8117" y2="54.2348"
+			gradientUnits="userSpaceOnUse">
+			<stop offset="0.15" stop-color="#F6BA83" />
+			<stop offset="0.49" stop-color="#915D47" />
+		</linearGradient>
+	</defs>
+</svg>
 </div><!-- .wrapper -->
 
 <script src="js/main.min.js"></script>

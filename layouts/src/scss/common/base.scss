@@ -3,7 +3,6 @@
 * {
 	outline: none;
 	box-sizing: border-box;
-	transition: background-color ease $tr, color ease $tr; 
 }
 
 body,
@@ -35,7 +34,7 @@ button {
 	border: 0;
 	outline: 0;
 	cursor: pointer;
-	transition: scale ease $tr,box-shadow ease $tr;
+	transition: scale ease $tr, box-shadow ease $tr;
 
 	&:active {
 		scale: 0.95;
@@ -51,6 +50,10 @@ ul {
 	margin: 0;
 	padding: 0;
 	list-style: none
+}
+
+svg path {
+	transition: fill ease $tr;
 }
 
 .wrapper {

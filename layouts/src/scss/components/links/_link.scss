@@ -26,4 +26,39 @@
 			font-size: $fs-md;
 		}
 	}
+
+	&.border-l {
+		color: var(--black8);
+		font-size: $fs-sm;
+		font-style: italic;
+		font-weight: $fw-medium;
+		line-height: normal;
+		letter-spacing: 0.84px;
+	
+		.line {
+			width: 56px;
+			height: 2px;
+			border-radius: $br20;
+			position: relative;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				right: 0;
+				top: 0;
+				background-color: $brown-light;
+				transition: width ease $tr;
+			}
+		}
+		
+		&:hover {
+			.line::before {
+				width: 40%;
+				
+			}
+		}
+	}
 }
