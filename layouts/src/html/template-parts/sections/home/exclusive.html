@@ -1,0 +1,37 @@
+<section class="exclusive">
+	<div class="container">
+		<div class="exclusive-wrapper flex flex-col a-s j-s md:flex-row md:a-c md:j-sb">
+			<div class="exclusive-left flex a-c j-c">
+				<div class="exclusive-left-img flex a-c j-c">
+					<img src="/dauri/assets/img/e-1.jpg" alt="">
+				</div>
+				
+			</div>
+			<div class="exclusive-right flex flex-col a-c j-c gap-90">
+				<div class="exclusive-right-img">
+					<img src="/dauri/assets/img/e-2.jpg" alt="">
+				</div>
+				<div class="swiper exclusive-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							@@include('../../../components/cards/exclusive-item/exclusive-item.html', {'src': '/dauri/assets/img/ew-1.png'})
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../components/cards/exclusive-item/exclusive-item.html', {'src': '/dauri/assets/img/w-1.png'})
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../components/cards/exclusive-item/exclusive-item.html', {'src': '/dauri/assets/img/ew-1.png'})
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../components/cards/exclusive-item/exclusive-item.html', {'src': '/dauri/assets/img/w-1.png'})
+						</div>
+					</div>
+					@@include('../../../components/buttons/swiper-button/swiper-button.html', {'direction': 'prev',
+					'type': 'circle'})
+					@@include('../../../components/buttons/swiper-button/swiper-button.html', {'direction': 'next',
+					'type': 'circle'})
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
