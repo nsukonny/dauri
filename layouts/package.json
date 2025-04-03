@@ -46,6 +46,7 @@
 		"last 3 versions"
 	],
 	"dependencies": {
+		"aos": "^2.3.4",
 		"swiper": "^11.2.6"
 	}
 }

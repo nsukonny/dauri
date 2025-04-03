@@ -1,3 +1,4 @@
+import AOS from '../../../node_modules/aos/dist/aos'
 import { WINDOW_WIDTH } from "./global"
 import { initDOM } from "./global"
 
@@ -7,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const DOM = initDOM()
 	const { header } = DOM
 
+	AOS.init()
 	headerScroll(header)
 	themeToggle()
 	footerDropdowns()
