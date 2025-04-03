@@ -37,7 +37,7 @@ const addToFavorite = () => {
 							text: 'Вы убрали изделие из избранного.',
 							linkText: 'Вернуть обратно',
 							linkUrl: '#',
-							duration: 2000
+							duration: 6000
 						})
 					}
 				})

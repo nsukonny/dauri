@@ -1,24 +1,34 @@
 @use '../../common/mixins.scss' as *;
+@use '../../vars/vars.scss' as *;
 
 .exclusive {
 	@include sectionPadding150();
 
 	&-left, &-right {
-		width: calc(50% - 20px);
+		width: 100%;
+
+		@media(min-width: $lg) {
+			width: calc(50% - 20px);
+		}
 	}
 
 	&-left {
 		&-img {
 			width: 100%;
 			height: 100%;
-			aspect-ratio: 0.925;
+			
 
 			img {
 				width: 100%;
-				height: 616px;
+				height: 340px;
 				object-fit: cover;
-				border-radius: 40px 5px 5px 40px;
+				aspect-ratio: 0.925;
+				border-radius: 3px 20px 20px 20px;
 				
+				@media(min-width: $md) {
+					height: 616px;
+					border-radius: 40px 5px 5px 40px;
+				}
 			}
 		}
 	}
@@ -26,13 +36,18 @@
 	&-right {
 		&-img {
 			width: 100%;
-			aspect-ratio: 1.52;
 
 			img {
 				width: 100%;
-				height: 373px;
+				height: 206px;
 				object-fit: cover;
-				border-radius: 40px 40px 5px 5px;
+				aspect-ratio: 1.52;
+				border-radius: $br20;
+
+				@media(min-width: $md) {
+					height: 373px;
+					border-radius: 40px 40px 5px 5px;
+				}
 			}
 		}
 	}
@@ -51,11 +66,27 @@
 		}
 
 		.swiper-prev {
-			left: -20%;
+			left: 10%;
+
+			@media(min-width: $sm) {
+				left: -12%;
+			}
+
+			@media(min-width: $md) {
+				left: -20%;
+			}
 		}
 
 		.swiper-next {
-			right: -20%;
+			right: 10%;
+
+			@media(min-width: $sm) {
+				right: -12%;
+			}
+
+			@media(min-width: $md) {
+				right: -20%;
+			}
 		}
 	}
 }

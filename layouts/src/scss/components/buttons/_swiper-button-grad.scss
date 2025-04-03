@@ -11,7 +11,7 @@
 		background-color: $white8;
 		backdrop-filter: $blur8;
 		position: relative;
-		transition: opacity ease $tr, visibility ease $tr;
+		transition: opacity ease $tr, visibility ease $tr, scale ease $tr;
 
 		&:after {
 			content: '';
