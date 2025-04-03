@@ -13,6 +13,14 @@
 		}
 	}
 
+	&:hover {
+		.item-card-inner {
+			img {
+				scale: 1.1;
+			}
+		}
+	}
+
 	&-inner {
 		border-radius: 40px 40px 5px 5px;
 		background-color: $transparent10;
@@ -21,6 +29,7 @@
 		padding: 24px;
 		position: relative;
 		margin-bottom: 10px;
+		overflow: hidden;
 
 		@media(min-width: $md) {
 			padding: 44px 55px 36px 55px;
@@ -54,6 +63,7 @@
 			width: 143px;
 			height: auto;
 			aspect-ratio: 0.856;
+			transition: scale ease $tr;
 		}
 	}
 
