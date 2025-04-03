@@ -35,12 +35,11 @@ const initFadeSwiper = (selector, { hasPagination, hasNavigation, autoplayToggle
 			el: container.querySelector('.swiper-pagination'),
 			clickable: true
 		}
-	} else {
-		const paginationWrapper = container.querySelector('.pagination-wrapper')
-	
-		if(!paginationWrapper) return
+	}
 
-		paginationWrapper.remove()
+	if (!hasPagination) {
+		const paginationWrapper = container.querySelector('.pagination-wrapper')
+		if (paginationWrapper) paginationWrapper.remove()
 	}
 
 	if (hasNavigation) {
