@@ -1,0 +1,57 @@
+@use '../../vars/vars.scss' as *;
+@use '../../common/mixins.scss' as *;
+
+.exclusive-item {
+	&-left {
+		width: 170px;
+	}
+
+	&-right {
+		width: calc(100% - 205px);
+	}
+
+	&-img {
+		width: 100%;
+
+		img {
+			width: auto;
+			height: 201px;
+		}
+	}
+
+	&-status {
+		font-size: $fs-xs;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: 120%;
+		padding: 8px;
+		margin-bottom: 10px;
+
+		@include bgBtn();
+		@include textGrad();
+	}
+
+	&-name {
+		color: var(--black8);
+		font-size: 16px;
+		font-style: normal;
+		font-weight: $fw-medium;
+		line-height: normal;
+		letter-spacing: 0.8px;
+		margin-bottom: 15px;
+	}
+
+	&-desc {
+		width: 100%;
+		margin-bottom: 20px;
+
+		p {
+			color: var(--black8);
+			font-size: $fs-md;
+			font-style: normal;
+			font-weight: $fw-light;
+			line-height: normal;
+			letter-spacing: 0.8px;
+		}
+	}
+}
