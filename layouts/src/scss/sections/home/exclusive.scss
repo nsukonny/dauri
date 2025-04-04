@@ -48,6 +48,12 @@
 		&-img {
 			width: 100%;
 			height: 100%;
+			box-shadow: $bs-main;
+			border-radius: 3px 20px 20px 20px;
+
+			@media(min-width: $md) {
+				border-radius: 40px 5px 5px 40px;
+			}
 
 			img {
 				width: 100%;
@@ -55,6 +61,7 @@
 				object-fit: cover;
 				aspect-ratio: 0.925;
 				border-radius: 3px 20px 20px 20px;
+				box-shadow: $bs-main;
 
 				@media(min-width: $md) {
 					height: 616px;
@@ -67,6 +74,12 @@
 	&-right {
 		&-img {
 			width: 100%;
+			box-shadow: $bs-main;
+			border-radius: $br20;
+
+			@media(min-width: $md) {
+				border-radius: 40px 40px 5px 5px;
+			}
 
 			img {
 				width: 100%;
@@ -74,6 +87,7 @@
 				object-fit: cover;
 				aspect-ratio: 1.52;
 				border-radius: $br20;
+				box-shadow: $bs-main;
 
 				@media(min-width: $md) {
 					height: 373px;
