@@ -1,0 +1,146 @@
+@use '../../common/mixins.scss' as *;
+@use '../../vars/vars.scss' as *;
+
+.video {
+	@include sectionPadding150();
+
+	h2 {
+		font-family: $ff;
+		font-weight: $fw-light;
+		margin-bottom: 30px;
+		@include textGrad265();
+
+		span {
+			font-family: $ff-corm;
+			font-style: italic;
+			font-weight: $fw-semibold;
+		}
+
+		@media(min-width: $md) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&-left {
+		width: 100%;
+
+		@media(min-width: $sm) {
+			max-width: 456px;
+		}
+
+		.video-left-item {
+			width: 100%;
+
+			.item-img {
+				width: 50%;
+
+				img {
+					width: 147px;
+					height: auto;
+
+					@media(min-width: $md) {
+						width: 202px;
+					}
+				}
+			}
+		}
+
+		.item-info {
+			width: 50%;
+
+			.item-status {
+				width: 40px;
+				height: 40px;
+				aspect-ratio: 1;
+				top: 20px;
+				left: 20px;
+				font-size: $fs-sm;
+				font-style: normal;
+				font-weight: $fw-bold;
+				text-transform: uppercase;
+				line-height: 120%;
+				letter-spacing: -0.423px;
+				box-shadow: $bs-card;
+				border-radius: 50%;
+				margin-bottom: 10px;
+				text-align: center;
+
+				@include textGrad();
+
+				@media(min-width: $md) {
+					text-align: left;
+				}
+
+				img {
+					width: 12px;
+					height: 18px;
+					transition: scale ease $tr;
+				}
+			}
+		}
+
+		.item-name {
+			color: $black8;
+			font-size: $fs-md;
+			font-style: normal;
+			font-weight: $fw-medium;
+			line-height: normal;
+			letter-spacing: 0.8px;
+			margin-bottom: 20px;
+			text-align: center;
+
+			@media(min-width: $md) {
+				margin-bottom: 20px;
+				text-align: left;
+			}
+		}
+
+		.desc-wrapper {
+			margin-bottom: 10px;
+
+			@media(min-width: $md) {
+				margin-bottom: 22px;
+			}
+		}
+
+		.item-state,
+		.item-text {
+			width: 100%;
+			color: $black8;
+			font-size: $fs-sm;
+			font-style: normal;
+			font-weight: $fw-light;
+			line-height: normal;
+			letter-spacing: 0.8px;
+			text-align: center;
+
+			@media(min-width: $md) {
+				font-size: $fs-md;
+				text-align: left;
+			}
+		}
+	}
+
+	&-right {
+		width: 100%;
+		height: 100%;
+		height: 340px;
+		position: relative;
+		border-radius: $br5;
+
+		@media(min-width: $md) {
+			max-width: 482px;
+			height: 522px;
+		}
+
+		video {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: $br5;
+		}
+	}
+}
