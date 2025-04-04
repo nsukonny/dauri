@@ -6,9 +6,8 @@
 		height: 50px;
 		aspect-ratio: 1;
 		border-radius: 50%;
-		background-color: $transparent10;
+		background-color: var(--roundBtn);
 		box-shadow: $bs-btns;
-		background-color: $white8;
 		backdrop-filter: $blur8;
 		position: relative;
 		transition: opacity ease $tr, visibility ease $tr, scale ease $tr;

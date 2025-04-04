@@ -57,10 +57,11 @@
 				font-size: $fs-sm;
 				font-style: normal;
 				font-weight: $fw-bold;
+				background-color: rgba(255, 255, 255, 0.05);
 				text-transform: uppercase;
 				line-height: 120%;
 				letter-spacing: -0.423px;
-				box-shadow: $bs-card;
+				box-shadow: var(--bs-card);
 				border-radius: 50%;
 				margin-bottom: 10px;
 				text-align: center;
@@ -80,7 +81,7 @@
 		}
 
 		.item-name {
-			color: $black8;
+			color: var(--black8);
 			font-size: $fs-md;
 			font-style: normal;
 			font-weight: $fw-medium;
@@ -106,7 +107,7 @@
 		.item-state,
 		.item-text {
 			width: 100%;
-			color: $black8;
+			color: var(--black8);
 			font-size: $fs-sm;
 			font-style: normal;
 			font-weight: $fw-light;

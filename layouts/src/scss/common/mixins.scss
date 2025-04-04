@@ -31,7 +31,7 @@
 }
 
 @mixin bgBtn() {
-	background: $white8;
+	background: var(--darkBlueBtn);
 	backdrop-filter: blur($blur8);
 	box-shadow: $bs-main;
 	border-radius: $br36;
@@ -50,7 +50,7 @@
 }
 
 @mixin textItalic() {
-	color: $black8;
+	color: var(--text);
 	font-size: $fs-md;
 	font-style: italic;
 	font-weight: 275;

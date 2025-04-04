@@ -18,7 +18,7 @@
 	}
 
 	span {
-		color: $black8;
+		color: var(--black8);
 		font-size: $fs-xs;
 		font-style: normal;
 		font-weight: $fw-medium;
@@ -33,7 +33,7 @@
 	}
 
 	&.dark {
-		background: $transparent10;
+		background: var(--transparent10);
 
 		span {
 			color: $greyTransparent;

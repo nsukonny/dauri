@@ -18,7 +18,7 @@
 	&-inner {
 		border-radius: 40px 40px 5px 5px;
 		background-color: $transparent10;
-		box-shadow: $bs-card;
+		box-shadow: var(--bs-card);
 		backdrop-filter: blur($blur8);
 		padding: 24px;
 		position: relative;
@@ -106,7 +106,7 @@
 	}
 
 	&-mark {
-		color: $black8;
+		color: var(--black8);
 		font-size: $fs-md;
 		font-style: normal;
 		font-weight: $fw-medium;
@@ -116,7 +116,7 @@
 	}
 
 	&-model {
-		color: $black8;
+		color: var(--black8);
 		font-size: $fs-md;
 		font-style: normal;
 		font-weight: $fw-regular;
@@ -126,7 +126,7 @@
 	}
 
 	.price {
-		color: $black8;
+		color: var(--black8);
 		font-size: $fs-xl;
 		font-style: normal;
 		font-weight: $fw-medium;
@@ -144,7 +144,7 @@
 	&-size,
 	&-state,
 	&-text {
-		color: $black8;
+		color: var(--black8);
 		font-size: $fs-md;
 		font-style: normal;
 		font-weight: $fw-light;
@@ -164,7 +164,7 @@
 	}
 
 	&-indicator {
-		color: $black8;
+		color: var(--black8);
 		font-size: $fs-sm;
 		font-style: normal;
 		font-weight: $fw-regular;

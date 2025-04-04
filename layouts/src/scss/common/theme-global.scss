@@ -1,0 +1,42 @@
+html {
+	&[data-theme="dark"] {
+		.slide-info-brand {
+			img {
+				filter: invert(100%);
+			}
+		}
+
+		.add-to-fav {
+			svg {
+				filter: invert(100%);
+			}
+
+			&.added {
+				svg {
+					filter: invert(0);
+				}
+			
+			}
+		}
+
+		.carousel {
+			.swiper {
+				.swiper-slide {
+					img {
+						filter: invert(100%);
+					}
+				}
+			}
+		}
+
+		.swiper {
+			.swiper-prev, .swiper-next {
+				&.circle {
+					svg {
+						filter: invert(100%);
+					}
+				}
+			}
+		}
+	}
+}
