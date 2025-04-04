@@ -1,5 +1,6 @@
 import Swiper from 'swiper'
 import { WINDOW_WIDTH } from './common/global'
+import { checkImageBrightness } from './checkBrightness'
 import { Pagination, Autoplay, Navigation, EffectFade } from 'swiper/modules'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,8 +28,39 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const initFadeSwiper = (selector, speed, { hasPagination, hasNavigation, autoplayToggleBtnId }) => {
+	const {LG} = WINDOW_WIDTH
 	const container = document.querySelector(selector)
 	if (!container) return
+
+	const updateBrightness = () => {
+		const activeSlide = container.querySelector('.swiper-slide-active')
+		if (activeSlide) {
+			const img = activeSlide.querySelector('.swiper-slide-img img')
+			const text = activeSlide.querySelector('.slide-info-desc')
+			if (img && text) {
+				const process = () => {
+					checkImageBrightness(img, (isDark, brightness) => {
+						console.log('Средняя яркость:', brightness)
+						if (isDark) {
+							text.classList.add('light-text')
+						} else {
+							text.classList.remove('light-text')
+						}
+					})
+				}
+
+				if (img.complete) {
+					process()
+				} else {
+					img.addEventListener('load', process)
+				}
+			}
+		}
+	}
+
+	const removeLightClasses = () => {
+		container.querySelectorAll('.light-text').forEach(el => el.classList.remove('light-text'))
+	}
 
 	const config = {
 		modules: [Autoplay, EffectFade],
@@ -37,6 +69,22 @@ const initFadeSwiper = (selector, speed, { hasPagination, hasNavigation, autopla
 		effect: 'fade',
 		fadeEffect: { crossFade: true },
 		autoplay: { delay: 5000, disableOnInteraction: false },
+		on: {
+			init: function () {
+				if (window.innerWidth < LG) {
+					updateBrightness()
+				} else {
+					removeLightClasses()
+				}
+			},
+			slideChangeTransitionStart: function () {
+				if (window.innerWidth < LG) {
+					updateBrightness()
+				} else {
+					removeLightClasses()
+				}
+			}
+		}
 	}
 
 	if (hasPagination) {
@@ -45,9 +93,7 @@ const initFadeSwiper = (selector, speed, { hasPagination, hasNavigation, autopla
 			el: container.querySelector('.swiper-pagination'),
 			clickable: true
 		}
-	}
-
-	if (!hasPagination) {
+	} else {
 		const paginationWrapper = container.querySelector('.pagination-wrapper')
 		if (paginationWrapper) paginationWrapper.remove()
 	}
@@ -63,8 +109,16 @@ const initFadeSwiper = (selector, speed, { hasPagination, hasNavigation, autopla
 	const swiper = new Swiper(container, config)
 
 	if (hasPagination && autoplayToggleBtnId) {
-		setupAutoplayToggle(swiper, autoplayToggleBtnId)
+		setupAutoplayToggle(swiper, autoplayToggleBtnId);
 	}
+
+	window.addEventListener('resize', () => {
+		if (window.innerWidth < LG) {
+			updateBrightness()
+		} else {
+			removeLightClasses()
+		}
+	})
 }
 
 const initDefaultSwiper = (selector, spvSM, spvXL, initOnMobileOnly = false) => {

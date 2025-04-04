@@ -1,5 +1,6 @@
 export const WINDOW_WIDTH = {
 	MD: 768,
+	LG: 992,
 	XL: 1200
 }
 

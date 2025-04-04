@@ -81,6 +81,18 @@
 				width: 37%;
 			}
 
+			&.light-text {
+				.slide-info-desc {
+					color: var(--white);
+				}
+
+				.slide-info-brand {
+					img {
+						filter: invert(100%);
+					}
+				}
+			}
+
 			.slide-info-img {
 				margin-bottom: 26px;
 
