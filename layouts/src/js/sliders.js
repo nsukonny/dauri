@@ -1,4 +1,5 @@
 import Swiper from 'swiper'
+import { WINDOW_WIDTH } from './common/global'
 import { Pagination, Autoplay, Navigation, EffectFade } from 'swiper/modules'
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -8,7 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		autoplayToggleBtnId: 'autoplayToggle'
 	})
 
-	initDefaultSwiper('.swiper.slides-half-swiper')
+	initFadeSwiper('.swiper.fade-swiper', 700, {
+		hasPagination: true,
+		hasNavigation: false,
+		autoplayToggleBtnId: 'autoplayToggle1'
+	})
+
+	initDefaultSwiper('.swiper.slides-half-swiper', 2, 3)
+	initDefaultSwiper('.swiper.swiper-slides', 1, 2, true)
 
 	initFadeSwiper('.swiper.exclusive-swiper', 800, {
 		hasPagination: false,
@@ -57,11 +65,14 @@ const initFadeSwiper = (selector, speed, { hasPagination, hasNavigation, autopla
 	}
 }
 
-const initDefaultSwiper = (selector) => {
+const initDefaultSwiper = (selector, spvSM, spvXL, initOnMobileOnly = false) => {
 	const swiperContainers = document.querySelectorAll(selector)
+	const { MD } = WINDOW_WIDTH
 
-	swiperContainers.forEach(container => {
-		new Swiper(container, {
+	const initSwiperForContainer = (container) => {
+		if (container.swiperInstance) return
+
+		container.swiperInstance = new Swiper(container, {
 			modules: [Autoplay, Navigation],
 			spaceBetween: 20,
 			speed: 1000,
@@ -71,12 +82,38 @@ const initDefaultSwiper = (selector) => {
 				prevEl: container.querySelector('.swiper-prev')
 			},
 			breakpoints: {
-				480: { slidesPerView: 2, spaceBetween: 20 },
-				768: { slidesPerView: 3 }
+				480: { slidesPerView: spvSM, spaceBetween: 20 },
+				768: { slidesPerView: spvXL }
 			}
 		})
-	})
+	}
+
+	const destroySwiperForContainer = (container) => {
+		if (container.swiperInstance) {
+			container.swiperInstance.destroy(true, true)
+			container.swiperInstance = null
+		}
+	}
+
+	const checkAndInit = () => {
+		swiperContainers.forEach(container => {
+			if (initOnMobileOnly) {
+				if (window.innerWidth <= MD) {
+					destroySwiperForContainer(container)
+					return
+				} else {
+					initSwiperForContainer(container)
+				}
+			} else {
+				initSwiperForContainer(container)
+			}
+		})
+	}
+
+	checkAndInit()
+	window.addEventListener('resize', checkAndInit)
 }
+
 
 const setupAutoplayToggle = (swiper, btnId) => {
 	const autoplayBtn = document.getElementById(btnId)

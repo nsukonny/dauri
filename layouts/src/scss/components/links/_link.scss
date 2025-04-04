@@ -25,6 +25,18 @@
 		@media(min-width: $lg) {
 			font-size: $fs-md;
 		}
+
+		&.gold {
+			font-family: $ff-corm;
+			font-style: italic;
+			font-size: $fs-xl;
+			width: auto;
+			margin: 0 auto;
+
+			&::after {
+				background-color: $brown-light;
+			}
+		}
 	}
 
 	&.border-l {

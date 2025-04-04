@@ -1,3 +1,9 @@
+// For decoration purposes only
+// The code defines a ToastManager class that manages the display of toast notifications on the page.
+// The class has a constructor that accepts a container selector for the toast notifications.
+// The show method creates a new toast notification with an image, text, and optional link.
+// The notification is displayed for a specified duration and automatically removed after that time.
+// You can remove it!!!!!!!!!!!!!!!!!!!!!!
 export class ToastManager {
 	constructor(containerSelector = '#toast-container') {
 		this.container = document.querySelector(containerSelector)

@@ -19,8 +19,8 @@
 @forward 'components/banners/cookie-banner';
 @forward 'components/cards/item-cards';
 @forward 'components/cards/exclusive-item';
-@forward 'components/titles/title-desc';
 @forward 'components/toasts/toasts.scss';
+@forward 'components/swiper/swipers';
 
 // Header styles.
 @forward 'header/header';
@@ -29,6 +29,6 @@
 @forward 'footer/footer';
 
 // Home page sections styles.
-@forward 'sections/home/hero';
 @forward 'sections/home/slides-half';
 @forward 'sections/home/exclusive';
+@forward 'sections/home/slides';

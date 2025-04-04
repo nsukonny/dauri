@@ -8,7 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	const DOM = initDOM()
 	const { header } = DOM
 
-	AOS.init()
+	AOS.init({
+		debounceDelay: 100,
+		once: true,
+		anchorPlacement: 'top-bottom'
+	})
 	headerScroll(header)
 	themeToggle()
 	footerDropdowns()

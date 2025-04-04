@@ -6,6 +6,25 @@
 
 	@include sectionPadding150();
 
+	.title-wrapper {
+		margin-bottom: 50px;
+
+		h2 {
+			margin-bottom: 10px;
+			@include textGrad();
+			
+			@media(min-width: $md) {
+				margin-bottom: 30px;
+			}
+		}
+
+		p {
+			max-width: 331px;
+			@include textItalic();
+		}
+	}
+
+
 	&-left {
 		width: 100%;
 		min-height: 100%;

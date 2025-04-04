@@ -1,10 +1,103 @@
 <section class="slides">
 	<div class="container">
-		<div class="slides-left">
-			<div class="title-wrapper">
-				@@include('../../../components/titles/title-desc.html', {'tag': 'h1', 'title': 'Новинки', 'text': 'Погружение в наши новинки – это когда часы показывают время, а чувства невозможно описать.'})
+			
+		<div class="title-wrapper">
+			<h2 data-aos="fade-up" data-aos-duration="1000">
+				HIGH <span>JEWELRY</span>
+			</h2>
+			<p data-aos="fade-up" data-aos-duration="1400">
+				Прикоснитесь к драгоценному совершенству, созданному покорять сердца даже самых искушенных ценителей.
+			</p>
+		</div>
+		<div class="slides-wrapper flex flex-col-reverse gap-40 a-c j-s xl:gap-16 xl:flex-row">
+			<div class="slides-left flex flex-col">
+				<div class="swiper swiper-slides">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							@@include('../../../components/cards/item-card/item-card.html',
+							{
+							'class': 'hot',
+							'src': '/dauri/assets/img/jew1.png', 'mark': 'AUDEMARS PIGUET', 'price': '49,900', 'model':
+							'Royal Oak',
+							'size': '42 мм', 'state': 'Новые', 'text': '', 'indicator': 'В НАЛИЧИИ'
+							}
+							)
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../components/cards/item-card/item-card.html',
+							{
+							'class': 'hot',
+							'src': '/dauri/assets/img/jew2.png', 'mark': 'ROLEX', 'price': '30,500', 'model':
+							'Yacht-Master',
+							'size': '42 мм', 'state': 'Как новые', 'text': '', 'indicator': 'ПО ЗАПРОСУ'
+							}
+							)
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../components/cards/item-card/item-card.html',
+							{
+							'class': '',
+							'src': '/dauri/assets/img/jew3.png', 'mark': 'AUDEMARS PIGUET', 'price': '49,900', 'model':
+							'Royal Oak',
+							'size': '42 мм', 'state': 'Как новые', 'text': '', 'indicator': 'ПО ЗАПРОСУ'
+							}
+							)
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../components/cards/item-card/item-card.html',
+							{
+							'class': 'hot',
+							'src': '/dauri/assets/img/jew4.png', 'mark': 'AUDEMARS PIGUET', 'price': '49,900', 'model':
+							'Royal Oak',
+							'size': '42 мм', 'state': 'Как новые', 'text': '', 'indicator': 'В НАЛИЧИИ'
+							}
+							)
+						</div>
+					</div>
+					<div class="slides-buttons">
+						@@include('../../../components/buttons/swiper-button/swiper-button.html', {'direction': 'prev',
+						'type': 'circle'})
+						@@include('../../../components/buttons/swiper-button/swiper-button.html', {'direction': 'next',
+						'type': 'circle'})
+					</div>
+				</div>
+				<a href="#" class="link underline gold">Перейти к каталогу</a>
+			</div>
+			<div class="slides-right order-1 xl:order-2">
+				<div class="swiper fade-swiper" data-aos="fade-left" data-aos-duration="1000">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide flex a-c j-c">
+							<div class="swiper-slide-img">
+								<img src="/dauri/assets/img/j1.jpg" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide flex a-c j-c">
+							<div class="swiper-slide-img">
+								<img src="/dauri/assets/img/j2.jpg" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide flex a-c j-c">
+							<div class="swiper-slide-img">
+								<img src="/dauri/assets/img/j3.jpg" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide flex a-c j-c">
+							<div class="swiper-slide-img">
+								<img src="/dauri/assets/img/j4.jpg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="pagination-wrapper flex a-c j-c">
+						<button id="autoplayToggle1">
+							<svg xmlns="http://www.w3.org/2000/svg" width="8" height="11" viewBox="0 0 8 11" fill="none">
+								<rect width="2.82612" height="10.3625" rx="1.41306" fill="#585858" />
+								<rect x="4.71094" width="2.82612" height="10.3625" rx="1.41306" fill="#585858" />
+							</svg>
+						</button>
+						<div class="swiper-pagination flex a-c j-c gap-15"></div>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="slides-right"></div>
 	</div>
 </section>

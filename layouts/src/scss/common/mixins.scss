@@ -43,6 +43,21 @@
 	-webkit-text-fill-color: transparent;
 }
 
+@mixin textGrad265() {
+	background: linear-gradient(265deg, #F6BA83 -5.49%, #915D47 111.77%);;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+@mixin textItalic() {
+	color: $black8;
+	font-size: $fs-md;
+	font-style: italic;
+	font-weight: 275;
+	line-height: 140%;
+	letter-spacing: -0.32px;
+}
+
 @mixin buttonGrad() {
 	background: linear-gradient(107deg, #F6BA83 21.12%, #915D47 108.84%);
 	box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);

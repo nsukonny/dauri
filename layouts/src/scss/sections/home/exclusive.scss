@@ -4,11 +4,43 @@
 .exclusive {
 	@include sectionPadding150();
 
-	&-left, &-right {
+	.title-wrapper {
+		h2 {
+			font-family: $ff;
+			font-weight: $fw-light;
+			font-style: italic;
+			@include textGrad265();
+
+			span {
+				font-family: $ff-corm;
+				font-weight: $fw-semibold;
+			}
+		}
+
+		margin-bottom: 30px;
+
+		@media(min-width: $xl) {
+			margin-bottom: 70px;
+		}
+	}
+
+	&-left,
+	&-right {
 		width: 100%;
 
 		@media(min-width: $lg) {
 			width: calc(50% - 20px);
+		}
+
+		&-img {
+			position: relative;
+
+			.button.round {
+				position: absolute;
+				right: 30px;
+				bottom: 30px;
+				z-index: 1;
+			}
 		}
 	}
 
@@ -16,7 +48,6 @@
 		&-img {
 			width: 100%;
 			height: 100%;
-			
 
 			img {
 				width: 100%;
@@ -24,7 +55,7 @@
 				object-fit: cover;
 				aspect-ratio: 0.925;
 				border-radius: 3px 20px 20px 20px;
-				
+
 				@media(min-width: $md) {
 					height: 616px;
 					border-radius: 40px 5px 5px 40px;
@@ -58,7 +89,8 @@
 		margin: 0;
 		overflow: visible;
 
-		.swiper-prev, .swiper-next {
+		.swiper-prev,
+		.swiper-next {
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);

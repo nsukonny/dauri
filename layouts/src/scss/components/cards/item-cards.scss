@@ -5,18 +5,12 @@
 	width: 100%;
 	height: 100%;
 
-	&.new {
-		.item-card-status {
-			opacity: 1;
-			visibility: visible;
-			z-index: 0;
-		}
-	}
-
 	&:hover {
 		.item-card-inner {
-			img {
-				scale: 1.1;
+			.item-card-img {
+				img {
+					scale: 1.1;
+				}
 			}
 		}
 	}
@@ -56,6 +50,33 @@
 		border-radius: 50%;
 
 		@include textGrad();
+
+		img {
+			width: 12px;
+			height: 18px;
+			transition: scale ease $tr;
+		}
+
+		&.new, &.hot {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		&.new {
+			.item-status {
+				&.hot {
+					display: none;
+				}
+			}
+		}
+		
+		&.hot {
+			.item-status {
+				&.new {
+					display: none;
+				}
+			}
+		}
 	}
 
 	&-img {
@@ -116,11 +137,13 @@
 		margin-bottom: 10px;
 
 		@media(min-width: $md) {
-			margin-bottom: 20px;	
+			margin-bottom: 20px;
 		}
 	}
 
-	&-size, &-state, &-text {
+	&-size,
+	&-state,
+	&-text {
 		color: $black8;
 		font-size: $fs-md;
 		font-style: normal;
@@ -152,7 +175,7 @@
 		background-color: var(--body);
 		border-radius: $br10;
 	}
-	
+
 	.add-to-fav {
 		width: 38px;
 		height: 38px;
