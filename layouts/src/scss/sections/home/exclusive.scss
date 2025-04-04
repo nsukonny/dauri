@@ -78,6 +78,7 @@
 			border-radius: $br20;
 
 			@media(min-width: $md) {
+				width: auto;
 				border-radius: 40px 40px 5px 5px;
 			}
 

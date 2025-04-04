@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		hasPagination: false,
 		hasNavigation: true
 	})
+
+	initInfiniteSlider('.swiper-carousel')
 })
 
 const initFadeSwiper = (selector, speed, { hasPagination, hasNavigation, autoplayToggleBtnId }) => {
@@ -114,6 +116,36 @@ const initDefaultSwiper = (selector, spvSM, spvXL, initOnMobileOnly = false) => 
 	window.addEventListener('resize', checkAndInit)
 }
 
+const initInfiniteSlider = (selector) => {
+	const container = document.querySelector(selector)
+	if (!container) return
+
+	new Swiper(container, {
+		modules: [Autoplay],
+		loop: true,
+		speed: 15000,
+		slidesPerView: 2,
+		allowTouchMove: false,
+		spaceBetween: 40,
+		autoplay: { delay: 0, disableOnInteraction: true },
+		freeMode: true,
+
+		breakpoints: {
+			480: {
+				spaceBetween: 50,
+				slidesPerView: 3
+			},
+			768: {
+				spaceBetween: 60,
+				slidesPerView: 5
+			},
+			1200: {
+				spaceBetween: 80,
+				slidesPerView: 7
+			},
+		}
+	})
+}
 
 const setupAutoplayToggle = (swiper, btnId) => {
 	const autoplayBtn = document.getElementById(btnId)
