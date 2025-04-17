@@ -1,0 +1,41 @@
+@use '../../../vars/vars.scss' as v;
+@use '../../../mixins/mixins.scss' as m;
+
+%link-border {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 10px;
+	color: var(--black8);
+	font-size: v.$fs-sm;
+	font-style: italic;
+	font-weight: v.$fw-medium;
+	line-height: normal;
+	letter-spacing: 0.84px;
+
+	.line {
+		width: 56px;
+		height: 2px;
+		border-radius: v.$br20;
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			border-radius: v.$br20;
+			background-color: v.$brown-light;
+			transition: width ease v.$tr;
+		}
+	}
+
+	&:hover {
+		.line::before {
+			width: 40%;
+		}
+	}
+}

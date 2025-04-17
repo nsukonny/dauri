@@ -1,0 +1,99 @@
+@use '../../../../scss/vars/vars.scss' as v;
+@use '../../../../scss/mixins/mixins' as m;
+
+.exclusive-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 10px;
+
+	@include m.media(sm) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	@include m.media(lg) {
+		gap: 35px;
+	}
+
+	&-left {
+		width: 170px;
+	}
+
+	&-right {
+		width: calc(100% - 130px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		@include m.media(md) {
+			width: calc(100% - 205px);
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+	}
+
+	&-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		
+		img {
+			width: auto;
+			height: 201px;
+			object-fit: cover;
+		}
+	}
+
+	&-status {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: v.$fs-xs;
+		font-style: normal;
+		font-weight: v.$fw-medium;
+		line-height: 120%;
+		padding: 8px;
+		margin-bottom: 10px;
+
+		@include m.bgBtn();
+		@include m.text-gradient();
+	}
+
+	&-name {
+		color: var(--black8);
+		font-size: 16px;
+		font-style: normal;
+		font-weight: v.$fw-medium;
+		line-height: normal;
+		letter-spacing: 0.8px;
+		margin-bottom: 15px;
+	}
+
+	&-desc {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 20px;
+
+		@include m.media(md) {
+			align-items: flex-start;
+			justify-content: flex-start;
+		}
+
+		p {
+			color: var(--black8);
+			font-size: v.$fs-md;
+			font-style: normal;
+			font-weight: v.$fw-light;
+			line-height: normal;
+			letter-spacing: 0.8px;
+		}
+	}
+}

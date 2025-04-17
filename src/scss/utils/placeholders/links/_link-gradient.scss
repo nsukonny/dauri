@@ -1,0 +1,16 @@
+@use '../../../vars/vars.scss' as v;
+@use '../../../mixins/mixins.scss' as m;
+
+%link-gradient {
+	color: v.$white;
+	text-align: center;
+	font-size: v.$fs-md;
+	font-style: normal;
+	font-weight: v.$fw-regular;
+	line-height: normal;
+	border-radius: v.$br20;
+	padding: 10px 33px;
+
+	@include m.button-gradient();
+	@include m.glare();
+}

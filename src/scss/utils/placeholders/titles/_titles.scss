@@ -1,0 +1,10 @@
+@use '../../../vars/vars.scss' as v;
+
+%title {
+	font-family: v.$ff-corm;
+	font-weight: v.$fw-light;
+	line-height: v.$lh-title;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+}

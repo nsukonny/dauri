@@ -1,0 +1,231 @@
+@use '../../../../scss/vars/vars.scss' as v;
+@use '../../../../scss/mixins/mixins' as m;
+
+.item-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    .item-card-inner {
+      .item-card-img {
+        img {
+          scale: 1.1;
+        }
+      }
+    }
+  }
+
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 40px 40px 5px 5px;
+    background-color: v.$transparent10;
+    box-shadow: var(--bs-card);
+    backdrop-filter: blur(v.$blur8);
+    padding: 24px;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    @include m.media(md) {
+      padding: 44px 55px 36px 55px;
+    }
+  }
+
+  &-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    aspect-ratio: 1;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -10;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: v.$fs-sm;
+    font-style: normal;
+    font-weight: v.$fw-bold;
+    text-transform: uppercase;
+    line-height: 120%;
+    letter-spacing: -0.423px;
+    box-shadow: v.$bs-card;
+    border-radius: 50%;
+
+    @include m.text-gradient();
+
+    img {
+      width: 12px;
+      height: 18px;
+      transition: scale ease v.$tr;
+    }
+
+    &.new, &.hot {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.new {
+      .item-status {
+        &.hot {
+          display: none;
+        }
+      }
+    }
+
+    &.hot {
+      .item-status {
+        &.new {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 143px;
+      height: auto;
+      aspect-ratio: 0.856;
+      transition: scale ease v.$tr;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 190px;
+  }
+
+  &-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 10px;
+
+    @include m.media(md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-name {
+    display: flex;
+    flex-direction: column;
+    max-width: 110px;
+  }
+
+  &-mark {
+    color: var(--black8);
+    font-size: v.$fs-md;
+    font-style: normal;
+    font-weight: v.$fw-medium;
+    line-height: 16.813px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  &-model {
+    color: var(--black8);
+    font-size: v.$fs-md;
+    font-style: normal;
+    font-weight: v.$fw-regular;
+    line-height: normal;
+    letter-spacing: 0.841px;
+    text-transform: capitalize;
+  }
+
+  .price {
+    color: var(--black8);
+    font-size: v.$fs-xl;
+    font-style: normal;
+    font-weight: v.$fw-medium;
+    line-height: normal;
+  }
+
+  &-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+
+    @include m.media(md) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-size,
+  &-state,
+  &-text {
+    color: var(--black8);
+    font-size: v.$fs-md;
+    font-style: normal;
+    font-weight: v.$fw-light;
+    line-height: normal;
+    letter-spacing: 0.8px;
+  }
+
+  &-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .indicator-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: v.$grad-main;
+    border-radius: v.$br10;
+    padding: 1px;
+  }
+
+  &-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black8);
+    font-size: v.$fs-sm;
+    font-style: normal;
+    font-weight: v.$fw-regular;
+    line-height: 7px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    background-color: var(--body);
+    border-radius: v.$br10;
+  }
+
+  .add-to-fav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &.added {
+      svg path {
+        stroke: url(#heart-grad);
+      }
+    }
+  }
+}

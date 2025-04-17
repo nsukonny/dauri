@@ -1,0 +1,26 @@
+@use '../../../mixins/mixins.scss' as m;
+@use '../../../vars/vars.scss' as v;
+
+%button-ico {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 50px;
+	padding: 0 15px;
+	gap: 15px;
+	border-radius: v.$br36;
+	box-shadow: var(--bs-main-2);
+
+	img {
+		max-width: 22px;
+		max-height: 22px;
+	}
+
+	span {
+		font-size: v.$fs-xs;
+		font-style: normal;
+		font-weight: v.$fw-regular;
+		line-height: normal;
+		letter-spacing: 0.72px;
+	}
+}

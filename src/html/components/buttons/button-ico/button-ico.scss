@@ -1,0 +1,15 @@
+@use '../../../../scss/vars/vars.scss' as v;
+@use '../../../../scss/utils/placeholders/placeholders' as *;
+
+.button-ico {
+	@extend %button-ico;
+
+	// Dark button
+	&.dark {
+		background: var(--transparent10);
+
+		span {
+			color: v.$greyTransparent;
+		}
+	}
+}

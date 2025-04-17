@@ -1,0 +1,40 @@
+@use '../vars/vars.scss' as v;
+
+@mixin glare() {
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: -100%;
+		width: 50%;
+		height: 200%;
+		background: rgba(255, 255, 255, 0.11);
+		transform: skewX(-25deg) translateY(-50%);
+		transition: left 1s ease;
+	}
+
+	&:hover::before {
+		left: 150%;
+	}
+}
+
+@mixin right-seam() {
+	position: relative;
+
+	&::before {
+		content: '';
+		display: block;
+		background-color: var(--body);
+		min-width: 100vw;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		top: -40px;
+		border-radius: v.$br20;
+		z-index: -1;
+		box-shadow: 14px 40px 20px 15px var(--body);
+	}
+}

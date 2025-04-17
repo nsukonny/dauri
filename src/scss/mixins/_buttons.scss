@@ -1,0 +1,14 @@
+@use '../vars/vars.scss' as v;
+
+@mixin bgBtn() {
+	background: var(--darkBlueBtn);
+	backdrop-filter: blur(v.$blur8);
+	box-shadow: v.$bs-main;
+	border-radius: v.$br36;
+}
+
+@mixin button-gradient() {
+	background: linear-gradient(107deg, #F6BA83 21.12%, #915D47 108.84%);
+	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(15px);
+}

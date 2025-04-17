@@ -1,0 +1,22 @@
+@use '../../vars/vars' as *;
+@use '../../mixins/mixins.scss' as *;
+
+.hidden {
+	display: none;
+
+	&-m {
+		display: none;
+
+		@include media(lg) {
+			display: flex;
+		}
+	}
+
+	&-d {
+		display: flex;
+
+		@include media(lg) {
+			display: none;
+		}
+	}
+}

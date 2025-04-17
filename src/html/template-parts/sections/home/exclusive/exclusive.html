@@ -1,0 +1,47 @@
+<section class="exclusive">
+	<div class="container">
+		<div class="title-wrapper">
+			<h2 data-aos="fade-up" data-aos-duration="1400">
+				ЭКСКЛЮЗИВНЫЕ <span>МОДЕЛИ</span>
+			</h2>
+		</div>
+		<div class="exclusive-wrapper">
+			<div class="exclusive-left">
+				<div class="exclusive-left-img" data-aos="fade-up" data-aos-duration="1000">
+					<img src="/img/e-1.jpg" alt="">
+					<button class="button round">
+						<img src="/img/bag.svg" alt="">
+					</button>
+				</div>
+			</div>
+			<div class="exclusive-right">
+				<div class="exclusive-right-img" data-aos="fade-up" data-aos-duration="1400">
+					<img src="/img/e-2.jpg" alt="">
+					<button class="button round">
+						<img src="/img/bag.svg" alt="">
+					</button>
+				</div>
+				<div class="swiper exclusive-swiper" data-aos="fade-up" data-aos-duration="1700">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/exclusive-item/exclusive-item.html', {'src': 'img/ew-1.png'})
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/exclusive-item/exclusive-item.html', {'src': 'img/w-1.png'})
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/exclusive-item/exclusive-item.html', {'src': 'img/ew-1.png'})
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/exclusive-item/exclusive-item.html', {'src': 'img/w-1.png'})
+						</div>
+					</div>
+					@@include('../../../../components/buttons/swiper-button/swiper-button.html', {'direction': 'prev',
+					'type': 'circle'})
+					@@include('../../../../components/buttons/swiper-button/swiper-button.html', {'direction': 'next',
+					'type': 'circle'})
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

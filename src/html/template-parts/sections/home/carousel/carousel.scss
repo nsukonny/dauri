@@ -1,0 +1,26 @@
+@use '../../../../../scss/vars/vars.scss' as v;
+@use '../../../../../scss/mixins/mixins.scss' as m;
+
+.carousel {
+	@include m.sectionPadding150();
+
+	.swiper {
+		height: 34px;
+
+		&-wrapper {
+			display: flex;
+			align-items: center;
+			height: 100%;
+			transition-timing-function: linear;
+		}
+
+		&-slide {
+			display: flex;
+			height: 100%;
+	
+			img {
+				max-height: 34px;
+			}
+		}
+	}
+}

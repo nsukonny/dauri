@@ -1,0 +1,25 @@
+@use '../../../vars/vars.scss' as v;
+@use '../../../mixins/mixins' as m;
+
+%button-round {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 1;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: v.$transparent10;
+	box-shadow: v.$bs-buttons;
+	backdrop-filter: blur(v.$blur8);
+
+	@include m.media(md) {
+		width: 60px;
+		height: 60px;
+	}
+
+	img {
+		width: 34px;
+		height: 34px;
+	}
+}
