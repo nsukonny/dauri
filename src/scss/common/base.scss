@@ -2,70 +2,70 @@
 @use '../utils/placeholders/placeholders' as *;
 
 * {
-  outline: none;
-  box-sizing: border-box;
+	outline: none;
+	box-sizing: border-box;
 }
 
 body,
 html {
-  height: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  margin: 0
+	height: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	margin: 0
 }
 
 body {
-  position: relative;
-  min-width: 300px;
-  display: flex;
-  height: auto;
-  font-family: v.$ff;
-  font-size: v.$fs-md;
-  line-height: v.$lh;
-  color: v.$black;
-  background-color: var(--body)
+	position: relative;
+	min-width: 300px;
+	display: flex;
+	height: auto;
+	font-family: v.$ff;
+	font-size: v.$fs-md;
+	line-height: v.$lh;
+	color: v.$black;
+	background-color: var(--body)
 }
 
 button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  background-color: transparent;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
-  transition: scale ease v.$tr, box-shadow ease v.$tr;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	transition: scale ease v.$tr, box-shadow ease v.$tr;
 
-  &:active {
-    scale: 0.95;
-  }
+	&:active {
+		scale: 0.95;
+	}
 }
 
 img {
-  max-width: 100%;
-  height: auto
+	max-width: 100%;
+	height: auto
 }
 
 ul {
-  margin: 0;
-  padding: 0;
-  list-style: none
+	margin: 0;
+	padding: 0;
+	list-style: none
 }
 
 svg path {
-  transition: fill ease v.$tr;
+	transition: fill ease v.$tr;
 }
 
 .wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
 
-  .footer {
-    margin-top: auto
-  }
+	.footer {
+		margin-top: auto
+	}
 }

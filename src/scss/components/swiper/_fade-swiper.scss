@@ -46,6 +46,10 @@
 						scale: 1.05;
 					}
 				}
+
+				.swiper-slide-info {
+					opacity: 0;
+				} 
 			}
 
 			&-next {
@@ -54,6 +58,10 @@
 						scale: 1.05;
 					}
 				}
+
+				.swiper-slide-info {
+					opacity: 0;
+				} 
 			}
 
 			&-active {
@@ -62,6 +70,12 @@
 						scale: 1;
 					}
 				}
+
+				.swiper-slide-info {
+					opacity: 1;
+					transition-delay: 0.6s;
+				}
+				
 			}
 		}
 	}
@@ -82,6 +96,7 @@
 			width: 100%;
 			min-height: 100%;
 			padding: 27px;
+			transition: transform ease v.$tr, opacity ease v.$tr;
 
 			@include m.media(lg) {
 				justify-content: center;
@@ -168,14 +183,20 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		gap: 8px;
+		margin-top: 20px;
+
+		@include m.media(md) {
+			margin-top: 25px;
+		}
 
 		button {
-			width: 52px;
-			height: 52px;
+			width: 12px;
+			height: 12px;
 
 			svg {
-				width: 16px;
-				height: 16px;
+				width: 100%;
+				height: 100%;
 			}
 		}
 	}
@@ -184,23 +205,79 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 15px;
+		gap: 8px;
 		width: auto;
 		position: static;
 
 		&-bullet {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			width: 8px;
 			height: 8px;
 			border-radius: 50%;
-			background-color: v.$grey;
+			background-color: transparent;
 			opacity: 1;
-			transition: width ease v.$tr height ease v.$tr;
+			aspect-ratio: 1;
+			margin: 0 !important;
+			transition: scale ease v.$tr, opacity ease v.$tr;
+			position: relative;
+
+			&::before {
+				content: '';
+				display: block;
+				width: 8px;
+				height: 8px;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				transform-origin: center;
+				aspect-ratio: 1;
+				opacity: 1;
+				scale: 1;
+				background-color: #585858;
+				border-radius: 50%;
+				transition: opacity ease v.$tr, scale ease v.$tr;
+				z-index: 1;
+			}
+
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 8px;
+				height: 8px;
+				opacity: 0;
+				border-radius: 50%;
+				background: var(--body);
+			}
 
 			&-active {
 				width: 12px;
 				height: 12px;
-				background: url('../../img/grad-circle.svg') no-repeat center center;
-				background-size: contain;
+				border-radius: 50%;
+				background-color: transparent;
+				opacity: 1;
+				background: linear-gradient(107deg, #F6BA83 21.12%, #915D47 108.84%);
+				position: relative;
+				transition: opacity ease v.$tr, scale ease v.$tr;
+			
+				&::after {
+					opacity: 1;
+				}
+
+				&::before {
+					opacity: 0;
+				}
+			}
+			
+
+			&:hover {
+				scale: 1.1;
 			}
 		}
 	}

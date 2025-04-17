@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		autoplayToggleBtnId: 'autoplayToggle1'
 	})
 
-	initDefaultSwiper('.swiper.slides-half-swiper', 2, 3)
-	initDefaultSwiper('.swiper.swiper-slides', 1, 2, true)
+	initDefaultSwiper('.swiper.slides-half-swiper', 1, 1, false, false)
+	initDefaultSwiper('.swiper.swiper-slides', 1, 2, true, true)
 
 	initFadeSwiper('.swiper.exclusive-swiper', 800, {
 		hasPagination: false,
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 const initFadeSwiper = (selector, speed, { hasPagination, hasNavigation, autoplayToggleBtnId }) => {
-	const {LG} = WINDOW_WIDTH
+	const { LG } = WINDOW_WIDTH
 	const container = document.querySelector(selector)
 	if (!container) return
 
@@ -121,25 +121,36 @@ const initFadeSwiper = (selector, speed, { hasPagination, hasNavigation, autopla
 	})
 }
 
-const initDefaultSwiper = (selector, spvSM, spvXL, initOnMobileOnly = false) => {
+const initDefaultSwiper = (selector, spvSM, spvXL, initOnMobileOnly = false, startFromLast = false) => {
 	const swiperContainers = document.querySelectorAll(selector)
-	const { MD } = WINDOW_WIDTH
+	const { XL } = WINDOW_WIDTH
 
 	const initSwiperForContainer = (container) => {
 		if (container.swiperInstance) return
+
+		const totalSlides = container.querySelectorAll('.swiper-slide').length
+		const lastSlideIndex = Math.max(totalSlides - 1, 0)
 
 		container.swiperInstance = new Swiper(container, {
 			modules: [Autoplay, Navigation],
 			spaceBetween: 20,
 			speed: 1000,
-			slidesPerView: 1,
+			initialSlide: startFromLast ? lastSlideIndex : 0,
 			navigation: {
 				nextEl: container.querySelector('.swiper-next'),
 				prevEl: container.querySelector('.swiper-prev')
 			},
 			breakpoints: {
-				480: { slidesPerView: spvSM, spaceBetween: 20 },
-				768: { slidesPerView: spvXL }
+				320: {
+					slidesPerView: 1
+				},
+				480: {
+					slidesPerView: spvSM,
+					spaceBetween: 20
+				},
+				768: {
+					slidesPerView: spvXL
+				}
 			}
 		})
 	}
@@ -154,7 +165,7 @@ const initDefaultSwiper = (selector, spvSM, spvXL, initOnMobileOnly = false) => 
 	const checkAndInit = () => {
 		swiperContainers.forEach(container => {
 			if (initOnMobileOnly) {
-				if (window.innerWidth <= MD) {
+				if (window.innerWidth <= XL) {
 					destroySwiperForContainer(container)
 					return
 				} else {

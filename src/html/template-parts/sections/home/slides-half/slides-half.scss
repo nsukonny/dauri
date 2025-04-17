@@ -3,7 +3,11 @@
 
 .slides-half {
 	overflow: hidden;
-	@include m.sectionPadding150();
+	padding: 45px 0 35px;
+
+	@include m.media(md) {
+		padding: 133px 0 75px;
+	}
 
 	&-wrapper {
 		display: flex;
@@ -15,14 +19,23 @@
 		@include m.media(md) {
 			flex-direction: row;
 		}
-
 	}
 
 	.title-wrapper {
-		margin-bottom: 50px;
+		margin-bottom: 10px;
+
+		@include m.media(md) {
+			margin-bottom: 50px;
+		}
 
 		h2 {
-			margin-bottom: 10px;
+			font-family: v.$ff-corm;
+			font-size: 48px;
+			font-style: normal;
+			font-weight: v.$fw-light;
+			line-height: normal;
+			letter-spacing: -0.96px;
+			text-transform: uppercase;
 			@include m.text-gradient();
 			
 			@include m.media(md) {
@@ -31,8 +44,13 @@
 		}
 
 		p {
+			display: none;
 			max-width: 331px;
 			@include m.text-italic();
+
+			@include m.media(md) {
+				display: block;
+			}
 		}
 	}
 
@@ -46,6 +64,10 @@
 		background-color: var(--body);
 		z-index: 10;
 		@include m.right-seam();
+
+		@include m.media(xl) {
+			padding-top: 16px;
+		}
 	}
 
 	&-right {
@@ -57,15 +79,11 @@
 
 		.swiper {
 			overflow: visible;
-			width: 254px;
+			width: 151px;
 			margin: 0;
 
-			@include m.media(sm) {
-				width: 528px;
-			}
-
 			@include m.media(md) {
-				width: 802px;
+				width: 253px;
 			}
 
 			&-slide {
