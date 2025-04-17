@@ -1,4 +1,4 @@
-@use '../../vars/vars.scss' as *;
+@use '../../vars/vars.scss' as v;
 
 .swiper-prev, .swiper-next {
 	&.circle {
@@ -7,28 +7,28 @@
 		aspect-ratio: 1;
 		border-radius: 50%;
 		background-color: var(--roundBtn);
-		box-shadow: $bs-btns;
-		backdrop-filter: $blur8;
+		box-shadow: v.$bs-buttons;
+		backdrop-filter: v.$blur8;
 		position: relative;
-		transition: opacity ease $tr, visibility ease $tr, scale ease $tr;
+		transition: opacity ease v.$tr, visibility ease v.$tr, scale ease v.$tr;
 
 		&:after {
 			content: '';
 			display: block;
 			width: 100%;
 			height: 100%;
-			background: $grad-main;
+			background: v.$grad-main;
 			position: absolute;
 			left: 0;
 			top: 0;
 			z-index: -1;
 			border-radius: 50%;
 			opacity: 0;
-			transition: opacity ease $tr;
+			transition: opacity ease v.$tr;
 		}
 
 		svg path {
-			fill: $black8;
+			fill: v.$black8;
 		}
 	
 		&:hover {
@@ -37,7 +37,7 @@
 			}
 
 			svg path {
-				fill: $white;
+				fill: v.$white;
 			}
 		}
 

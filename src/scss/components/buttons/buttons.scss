@@ -1,4 +1,7 @@
-@forward './button-ico';
+// General buttons styles
 @forward './button';
-@forward './theme-button';
 @forward './swiper-button-grad';
+
+// External styles
+@forward '../../../html/components/buttons/button-ico/button-ico';
+@forward '../../../html/components/buttons/theme-button/theme-button';

@@ -1,46 +1,20 @@
-@use '../../vars/vars' as *;
-@use '../../common/mixins.scss' as *;
+@use '../../vars/vars' as v;
+@use '../../mixins/mixins' as m;
+@use '../../utils/placeholders/placeholders' as *;
 
 .button {
-	&.gold {
-		color: $white;
-		text-align: center;
-		font-size: $fs-md;
-		font-style: normal;
-		font-weight: $fw-regular;
-		line-height: normal;
-		border-radius: $br20;
-		padding: 10px 33px;
+  &.gradient {
+    @extend %link-gradient;
 
-		@include buttonGrad();
-		@include glare();
+    // Big size
+    &.big {
+      border-radius: 15px;
+      padding: 23px 33px;
+    }
+  }
 
-		&.big {
-			border-radius: 15px;
-			padding: 23px 33px;
-		}
-	}
-
-	&.round {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		aspect-ratio: 1;
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		background: $transparent10;
-		box-shadow: $bs-btns;
-		backdrop-filter: blur($blur8);
-
-		@media(min-width: $md) {
-			width: 60px;
-			height: 60px;
-		}
-
-		img {
-			width: 34px;
-			height: 34px;
-		}
-	}
+  // Rounded button
+  &.round {
+    @extend %button-round;
+  }
 }

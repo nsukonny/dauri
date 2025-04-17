@@ -1,7 +1,7 @@
-@use '../../vars/vars' as *;
+@use '../../vars/vars' as v;
+@use '../../mixins/mixins.scss' as m;
 
 .swiper {
-
 	&.hero-swiper,
 	&.fade-swiper {
 		.swiper-slide {
@@ -14,7 +14,7 @@
 				top: 0;
 				z-index: -1;
 
-				@media(min-width: $lg) {
+				@include m.media(lg) {
 					width: 63%;
 					position: relative;
 				}
@@ -29,11 +29,11 @@
 					scale: 1.05;
 					object-fit: cover;
 					object-position: center;
-					transition: opacity ease $tr, transform linear 3s, scale 1s linear;
-					border-bottom-left-radius: $br5;
-					border-bottom-right-radius: $br5;
+					transition: opacity ease v.$tr, transform linear 3s, scale 1s linear;
+					border-bottom-left-radius: v.$br5;
+					border-bottom-right-radius: v.$br5;
 
-					@media(min-width: $lg) {
+					@include m.media(lg) {
 						border-bottom-left-radius: 0;
 						width: 98%;
 					}
@@ -68,16 +68,23 @@
 
 	&.hero-swiper {
 		.swiper-slide {
+			display: flex;
+			align-items: center;
 			width: 100vw;
 			height: calc(100vh - 52px);
 		}
 
 		.swiper-slide-info {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-end;
 			width: 100%;
 			min-height: 100%;
 			padding: 27px;
 
-			@media(min-width: $lg) {
+			@include m.media(lg) {
+				justify-content: center;
 				width: 37%;
 			}
 
@@ -94,16 +101,26 @@
 			}
 
 			.slide-info-img {
+				display: none;
 				margin-bottom: 26px;
+
+				@include m.media(lg) {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
 
 				img {
 					width: 305px;
 					height: auto;
-					border-radius: $br20;
+					border-radius: v.$br20;
 				}
 			}
 
 			.slide-info-brand {
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				margin-bottom: 15px;
 
 				img {
@@ -111,7 +128,7 @@
 					height: 14px;
 				}
 
-				@media(min-width: $lg) {
+				@include m.media(lg) {
 					margin-bottom: 30px;
 				}
 			}
@@ -120,15 +137,15 @@
 				max-width: 322px;
 				color: var(--blackA);
 				text-align: center;
-				font-family: $ff-corm;
-				font-size: $fs-lg;
+				font-family: v.$ff-corm;
+				font-size: v.$fs-lg;
 				font-style: normal;
-				font-weight: $fw-regular;
+				font-weight: v.$fw-regular;
 				line-height: normal;
 				letter-spacing: 0.2px;
 				margin-bottom: 23px;
 
-				@media(min-width: $lg) {
+				@include m.media(lg) {
 					font-size: 24px;
 					letter-spacing: 1.2px;
 					margin-bottom: 50px;
@@ -148,6 +165,10 @@
 	}
 
 	.pagination-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
 		button {
 			width: 52px;
 			height: 52px;
@@ -160,6 +181,10 @@
 	}
 
 	.swiper-pagination {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 15px;
 		width: auto;
 		position: static;
 
@@ -167,9 +192,9 @@
 			width: 8px;
 			height: 8px;
 			border-radius: 50%;
-			background-color: $grey;
+			background-color: v.$grey;
 			opacity: 1;
-			transition: width ease $tr height ease $tr;
+			transition: width ease v.$tr height ease v.$tr;
 
 			&-active {
 				width: 12px;

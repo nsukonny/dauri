@@ -10,11 +10,11 @@ export default {
 		dest	: pathDest
 	},
 
-	scss	: {
-		src		: pathSrc + '/scss/main.scss',
-		watch	: pathSrc + '/scss/**/*.scss',
-		dest	: pathDest + '/css'
-	},
+	scss: {
+		src   : pathSrc + '/scss/main.scss',
+		watch : pathSrc + '/**/*.scss',
+		dest  : pathDest + '/css'
+	},	
 
 	js		: {
 		src		: pathSrc + '/js/main.js',

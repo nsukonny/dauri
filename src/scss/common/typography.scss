@@ -1,81 +1,60 @@
-@use '../vars/vars' as *;
-@use '../common/mixins' as *;
+@use '../vars/vars' as v;
+@use '../mixins/mixins' as m;
+@use '../utils/placeholders/placeholders' as *;
 
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-	font-family: $ff-corm;
-	font-weight: $fw-light;
-	line-height: $lh-title;
-	margin: 0;
-	padding: 0;
-	text-transform: uppercase;
+
+h1, .h1, h2, .h2, h3, .h3,
+h4, .h4, h5, .h5, h6, .h6 {
+  @extend %title
 }
 
-h1,
-.h1,
-h2,
-.h2 {
-	font-family: $ff-corm;
-	font-size: 32px;
-	font-style: normal;
-	font-weight: $fw-light;
-	line-height: normal;
-	letter-spacing: -0.96px;
+h1, .h1, h2, .h2 {
+  font-family: v.$ff-corm;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: v.$fw-light;
+  line-height: normal;
+  letter-spacing: -0.96px;
 
-	@media all and (min-width: $lg) {
-		font-size: 48px
-	}
+  @include m.media(lg) {
+    font-size: 48px
+  }
 }
 
-h3,
-.h3 {
-	font-size: 30px
+h3, .h3 {
+  font-size: 30px
 }
 
-h4,
-.h4 {
-	font-size: $fs-xl;
+h4, .h4 {
+  font-size: v.$fs-xl;
 
-	@media all and (min-width: $lg) {
-		font-size: 24px
-	}
+  @include m.media(lg) {
+    font-size: 24px
+  }
 }
 
-h5,
-.h5 {
-	font-size: $fs-xl
+h5, .h5 {
+  font-size: v.$fs-xl
 }
 
-h6,
-.h6 {
-	font-size: $fs-lg
+h6, .h6 {
+  font-size: v.$fs-lg
 }
 
 a {
-	display: inline-block;
-	text-decoration: none;
-	transition: opacity ease $tr;
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity ease v.$tr;
 
-	&:hover {
-		opacity: $op;
-	}
+  &:hover {
+    opacity: v.$op;
+  }
 }
 
 p {
-	margin: 0
+  margin: 0
 }
 
-b,
-strong {
-	font-weight: $fw-bold
+b, strong {
+  font-weight: v.$fw-bold
 }

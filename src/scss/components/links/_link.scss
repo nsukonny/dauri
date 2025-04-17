@@ -1,77 +1,22 @@
-@use '../../vars/vars' as *;
+@use '../../vars/vars' as v;
+@use '../../mixins/mixins' as m;
+@use '../../utils/placeholders/placeholders' as *;
 
 .link {
 	&.underline {
-		color: var(--black8);
-		font-size: $fs-sm;
-		font-style: italic;
-		font-weight: $fw-regular;
-		line-height: normal;
-		position: relative;
+		@extend %link-underline;
+	}
 
-		&::after {
-			content: '';
-			display: block;
-			width: 100%;
-			height: 2px;
-			background-color: var(--link-line);
-			transition: width ease $tr;
-		}
+	&.gradient {
+		@extend %link-gradient;
 
-		&:hover {
-			opacity: $op;
-		}
-
-		@media(min-width: $lg) {
-			font-size: $fs-md;
-		}
-
-		&.gold {
-			font-family: $ff-corm;
-			font-style: italic;
-			font-size: $fs-xl;
-			width: auto;
-			margin: 0 auto;
-
-			&::after {
-				background-color: $brown-light;
-			}
+		&.big {
+			border-radius: 15px;
+			padding: 23px 33px;
 		}
 	}
 
-	&.border-l {
-		color: var(--black8);
-		font-size: $fs-sm;
-		font-style: italic;
-		font-weight: $fw-medium;
-		line-height: normal;
-		letter-spacing: 0.84px;
-	
-		.line {
-			width: 56px;
-			height: 2px;
-			border-radius: $br20;
-			position: relative;
-
-			&::before {
-				content: '';
-				display: block;
-				width: 100%;
-				height: 100%;
-				position: absolute;
-				right: 0;
-				top: 0;
-				border-radius: $br20;
-				background-color: $brown-light;
-				transition: width ease $tr;
-			}
-		}
-		
-		&:hover {
-			.line::before {
-				width: 40%;
-				
-			}
-		}
+	&.border {
+		@extend %link-border;
 	}
 }
