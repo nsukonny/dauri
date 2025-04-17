@@ -28,15 +28,5 @@ html {
 				}
 			}
 		}
-
-		.swiper {
-			.swiper-prev, .swiper-next {
-				&.circle {
-					svg {
-						filter: invert(100%);
-					}
-				}
-			}
-		}
 	}
 }

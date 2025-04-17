@@ -6,12 +6,14 @@ import { Pagination, Autoplay, Navigation, EffectFade } from 'swiper/modules'
 document.addEventListener('DOMContentLoaded', () => {
 	initFadeSwiper('.swiper.hero-swiper', 2000, {
 		hasPagination: true,
+		paginationType: 'bullets',
 		hasNavigation: false,
 		autoplayToggleBtnId: 'autoplayToggle'
 	})
 
 	initFadeSwiper('.swiper.fade-swiper', 700, {
 		hasPagination: true,
+		paginationType: 'bullets',
 		hasNavigation: false,
 		autoplayToggleBtnId: 'autoplayToggle1'
 	})
@@ -20,14 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	initDefaultSwiper('.swiper.swiper-slides', 1, 2, true, true)
 
 	initFadeSwiper('.swiper.exclusive-swiper', 800, {
-		hasPagination: false,
+		hasPagination: true,
+		paginationType: 'fraction',
 		hasNavigation: true
 	})
 
 	initInfiniteSlider('.swiper-carousel')
 })
 
-const initFadeSwiper = (selector, speed, { hasPagination, hasNavigation, autoplayToggleBtnId }) => {
+const initFadeSwiper = (selector, speed, { hasPagination, paginationType, hasNavigation, autoplayToggleBtnId }) => {
 	const { LG } = WINDOW_WIDTH
 	const container = document.querySelector(selector)
 	if (!container) return
@@ -40,7 +43,6 @@ const initFadeSwiper = (selector, speed, { hasPagination, hasNavigation, autopla
 			if (img && text) {
 				const process = () => {
 					checkImageBrightness(img, (isDark, brightness) => {
-						console.log('Средняя яркость:', brightness)
 						if (isDark) {
 							text.classList.add('light-text')
 						} else {
@@ -91,7 +93,8 @@ const initFadeSwiper = (selector, speed, { hasPagination, hasNavigation, autopla
 		config.modules.push(Pagination)
 		config.pagination = {
 			el: container.querySelector('.swiper-pagination'),
-			clickable: true
+			clickable: true,
+			type: paginationType
 		}
 	} else {
 		const paginationWrapper = container.querySelector('.pagination-wrapper')

@@ -1,9 +1,10 @@
 @use '../../vars/vars.scss' as v;
+@use '../../mixins/mixins.scss' as m;
 
 .swiper-prev, .swiper-next {
 	&.circle {
-		width: 50px;
-		height: 50px;
+		width: 33px;
+		height: 33px;
 		aspect-ratio: 1;
 		border-radius: 50%;
 		background-color: var(--roundBtn);
@@ -12,33 +13,48 @@
 		position: relative;
 		transition: opacity ease v.$tr, visibility ease v.$tr, scale ease v.$tr;
 
-		&:after {
-			content: '';
-			display: block;
-			width: 100%;
-			height: 100%;
-			background: v.$grad-main;
-			position: absolute;
-			left: 0;
-			top: 0;
-			z-index: -1;
-			border-radius: 50%;
-			opacity: 0;
-			transition: opacity ease v.$tr;
+		@include m.media(md) {
+			width: 50px;
+			height: 50px;
+		}
+		// Bacgkround gradient. Waiting for client says. 
+		// &:after {
+		// 	content: '';
+		// 	display: block;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	background: v.$grad-main;
+		// 	position: absolute;
+		// 	left: 0;
+		// 	top: 0;
+		// 	z-index: -1;
+		// 	border-radius: 50%;
+		// 	opacity: 0;
+		// 	transition: opacity ease v.$tr;
+		// }
+
+		svg {
+			width: 8px;
+			height: 16px;
+
+			@include m.media(md) {
+				width: 12px;
+				height: 25px;
+			}
 		}
 
 		svg path {
-			fill: v.$black8;
+			fill: var(--swiperRound);
 		}
 	
 		&:hover {
-			&::after {
-				opacity: 1;
-			}
-
 			svg path {
-				fill: v.$white;
+				fill: url(#heart-grad);
 			}
+		}
+
+		&:active {
+			box-shadow: v.$bs-active;
 		}
 
 		&[disabled] {

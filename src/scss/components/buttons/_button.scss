@@ -3,18 +3,18 @@
 @use '../../utils/placeholders/placeholders' as *;
 
 .button {
-  &.gradient {
-    @extend %link-gradient;
+	&.gradient {
+		@extend %link-gradient;
 
-    // Big size
-    &.big {
-      border-radius: 15px;
-      padding: 23px 33px;
-    }
-  }
+		// Big size
+		&.big {
+			border-radius: 15px;
+			padding: 23px 33px;
+		}
+	}
 
-  // Rounded button
-  &.round {
-    @extend %button-round;
-  }
+	// Rounded button
+	&.round {
+		@extend %button-round;
+	}
 }

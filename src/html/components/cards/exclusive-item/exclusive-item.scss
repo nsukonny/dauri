@@ -3,7 +3,6 @@
 
 .exclusive-item {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
@@ -23,14 +22,12 @@
 	}
 
 	&-right {
-		width: calc(100% - 130px);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 
 		@include m.media(md) {
-			width: calc(100% - 205px);
 			align-items: flex-start;
 			justify-content: flex-start;
 		}
@@ -44,8 +41,12 @@
 		
 		img {
 			width: auto;
-			height: 201px;
+			height: 164px;
 			object-fit: cover;
+
+			@include m.media(md) {
+				height: 201px;
+			}
 		}
 	}
 
@@ -53,7 +54,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: v.$fs-xs;
+		font-size: 10px;
 		font-style: normal;
 		font-weight: v.$fw-medium;
 		line-height: 120%;
@@ -62,16 +63,26 @@
 
 		@include m.bgBtn();
 		@include m.text-gradient();
+
+		@include m.media(md) {
+			font-size: v.$fs-xs;
+		}
 	}
 
 	&-name {
 		color: var(--black8);
-		font-size: 16px;
+		font-size: v.$fs-xs;
 		font-style: normal;
 		font-weight: v.$fw-medium;
 		line-height: normal;
-		letter-spacing: 0.8px;
-		margin-bottom: 15px;
+		letter-spacing: 0.6px;
+		margin-bottom: 10px;
+
+		@include m.media(md) {
+			font-size: v.$fs-md;
+			margin-bottom: 15px;
+			letter-spacing: 0.8px;
+		}
 	}
 
 	&-desc {
@@ -80,20 +91,26 @@
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 
 		@include m.media(md) {
+			margin-bottom: 20px;
 			align-items: flex-start;
 			justify-content: flex-start;
 		}
 
 		p {
 			color: var(--black8);
-			font-size: v.$fs-md;
+			font-size: v.$fs-xs;
 			font-style: normal;
 			font-weight: v.$fw-light;
 			line-height: normal;
-			letter-spacing: 0.8px;
+			letter-spacing: 0.6px;
+
+			@include m.media(md) {
+				font-size: v.$fs-md;
+				letter-spacing: 0.8px;
+			}
 		}
 	}
 }

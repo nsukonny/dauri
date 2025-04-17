@@ -1,22 +1,22 @@
 @use '../vars/vars.scss' as v;
 
 @mixin text-gradient() {
-  background: linear-gradient(164deg, #F6BA83 22.09%, #915D47 83.07%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	background: linear-gradient(164deg, #F6BA83 22.09%, #915D47 83.07%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 @mixin text-gradient265() {
-  background: linear-gradient(265deg, #F6BA83 -5.49%, #915D47 111.77%);;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	background: linear-gradient(265deg, #F6BA83 -5.49%, #915D47 111.77%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 @mixin text-italic() {
-  color: var(--text);
-  font-size: v.$fs-md;
-  font-style: italic;
-  font-weight: 275;
-  line-height: 140%;
-  letter-spacing: -0.32px;
+	color: var(--text);
+	font-size: v.$fs-md;
+	font-style: italic;
+	font-weight: 275;
+	line-height: 140%;
+	letter-spacing: -0.32px;
 }
