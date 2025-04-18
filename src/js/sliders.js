@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	initInfiniteSlider('.swiper-carousel', 15000, 40, 50, 60, 80, 2, 3, 5, 7)
-	initInfiniteSlider('.swiper-card-carousel', 5000, 15, 25, 30, 60, 'auto', 'auto', 'auto', 'auto')
+	initInfiniteSlider('.swiper-card-carousel', 4000, 5, 5, 5, 5, 1, 2, 3, 3)
 })
 
 const initFadeSwiper = (selector, speed, { hasPagination, paginationType, hasNavigation, autoplayToggleBtnId }) => {
