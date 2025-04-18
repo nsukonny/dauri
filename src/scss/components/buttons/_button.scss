@@ -11,6 +11,32 @@
 			border-radius: 15px;
 			padding: 23px 33px;
 		}
+
+		&.full {
+			width: 100%;
+			max-width: 773px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 10px;
+			font-size: 11px;
+			padding: 13px 18px;
+
+			img {
+				width: 18px;
+				height: 18px;
+
+				@include m.media(md) {
+					width: 22px;
+					height: 22px;
+				}
+			}
+
+			@include m.media(md) {
+				font-size: v.$fs-sm;
+				padding: 20px 30px;
+			}
+		}
 	}
 
 	// Rounded button

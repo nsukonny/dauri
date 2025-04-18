@@ -1,0 +1,60 @@
+@use '../../../../../scss/vars/vars' as v;
+@use '../../../../../scss/mixins/mixins' as m;
+
+.perks {
+	padding: 0 0 45px;
+
+	@include m.media(xl) {
+		padding: 0 0 45px;
+	}
+
+	&-wrapper {
+		padding: 26px 0;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		border-top: 1px solid rgba(26, 26, 26, 0.30);
+		border-bottom: 1px solid rgba(26, 26, 26, 0.30);
+
+		@include m.media(md) {
+			padding: 52px 0;
+		}
+
+		.swiper {
+			&-wrapper {
+				transition-timing-function: linear;
+			}
+
+			&-slide {
+				width: auto;
+			}
+		}
+
+		.perks-item {
+			display: flex;
+			align-items: center;
+			gap: 20px;
+			scroll-snap-align: start; 
+
+			img {
+				width: 25px;
+				height: 25px;
+			}
+
+			span {
+				color: v.$black8;
+				text-align: center;
+				font-size: v.$fs-xs;
+				font-style: normal;
+				font-weight: v.$fw-regular;
+				line-height: 120%;
+				letter-spacing: -0.33px;
+				text-transform: uppercase;
+
+				@include m.media(md) {
+					font-size: v.$fs-md;
+				}
+			}
+		}
+	}
+}

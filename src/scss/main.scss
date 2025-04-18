@@ -20,7 +20,6 @@
 @forward '../html/components/banners/cookie-banner/cookie-banner.scss';
 @forward '../html/components/cards/item-card/item-card.scss';
 @forward '../html/components/cards/exclusive-item/exclusive-item.scss';
-@forward '../html/components/toast/toast.scss';
 @forward 'components/components.scss';
 
 
@@ -30,12 +29,5 @@
 // Footer styles.
 @forward '../html/template-parts/footer/footer';
 
-// Home page sections styles.
-@forward '../html/template-parts/sections/home/hero/hero.scss';
-@forward '../html/template-parts/sections/home/slides-half/slides-half.scss';
-@forward '../html/template-parts/sections/home/exclusive/exclusive.scss';
-@forward '../html/template-parts/sections/home/slides/slides.scss';
-@forward '../html/template-parts/sections/home/articles/article.scss';
-@forward '../html/template-parts/sections/home/video/video.scss';
-@forward '../html/template-parts/sections/home/carousel/carousel.scss';
-@forward '../html/template-parts/sections/home/cta/cta.scss';
+// Sections styles.
+@forward '../scss/sections/sections';

@@ -271,6 +271,15 @@
 		padding: 1px;
 	}
 
+	.indicator-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: v.$grad-main;
+		border-radius: v.$br10;
+		padding: 1px;
+	}
+
 	&-indicator {
 		display: flex;
 		align-items: center;

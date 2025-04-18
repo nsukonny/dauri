@@ -5,6 +5,44 @@
 	overflow: hidden;
 	padding: 45px 0 35px;
 
+	&.type-a {
+		.title-wrapper {
+			display: flex;
+			flex-direction: column;
+
+			h2 {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				font-family: v.$ff;
+				font-style: italic;
+				font-weight: 275;
+			}
+			
+			span {
+				font-family: v.$ff-corm;
+				font-size: 24px;
+				font-weight: v.$fw-semibold;
+
+				@include m.media(md) {
+					font-size: 52px;
+				}
+			}
+
+			p {
+				display: none;
+			}
+		}
+
+		.slides-half-left {
+			max-width: 368px;
+		}
+
+		.slides-half-right {
+			width: calc(100% - 404px);
+		}
+	}
+
 	@include m.media(xl) {
 		padding: 133px 0 75px;
 	}

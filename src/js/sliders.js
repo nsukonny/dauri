@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 		hasNavigation: true
 	})
 
-	initInfiniteSlider('.swiper-carousel')
+	initInfiniteSlider('.swiper-carousel', 15000, 40, 50, 60, 80, 2, 3, 5, 7)
+	initInfiniteSlider('.swiper-card-carousel', 5000, 15, 25, 30, 60, 'auto', 'auto', 'auto', 'auto')
 })
 
 const initFadeSwiper = (selector, speed, { hasPagination, paginationType, hasNavigation, autoplayToggleBtnId }) => {
@@ -184,32 +185,32 @@ const initDefaultSwiper = (selector, spvSM, spvXL, initOnMobileOnly = false, sta
 	window.addEventListener('resize', checkAndInit)
 }
 
-const initInfiniteSlider = (selector) => {
+const initInfiniteSlider = (selector, speed, spaceInit, spaceSm, spaceMd, spaceXl, spInit, sm, md, xl) => {
 	const container = document.querySelector(selector)
 	if (!container) return
 
 	new Swiper(container, {
 		modules: [Autoplay],
 		loop: true,
-		speed: 15000,
-		slidesPerView: 2,
+		speed: speed,
+		slidesPerView: spInit,
 		allowTouchMove: false,
-		spaceBetween: 40,
+		spaceBetween: spaceInit,
 		autoplay: { delay: 0, disableOnInteraction: true },
 		freeMode: true,
 
 		breakpoints: {
 			480: {
-				spaceBetween: 50,
-				slidesPerView: 3
+				spaceBetween: spaceSm,
+				slidesPerView: sm
 			},
 			768: {
-				spaceBetween: 60,
-				slidesPerView: 5
+				spaceBetween: spaceMd,
+				slidesPerView: md
 			},
 			1200: {
-				spaceBetween: 80,
-				slidesPerView: 7
+				spaceBetween: spaceXl,
+				slidesPerView: xl
 			},
 		}
 	})
