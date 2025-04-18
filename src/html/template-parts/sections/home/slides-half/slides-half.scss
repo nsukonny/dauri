@@ -30,13 +30,6 @@
 		}
 
 		h2 {
-			font-family: v.$ff-corm;
-			font-size: 48px;
-			font-style: normal;
-			font-weight: v.$fw-light;
-			line-height: normal;
-			letter-spacing: -0.96px;
-			text-transform: uppercase;
 			@include m.text-gradient();
 
 			@include m.media(md) {
