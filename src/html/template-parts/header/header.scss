@@ -1,6 +1,8 @@
 @use '../../../scss/mixins/mixins.scss' as m;
 @use '../../../scss/vars/vars' as v;
 
+
+
 .header {
 	position: fixed;
 	left: 0;
@@ -16,7 +18,8 @@
 	&.scrolled {
 		top: 20px;
 
-		.header-left, .header-right {
+		.header-left,
+		.header-right {
 			transform: translateY(-200%);
 			opacity: 0;
 		}
@@ -70,14 +73,15 @@
 		top: 50%;
 		transform: translate(-50%, -50%);
 		transition: opacity ease v.$tr;
-
+		border-radius: 43.803px;
+		background: rgba(255, 255, 255, 0.10);
+		box-shadow: 0px -2.92px 29.202px 0px rgba(0, 0, 0, 0.15);
+		backdrop-filter: blur(2.974829912185669px);
 
 		img {
 			width: auto;
 			height: 27px;
 		}
-
-		@include m.bgBtn();
 
 		@include m.media(md) {
 			width: 72px;
@@ -93,7 +97,8 @@
 		}
 	}
 
-	&-left, &-right {
+	&-left,
+	&-right {
 		display: flex;
 		width: 50%;
 		height: 100%;
@@ -121,8 +126,10 @@
 			gap: 20px;
 			height: 100%;
 			padding: 0 15px;
-
-			@include m.bgBtn();
+			border-radius: 36.503px;
+			background: rgba(255, 255, 255, 0.10);
+			box-shadow: 0px -2.434px 24.335px 0px rgba(0, 0, 0, 0.15);
+			backdrop-filter: blur(2.974829912185669px);
 
 			@include m.media(md) {
 				padding: 0 30px;
@@ -132,7 +139,7 @@
 				gap: 30px;
 			}
 
-			button{
+			button {
 				width: 30px;
 				height: 30px;
 
@@ -158,7 +165,10 @@
 			height: 100%;
 			padding: 0 30px;
 			display: none;
-			@include m.bgBtn();
+			border-radius: 36.503px;
+			background: rgba(255, 255, 255, 0.10);
+			box-shadow: 0px -2.434px 24.335px 0px rgba(0, 0, 0, 0.15);
+			backdrop-filter: blur(2.974829912185669px);
 
 			.header-menu {
 				height: 100%;
@@ -168,11 +178,11 @@
 				gap: 20px;
 			}
 
-			.menu-item  a{
+			.menu-item a {
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				color: var(--black8);
+				color: v.$black8;
 				font-size: v.$fs-xs;
 				font-style: normal;
 				font-weight: v.$fw-medium;
@@ -208,8 +218,10 @@
 			gap: 20px;
 			height: 100%;
 			padding: 0 15px;
-
-			@include m.bgBtn();
+			border-radius: 30.676px;
+			background: rgba(255, 255, 255, 0.10);
+			box-shadow: 0px -2.045px 20.451px 0px rgba(0, 0, 0, 0.15);
+			backdrop-filter: blur(2.5px);
 
 			@include m.media(md) {
 				padding: 0 30px;

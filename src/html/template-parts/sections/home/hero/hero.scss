@@ -1,2 +1,13 @@
-@use '../../../../../scss/vars/vars.scss' as *;
-@use '../../../../../scss/mixins/mixins.scss' as *;
+@use '../../../../../scss/vars/vars.scss' as v;
+@use '../../../../../scss/mixins/mixins.scss' as m;
+
+.hero {
+	.swiper-slide-info {
+		.slide-info-desc {
+			@include m.theme(dark) {
+				color: #FCFCFF;
+			}
+		}
+		
+	}
+}

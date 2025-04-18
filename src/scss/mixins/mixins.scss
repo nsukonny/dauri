@@ -1,11 +1,12 @@
 @use '../vars/vars' as *;
 
-@forward './buttons.scss';
-@forward './effects.scss';
-@forward './general.scss';
-@forward './text.scss';
-@forward './media.scss';
-@forward './general.scss';
+@forward './buttons';
+@forward './effects';
+@forward './general';
+@forward './text';
+@forward './theme';
+@forward './media';
+@forward './general';
 
 
 

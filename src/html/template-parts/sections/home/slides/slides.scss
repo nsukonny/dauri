@@ -3,10 +3,23 @@
 
 .slides {
 	position: relative;
-	@include m.sectionPadding150();
+	padding: 50px 0;
 
-	.link.border {
-		margin-top: 78px;
+	@include m.media(xl) {
+		padding: 125px 0 100px;
+	}
+
+	.link-wrapper {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 45px;
+
+		@include m.media(xl) {
+			margin-top: 78px;
+			justify-content: flex-start;
+		}
 	}
 
 	&-wrapper {
@@ -27,6 +40,9 @@
 	}
 
 	.title-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 		margin-bottom: 30px;
 
 		h2 {
@@ -37,8 +53,13 @@
 			@include m.text-gradient265();
 
 			span {
+				font-size: 26px;
 				font-family: v.$ff-corm;
 				font-weight: v.$fw-semibold;
+
+				@include m.media(md) {
+					font-size: 52px;
+				}
 			}
 		}
 
@@ -64,6 +85,7 @@
 		align-items: center;
 		gap: 45px;
 		width: 100%;
+		position: relative;
 
 		@include m.media(md) {
 			gap: 70px;
@@ -84,14 +106,13 @@
 			max-width: 314px;
 			margin: 0;
 			overflow: visible;
-			position: relative;
+			position: static;
 
 			@include m.media(md) {
-				max-width: 100%;
+				max-width: 535px;
 			}
 
 			@include m.media(xl) {
-				max-width: 535px;
 				margin-left: auto;
 			}
 
@@ -168,8 +189,6 @@
 				}
 			}
 
-			
-
 			.slides-buttons {
 				display: none;
 
@@ -182,10 +201,12 @@
 				}
 			}
 
-
 			.swiper-prev,
 			.swiper-next {
+				display: none;
+
 				@include m.media(xl) {
+					display: flex;
 					position: absolute;
 					top: 50%;
 					transform: translateY(-50%);
@@ -195,21 +216,18 @@
 
 			.swiper-prev {
 				@include m.media(xl) {
-					left: 0;
+					left: 5%;
 				}
 
+
 				@include m.media(xxl) {
-					left: -10%;
+					left: 20%;
 				}
 			}
 
 			.swiper-next {
 				@include m.media(xl) {
 					right: 0;
-				}
-
-				@include m.media(xxl) {
-					right: -10%;
 				}
 			}
 		}

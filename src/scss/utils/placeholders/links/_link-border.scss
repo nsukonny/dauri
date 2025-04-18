@@ -6,7 +6,7 @@
 	align-items: center;
 	justify-content: flex-start;
 	gap: 10px;
-	color: var(--black8);
+	color: v.$black8;
 	font-size: v.$fs-sm;
 	font-style: italic;
 	font-weight: v.$fw-medium;
@@ -37,5 +37,9 @@
 		.line::before {
 			width: 40%;
 		}
+	}
+
+	@include m.theme(dark) {
+		color: #FFFFFFCC;
 	}
 }

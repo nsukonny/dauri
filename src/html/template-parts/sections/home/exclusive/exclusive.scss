@@ -4,7 +4,7 @@
 .exclusive {
 	padding: 36px 0 50px;
 
-	@include m.media(md) {
+	@include m.media(xl) {
 		padding: 75px 0 120px;
 	}
 
@@ -43,7 +43,11 @@
 			span {
 				font-family: v.$ff-corm;
 				font-weight: v.$fw-semibold;
-				font-size: 52px;
+				font-size: 26px;
+
+				@include m.media(md) {
+					font-size: 52px;
+				}
 			}
 		}
 	}
@@ -185,7 +189,7 @@
 
 		.swiper-pagination-fraction {
 			font-size: v.$fs-xs;
-			color: var(--black8);
+			color: v.$black8;
 
 			@include m.media(md) {
 				font-size: v.$fs-sm;

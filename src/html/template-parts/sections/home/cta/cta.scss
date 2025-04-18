@@ -2,7 +2,11 @@
 @use '../../../../../scss/mixins/mixins.scss' as m;
 
 .cta {
-	@include m.sectionPadding150();
+	padding: 40px 0 32px;
+
+	@include m.media(xl) {
+		padding: 50px 0 66px;
+	}
 
 	&-wrapper {
 		display: flex;

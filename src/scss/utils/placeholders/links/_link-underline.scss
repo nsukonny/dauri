@@ -2,7 +2,7 @@
 @use '../../../mixins/mixins.scss' as m;
 
 %link-underline {
-	color: var(--black8);
+	color: v.$black8;
 	font-size: v.$fs-sm;
 	font-style: italic;
 	font-weight: v.$fw-regular;
@@ -14,7 +14,7 @@
 		display: block;
 		width: 100%;
 		height: 2px;
-		background-color: var(--link-line);
+		background-color: v.$link-line;
 		transition: width ease v.$tr;
 	}
 
@@ -24,5 +24,13 @@
 
 	@include m.media(lg) {
 		font-size: v.$fs-md;
+	}
+
+	@include m.theme(dark) {
+		color: #FFFFFFCC;
+
+		&::after {
+			background-color: #FFFFFF33;
+		}
 	}
 }

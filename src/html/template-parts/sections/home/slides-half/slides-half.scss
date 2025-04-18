@@ -5,7 +5,7 @@
 	overflow: hidden;
 	padding: 45px 0 35px;
 
-	@include m.media(md) {
+	@include m.media(xl) {
 		padding: 133px 0 75px;
 	}
 
@@ -15,6 +15,7 @@
 		align-items: stretch;
 		justify-content: flex-start;
 		gap: 36px;
+		position: relative;
 
 		@include m.media(md) {
 			flex-direction: row;
@@ -37,7 +38,7 @@
 			letter-spacing: -0.96px;
 			text-transform: uppercase;
 			@include m.text-gradient();
-			
+
 			@include m.media(md) {
 				margin-bottom: 30px;
 			}
@@ -61,12 +62,16 @@
 		width: 100%;
 		min-height: 100%;
 		max-width: 331px;
-		background-color: var(--body);
+		background-color: v.$white;
 		z-index: 10;
 		@include m.right-seam();
 
 		@include m.media(xl) {
 			padding-top: 16px;
+		}
+
+		@include m.theme(dark) {
+			background-color: v.$darkBlue;
 		}
 	}
 
@@ -75,12 +80,12 @@
 		align-items: flex-start;
 		justify-content: flex-start;
 		width: calc(100% - 367px);
-		position: relative;
 
 		.swiper {
 			overflow: visible;
 			width: 151px;
 			margin: 0;
+			position: static;
 
 			@include m.media(md) {
 				width: 253px;
@@ -90,32 +95,28 @@
 				width: 100%;
 			}
 
-			.swiper-next, .swiper-prev {
+			.swiper-next,
+			.swiper-prev {
 				position: absolute;
 				top: 20%;
 				z-index: 100;
 				display: none;
 
-				@include m.media(md) {
+				@include m.media(lg) {
 					display: flex;
 				}
 			}
 
 			.swiper-next {
-				left: 90%;
-				display: none;
-
-				@include m.media(xl) {
-					display: flex;
-				}
-
-				@include m.media(xxl) {
-					left: 110%;
-				}
+				right: 0;
 			}
 
 			.swiper-prev {
-				left: 1%;
+				left: 35%;
+
+				@include m.media(xl) {
+					left: 30%;
+				}
 			}
 		}
 	}

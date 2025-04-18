@@ -105,7 +105,7 @@
 
 			&.light-text {
 				.slide-info-desc {
-					color: var(--white);
+					color: v.$white;
 				}
 
 				.slide-info-brand {
@@ -150,7 +150,7 @@
 
 			.slide-info-desc {
 				max-width: 322px;
-				color: var(--blackA);
+				color: v.$blackA;
 				text-align: center;
 				font-family: v.$ff-corm;
 				font-size: v.$fs-lg;
@@ -253,7 +253,11 @@
 				height: 8px;
 				opacity: 0;
 				border-radius: 50%;
-				background: var(--body);
+				background: v.$white;
+
+				@include m.theme(dark) {
+					background-color: v.$darkBlue;
+				}
 			}
 
 			&-active {

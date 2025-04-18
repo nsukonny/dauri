@@ -1,9 +1,1 @@
 @use '../vars/vars.scss' as v;
-
-@mixin sectionPadding150() {
-	padding: 50px 0;
-
-	@media(min-width: v.$lg) {
-		padding: 100px 0;
-	}
-}

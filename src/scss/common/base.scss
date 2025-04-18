@@ -1,4 +1,5 @@
 @use '../vars/vars' as v;
+@use '../mixins/mixins' as m;
 @use '../utils/placeholders/placeholders' as *;
 
 * {
@@ -22,7 +23,11 @@ body {
 	font-size: v.$fs-md;
 	line-height: v.$lh;
 	color: v.$black;
-	background-color: var(--body)
+	background-color: v.$white;
+
+	@include m.theme(dark) {
+			background-color: v.$darkBlue;	
+	}
 }
 
 button {

@@ -5,7 +5,10 @@
 	min-height: 50px;
 	padding: 0 15px;
 	gap: 15px;
-	@include m.bgBtn();
+	border-radius: 37.228px;
+	background-color: rgba(255, 255, 255, 0.10);
+	box-shadow: 0px -2.482px 24.819px 0px rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(7.5px);
 
 	&.header-btn {
 		height: 100%;
@@ -20,13 +23,17 @@
 	}
 
 	span {
-		color: var(--black8);
+		color: v.$black8;
 		font-size: v.$fs-xs;
 		font-style: normal;
 		font-weight: v.$fw-medium;
 		line-height: normal;
 		letter-spacing: 1px;
 		text-transform: uppercase;
+
+		@include m.theme(dark) {
+			color: #EDF2F5;
+		}
 	}
 
 	img {
@@ -35,7 +42,7 @@
 	}
 
 	&.dark {
-		background: var(--transparent10);
+		background: v.$transparent10;
 
 		span {
 			color: v.$greyTransparent;

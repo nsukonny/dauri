@@ -2,7 +2,11 @@
 @use '../../../../../scss/mixins/mixins.scss' as m;
 
 .article {
-	@include m.sectionPadding150();
+	padding: 50px 0;
+
+	@include m.media(md) {
+		padding: 100px 0;
+	}
 
 	&-wrapper {
 		display: flex;
@@ -48,6 +52,9 @@
 		width: 100%;
 
 		h2 {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
 			font-family: v.$ff;
 			font-weight: v.$fw-light;
 			margin-bottom: 30px;
@@ -56,7 +63,12 @@
 			span {
 				font-family: v.$ff-corm;
 				font-style: italic;
+				font-size: 26px;
 				font-weight: v.$fw-semibold;
+
+				@include m.media(md) {
+					font-size: 52px;
+				}
 			}
 
 			@include m.media(md) {

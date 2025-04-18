@@ -146,6 +146,14 @@
 				&::after {
 					background-color: v.$link-line;
 				}
+
+				@include m.theme(dark) {
+					color: v.$black8;
+
+					&::after {
+						background-color: v.$link-line;
+					}
+				}
 			}
 		}
 	}
