@@ -1,5 +1,6 @@
 @use '../vars/vars.scss' as v;
 @use '../mixins/theme' as m;
+@use '../mixins/media' as q;
 
 @mixin text-gradient() {
 	background: linear-gradient(164deg, #F6BA83 22.09%, #915D47 83.07%);
@@ -15,11 +16,15 @@
 
 @mixin text-italic() {
 	color: v.$black8;
-	font-size: v.$fs-md;
+	font-size: v.$fs-xs;
 	font-style: italic;
 	font-weight: 275;
 	line-height: 140%;
 	letter-spacing: -0.32px;
+
+	@include q.media(md) {
+		font-size: v.$fs-md;
+	}
 
 	@include m.theme(dark) {
 		color: rgba(255, 255, 255, 0.80);
