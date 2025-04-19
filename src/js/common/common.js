@@ -67,3 +67,12 @@ const cookiesBanner = () => {
 		setTimeout(() => cookieBanner.style.display = 'none', 1000)
 	})
 }
+
+export const reCalculateDropdownHeight = dropdown => {
+	const dropdownOpen = dropdown.querySelector('.dropdown-open'),
+		dropdownInner = dropdown.querySelector('.dropdown-inner')
+
+	if (!dropdownOpen || !dropdownInner) return
+
+	dropdownOpen.style.height = `${dropdownInner.getBoundingClientRect().height}px`
+}

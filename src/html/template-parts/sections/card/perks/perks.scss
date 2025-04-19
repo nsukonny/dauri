@@ -20,6 +20,11 @@
 			padding: 52px 0;
 		}
 
+		@include m.theme(dark) {
+			border-top: 1px solid rgba(26, 26, 26, 0.60);
+			border-bottom: 1px solid rgba(26, 26, 26, 0.60);
+		}
+
 		.swiper {
 			&-wrapper {
 				transition-timing-function: linear;
@@ -53,6 +58,10 @@
 
 				@include m.media(md) {
 					font-size: v.$fs-md;
+				}
+
+				@include m.theme(dark) {
+					color: v.$white8;
 				}
 			}
 		}
