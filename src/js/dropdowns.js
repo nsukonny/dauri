@@ -14,6 +14,7 @@ const toggleDropdown = (selector, button) => {
 
 	dropdowns.forEach(dropdown => {
 		const dropdownButton = dropdown.querySelector(button)
+		const shortDesc = dropdown.previousElementSibling
 
 		if (dropdown.classList.contains('opened'))
 			reCalculateDropdownHeight(dropdown)
@@ -27,6 +28,12 @@ const toggleDropdown = (selector, button) => {
 			if (!dropdown.classList.contains('opened')) {
 				dropdown.classList.add('opened')
 
+				if(shortDesc) {
+					if(shortDesc.className === "short-desc") {
+						shortDesc.classList.add('viewed')
+					}
+				}
+
 				if (showMoreText) {
 					showMoreText.textContent = "Скрыть"
 				}
@@ -34,6 +41,9 @@ const toggleDropdown = (selector, button) => {
 				reCalculateDropdownHeight(dropdown)
 			} else {
 				dropdown.classList.remove('opened')
+
+				if(shortDesc) shortDesc.classList.remove('viewed')
+				
 				if (showMoreText) {
 					showMoreText.textContent = "Показать еще"
 				}

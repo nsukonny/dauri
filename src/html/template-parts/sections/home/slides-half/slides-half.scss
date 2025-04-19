@@ -41,6 +41,20 @@
 		.slides-half-right {
 			width: calc(100% - 404px);
 		}
+
+		.swiper {
+			.swiper-prev {
+				left: 35%;
+
+				@include m.media(lg) {
+					left: 40%;
+				}
+
+				@include m.media(xl) {
+					left: 34%;
+				}
+			}
+		}
 	}
 
 	@include m.media(xl) {

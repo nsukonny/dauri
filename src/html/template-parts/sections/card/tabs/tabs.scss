@@ -15,25 +15,18 @@
 		gap: 32px;
 		position: relative;
 		margin-bottom: 48px;
-
-		&::after {
-			content: '';
-			width: 100%;
-			display: block;
-			height: 1px;
-			background-color: rgba(26, 26, 26, 0.30);
-			position: absolute;
-			left: 0;
-			bottom: 1px;
-			z-index: -1;
-		}
+		white-space: nowrap;
+		overflow-x: auto;
+		border-bottom: 1px solid rgba(26, 26, 26, 0.30);
+		@include m.minimal-scrollbar();
 
 		.tab-button {
+			flex-shrink: 0;
 			display: flex;
 			align-items: center;
 			padding-bottom: 12px;
 			position: relative;
-			min-width: 222px;
+			min-width: 100px;
 			color: v.$black6;
 			text-align: center;
 			font-size: v.$fs-xs;
@@ -41,10 +34,12 @@
 			font-weight: v.$fw-medium;
 			letter-spacing: 0.6px;
 			line-height: 15px;
+			overflow: visible;
 
 			@include m.media(md) {
 				font-size: v.$fs-md;
 				letter-spacing: 0.8px;
+				min-width: 222px;
 			}
 
 			@include m.theme(dark) {
@@ -55,13 +50,17 @@
 				content: '';
 				display: block;
 				width: 0;
-				height: 3px;
+				height: 2px;
 				background-color: v.$brown-light;
 				position: absolute;
 				left: 0;
 				border-radius: v.$br20;
 				bottom: 0;
 				transition: width ease v.$tr;
+
+				@include m.media(md) {
+					height: 3px;
+				}
 			}
 
 			&.active {
@@ -114,6 +113,12 @@
 				overflow: hidden;
 				white-space: nowrap;
 				text-overflow: ellipsis;
+
+				&.viewed {
+					overflow: visible;
+					white-space: wrap;
+					text-overflow: none;
+				}
 
 				@include m.media(md) {
 					font-size: v.$fs-md;
@@ -239,6 +244,16 @@
 						}
 					}
 
+					@include m.theme(dark) {
+						.dropdown-button {
+							.plus {
+								&::before, &::after {
+									background: v.$grad-main;
+								}
+							}
+						}
+					}
+
 					&-button {
 						width: 100%;
 						display: flex;
@@ -289,7 +304,8 @@
 								height: 15px;
 							}
 
-							&::before, &::after {
+							&::before,
+							&::after {
 								content: '';
 								display: block;
 								height: 2px;
@@ -300,10 +316,6 @@
 								border-radius: v.$br20;
 								transform: translate(-50%, -50%);
 								background-color: #1A1A1A99;
-
-								@include m.theme(dark) {
-									background: v.$grad-main;
-								}
 							}
 
 							&::after {
@@ -321,6 +333,10 @@
 
 					&-inner {
 						padding: 30px 0;
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						gap: 10px;
 
 						p {
 							color: v.$black6;
@@ -340,10 +356,32 @@
 							}
 						}
 					}
-
-					&.opened {}
 				}
 			}
+		}
+	}
+
+	[data-floating-link] {
+		width: 100%;
+		max-width: 737px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 30;
+		position: fixed;
+		padding: 0 20px;
+		margin: 0 auto;
+		left: 50%;
+		transform: translate(-50%, 120%);
+		bottom: 5%;
+		transition: opacity ease v.$tr, transform ease v.$tr, visibility ease v.$tr;
+
+		&.scrolling {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(-50%, 0);
 		}
 	}
 }

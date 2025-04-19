@@ -1,1 +1,6 @@
 @use '../vars/vars.scss' as v;
+
+@mixin minimal-scrollbar {
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
