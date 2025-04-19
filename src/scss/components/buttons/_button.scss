@@ -30,12 +30,30 @@
 					width: 22px;
 					height: 22px;
 				}
+
+				@include m.theme(dark) {
+					filter: invert(100%);
+				}
 			}
 
 			@include m.media(md) {
 				font-size: v.$fs-sm;
 				padding: 20px 30px;
 			}
+		}
+
+		&.sm {
+			font-size: v.$fs-xs;
+			padding: 16px 40px;
+
+			@include m.media(md) {
+				padding: 22px 55px;
+				font-size: v.$fs-sm;
+			}
+		}
+
+		@include m.theme(dark) {
+			color: #0F111F;
 		}
 	}
 

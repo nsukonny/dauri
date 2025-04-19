@@ -1,0 +1,87 @@
+@use '../../../../../scss/vars/vars' as v;
+@use '../../../../../scss/mixins/mixins' as m;
+
+.bottom-cta {
+	padding: 60px 0 35px;
+
+	@include m.media(xl) {
+		padding: 90px 0 74px;
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: 20px;
+
+		@include m.media(sm) {
+			align-items: center;
+		}
+
+		@include m.media(xl) {
+			flex-direction: row;
+		}
+
+		h2 {
+			max-width: 395px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			font-family: v.$ff;
+			font-weight: v.$fw-light;
+			@include m.text-gradient265();
+
+			@include m.media(sm) {
+				align-items: center;
+			}
+
+			@include m.media(xl) {
+				align-items: flex-start;
+			}
+
+			span {
+				font-style: italic;
+				font-family: v.$ff-corm;
+				font-weight: v.$fw-semibold;
+				font-size: 26px;
+
+				@include m.media(md) {
+					font-size: 52px;
+				}
+			}
+		}
+
+		p {
+			margin-top: auto;
+			max-width: 227px;
+			color: v.$black6;
+			font-size: v.$fs-xs;
+			font-style: italic;
+			font-weight: v.$fw-light;
+			line-height: 100%;
+			text-align: left;
+
+			@include m.media(sm) {
+				text-align: center;
+				max-width: 302px;
+			}
+
+			@include m.media(md) {
+				font-size: v.$fs-md;
+			}
+
+			@include m.media(xl) {
+				text-align: left;
+			}
+
+			@include m.theme(dark) {
+				color: v.$white8;
+			}
+		}
+
+		a {
+			margin-top: auto;
+		}
+	}
+}
