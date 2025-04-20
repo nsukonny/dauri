@@ -1,0 +1,62 @@
+@use '../../../scss/vars/vars.scss' as v;
+@use '../../../scss/mixins/mixins' as m;
+
+
+.custom-select {
+	display: flex;
+	flex-direction: column;
+
+	&.opened {
+		.select-options {
+			display: flex;
+		}
+
+		.select-button {
+			transform: translateY(-50%) rotate(180deg);
+		}
+	}
+
+	.select-options {
+		position: absolute;
+		left: 0;
+		top: calc(100% + 4px);
+		width: 100%;
+		padding: 10px 0;
+		background-color: v.$snow;
+		box-shadow: v.$bs-main;
+		display: none;
+		border-radius: 10px;
+		flex-direction: column;
+		gap: 8px;
+		z-index: 1;
+	}
+
+	.select-option {
+		padding: 4px 8px;
+		width: 100%;
+		cursor: pointer;
+		transition: background-color ease v.$tr;
+		@include m.text-italic();
+
+		&:hover {
+			background-color: #f5f3f3;
+		}
+	}
+
+	.select-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		transition: transform ease v.$tr;
+
+		img {
+			width: auto;
+			height: 12px;
+		}
+	}
+}

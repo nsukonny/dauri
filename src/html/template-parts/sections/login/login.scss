@@ -45,7 +45,7 @@
 				max-width: 384px;
 			}
 
-			h2 {
+			h1 {
 				display: flex;
 				flex-direction: column;
 				font-family: v.$ff;
@@ -54,6 +54,10 @@
 				margin: 0 auto 40px auto;
 				text-align: center;
 				@include m.text-gradient265();
+
+				@include m.media(md) {
+					font-size: 54px;
+				}
 
 				@include m.media(lg) {
 					text-align: left;
@@ -136,7 +140,7 @@
 					width: 100%;
 
 					@include m.media(lg) {
-						width: 70%;
+						width: 75%;
 					}
 				}
 
@@ -167,6 +171,10 @@
 				text-align: center;
 				margin: 0 auto 40px auto;
 				@include m.text-gradient();
+
+				@include m.media(md) {
+					font-size: 54px;
+				}
 
 				@include m.media(lg) {
 					text-align: left;
