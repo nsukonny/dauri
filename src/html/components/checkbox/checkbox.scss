@@ -48,6 +48,10 @@
 			height: 26px;
 			border-radius: 7.5px;
 		}
+
+		@include m.theme(dark) {
+			border-color: v.$white8;
+		}
 	}
 
 	&::after {

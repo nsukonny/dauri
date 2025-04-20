@@ -29,6 +29,11 @@
 		flex-direction: column;
 		gap: 8px;
 		z-index: 1;
+
+		@include m.theme(dark) {
+			background-color: v.$darkBlue;
+			box-shadow: v.$bs-gold;
+		}
 	}
 
 	.select-option {
@@ -40,6 +45,10 @@
 
 		&:hover {
 			background-color: #f5f3f3;
+
+			@include m.theme(dark) {
+				background-color: #f5f3f315;
+			}
 		}
 	}
 
