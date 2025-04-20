@@ -1,0 +1,51 @@
+@use '../../vars/vars' as v;
+@use '../../mixins/mixins' as m;
+
+.not-have {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 10px;
+	justify-content: center;
+	margin-left: calc(50% - 50vw);
+	background-color: #F6F5F3;
+	padding: 18px 20px;
+	margin-bottom: 40px;
+
+	@include m.theme(dark) {
+		background-color: v.$black6;
+	}
+
+	p {
+		color: v.$black8;
+		font-size: v.$fs-xs;
+		font-style: normal;
+		font-weight: v.$fw-regular;
+		line-height: normal;
+		letter-spacing: 0.6px;
+
+		@include m.theme(dark) {
+			color: v.$white8;
+		}
+	}
+
+	a {
+		color: v.$black8;
+		font-size: 10px;
+		font-style: normal;
+		font-weight: v.$fw-regular;
+		line-height: normal;
+		letter-spacing: 0.5px;
+		border-bottom: 1px solid v.$black8;
+
+		@include m.theme(dark) {
+			color: v.$grayDark;
+			border-bottom: 1px solid v.$grayDark;
+		}
+	}
+
+	@include m.media(lg) {
+		display: none;
+	}
+}

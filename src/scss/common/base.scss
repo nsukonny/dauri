@@ -89,6 +89,14 @@ label {
 			background-color: #f0d7862c;
 		}
 	}
+
+	.show-pass {
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 1;
+	}
 }
 
 input {
@@ -114,6 +122,10 @@ input {
 
 		@include m.media(md) {
 			font-size: v.$fs-sm;
+		}
+
+		@include m.theme(dark) {
+			color: rgba(211, 211, 211, 0.3);
 		}
 	}
 
