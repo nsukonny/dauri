@@ -4,7 +4,7 @@
 .privacy {
 	padding: 139px 0 40px;
 
-	@include m.media(xl) {
+	@include m.media(md) {
 		padding: 212px 0;
 	}
 

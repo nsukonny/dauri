@@ -4,7 +4,7 @@
 .card-tabs {
 	padding: 40px 0 30px;
 
-	@include m.media(xl) {
+	@include m.media(md) {
 		padding: 93px 0 75px;
 	}
 

@@ -4,7 +4,7 @@
 .product-card {
 	padding: 105px 0 26px;
 
-	@include m.media(xl) {
+	@include m.media(md) {
 		padding: 211px 0 71px;
 	}
 

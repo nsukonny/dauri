@@ -4,7 +4,7 @@
 .profile {
 	padding: 121px 0 84px;
 
-	@include m.media(xl) {
+	@include m.media(md) {
 		padding: 191px 0 253px;
 	}
 }

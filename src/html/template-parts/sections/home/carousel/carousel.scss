@@ -4,7 +4,7 @@
 .carousel {
 	padding: 50px 0;
 
-	@include m.media(xl) {
+	@include m.media(md) {
 		padding: 100px 0;
 	}
 

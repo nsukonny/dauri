@@ -4,7 +4,7 @@
 .perks {
 	padding: 0 0 45px;
 
-	@include m.media(xl) {
+	@include m.media(md) {
 		padding: 0 0 45px;
 	}
 
