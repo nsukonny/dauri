@@ -1,0 +1,10 @@
+@use '../../../../scss/vars/vars' as v;
+@use '../../../../scss/mixins/mixins' as m;
+
+.profile {
+	padding: 121px 0 84px;
+
+	@include m.media(xl) {
+		padding: 191px 0 253px;
+	}
+}

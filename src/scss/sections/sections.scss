@@ -18,5 +18,9 @@
 @forward '../../html/template-parts/sections/register/register.scss';
 //Verify
 @forward '../../html/template-parts/sections/verify/verify.scss';
-//Verify
+//Privacy
 @forward '../../html/template-parts/sections/privacy/privacy.scss';
+//Profile
+@forward '../../html/template-parts/sections/profile/profile-top/profile-top.scss';
+@forward '../../html/template-parts/sections/profile/welcome/welcome.scss';
+@forward '../../html/template-parts/sections/profile/profile.scss';
