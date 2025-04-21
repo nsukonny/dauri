@@ -1,0 +1,137 @@
+@use '../../../../../scss/vars/vars' as v;
+@use '../../../../../scss/mixins/mixins' as m;
+
+.profile-top {
+	padding-bottom: 16px;
+	width: 100%;
+
+	&-scroll {
+		overflow-x: auto;
+		width: 100%;
+		position: relative;
+		@include m.minimal-scrollbar();
+	}
+
+	&-wrapper {
+		min-width: max-content;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 64px;
+		position: relative;
+		padding-bottom: 10px;
+
+		@include m.media(md) {
+			gap: 32px;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			display: block;
+			border-radius: v.$br20;
+			width: 100%;
+			height: 1px;
+			background-color: rgba(26, 26, 26, 0.30);
+			z-index: -1;
+
+			@include m.theme(dark) {
+				background-color: rgba(241, 241, 241, 0.3);
+			}
+		}
+	}
+
+	&-links {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 24px;
+
+		@include m.media(md) {
+			gap: 50px;
+			width: calc(100% - 78px);
+		}
+
+		.profile-link {
+			color: v.$black6;
+			text-transform: uppercase;
+			font-size: 10px;
+			font-style: normal;
+			font-weight: v.$fw-regular;
+			line-height: normal;
+			letter-spacing: 1px;
+			position: relative;
+			text-align: left;
+
+			&::after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 1px;
+				background-color: v.$brown-light;
+				position: absolute;
+				left: 0;
+				opacity: 0;
+				bottom: - 10px;
+				transition: opacity ease v.$tr, width ease v.$tr;
+
+				@include m.media(md) {
+					height: 2px;
+				}
+			}
+
+			@include m.media(md) {
+				font-size: v.$fs-xs;
+				font-style: normal;
+				font-weight: v.$fw-medium;
+				line-height: normal;
+				text-align: center;
+				letter-spacing: 1.2px;
+			}
+
+			@include m.theme(dark) {
+				color: v.$grayDark;
+			}
+
+			&.active {
+				color: v.$blackA;
+				font-weight: v.$fw-semibold;
+
+				&::after {
+					width: 100%;
+					opacity: 1;
+				}
+
+				@include m.theme(dark) {
+					color: v.$white8;
+				}
+			}
+		}
+	}
+
+	.logout {
+		color: v.$black6;
+		text-transform: uppercase;
+		font-size: 10px;
+		font-style: normal;
+		font-weight: v.$fw-regular;
+		line-height: normal;
+		letter-spacing: 1px;
+		margin-left: auto;
+
+		@include m.media(md) {
+			font-size: v.$fs-xs;
+			font-style: normal;
+			font-weight: v.$fw-medium;
+			line-height: normal;
+			letter-spacing: 1.2px;
+		}
+
+		@include m.theme(dark) {
+			color: v.$grayDark;
+		}
+	}
+}
