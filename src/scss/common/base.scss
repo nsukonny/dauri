@@ -100,6 +100,7 @@ label {
 }
 
 input {
+	width: 100%;
 	padding: 11px 0;
 	border: 0;
 	outline: 0;
@@ -135,6 +136,14 @@ input {
 
 	@include m.theme(dark) {
 		color: v.$white8;
+	}
+}
+
+input[type="password"] {
+	width: calc(100% - 75px);
+
+	@include m.media(md) {
+		width: calc(100% - 100px);
 	}
 }
 

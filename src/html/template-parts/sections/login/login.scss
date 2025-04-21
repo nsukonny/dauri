@@ -100,14 +100,6 @@
 					}
 				}
 
-				input {
-					width: 100%;
-
-					@include m.media(lg) {
-						width: 75%;
-					}
-				}
-
 				.button {
 					width: 100%;
 					max-width: 319px;

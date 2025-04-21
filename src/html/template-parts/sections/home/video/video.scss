@@ -183,10 +183,12 @@
 			@include m.media(md) {
 				font-size: v.$fs-md;
 			}
+		}
+	}
 
-			@include m.theme(dark) {
-				color: v.$white8;
-			}
+	@include m.theme(dark) {
+		.item-state, .item-text {
+			color: v.$white8;
 		}
 	}
 

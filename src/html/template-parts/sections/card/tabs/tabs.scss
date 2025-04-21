@@ -50,7 +50,7 @@
 				content: '';
 				display: block;
 				width: 0;
-				height: 2px;
+				height: 1px;
 				background-color: v.$brown-light;
 				position: absolute;
 				left: 0;
@@ -59,7 +59,7 @@
 				transition: width ease v.$tr;
 
 				@include m.media(md) {
-					height: 3px;
+					height: 2px;
 				}
 			}
 
@@ -301,6 +301,10 @@
 						.plus {
 							width: 6px;
 							height: 6px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							aspect-ratio: 1;
 							position: relative;
 
 							@include m.media(md) {
@@ -312,17 +316,20 @@
 							&::after {
 								content: '';
 								display: block;
-								height: 2px;
+								width: 100%;
+								height: 1px;
+								border-radius: v.$br20;
+								background-color: #1A1A1A99;
+								@include m.media(md) {
+									height: 2px;
+								}
+							}
+
+							&::after {
 								position: absolute;
 								width: 100%;
 								top: 50%;
 								left: 50%;
-								border-radius: v.$br20;
-								transform: translate(-50%, -50%);
-								background-color: #1A1A1A99;
-							}
-
-							&::after {
 								transition: opacity ease v.$tr;
 								transform: translate(-50%, -50%) rotate(90deg);
 							}

@@ -142,6 +142,11 @@
 			button {
 				width: 30px;
 				height: 30px;
+				order: 2;
+
+				@include m.media(md) {
+					order: 1;
+				}
 
 				img {
 					width: 100%;
@@ -153,6 +158,11 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				order: 1;
+
+				@include m.media(md) {
+					order: 2;
+				}
 
 				img {
 					width: auto;
