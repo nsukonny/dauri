@@ -7,4 +7,23 @@
 	@include m.media(md) {
 		padding: 191px 0 253px;
 	}
+
+	&-tab-content {
+		display: none;
+
+		&.active {
+			display: block;
+			animation: fadein 1s forwards ease;
+
+			@keyframes fadein {
+				from {
+					opacity: 0;
+				}
+
+				to {
+					opacity: 1;
+				}
+			}
+		}
+	}
 }
