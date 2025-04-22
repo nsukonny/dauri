@@ -1,2 +1,38 @@
 @use '../../../../../scss/vars/vars' as v;
 @use '../../../../../scss/mixins/mixins' as m;
+
+.catalog-result {
+	padding: 20px 0 40px;
+
+	&-wrapper {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		justify-content: center;	
+	}
+
+	&-items {
+		width: 100%;
+		max-width: 1076px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 40px 20px;
+
+		.item-card {
+			width: 100%;
+			max-width: 131px;
+
+			@include m.media(xs) {
+				max-width: 151px;
+			}
+
+			@include m.media(md) {
+				max-width: 254px;
+			}
+		}
+	}
+
+}
