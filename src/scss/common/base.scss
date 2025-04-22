@@ -97,6 +97,16 @@ label {
 		transform: translateY(-50%);
 		z-index: 1;
 	}
+
+	&.password {
+		input {
+			width: calc(100% - 75px);
+		
+			@include m.media(md) {
+				width: calc(100% - 100px);
+			}
+		}
+	}
 }
 
 input {
@@ -136,14 +146,6 @@ input {
 
 	@include m.theme(dark) {
 		color: v.$white8;
-	}
-}
-
-input[type="password"] {
-	width: calc(100% - 75px);
-
-	@include m.media(md) {
-		width: calc(100% - 100px);
 	}
 }
 
