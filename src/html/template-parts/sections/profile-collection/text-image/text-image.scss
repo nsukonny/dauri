@@ -2,6 +2,15 @@
 @use '../../../../../scss/mixins/mixins' as m;
 
 .text-image {
+
+	&.reverse {
+		.text-image-wrapper {
+			@include m.media(md) {
+				flex-direction: row-reverse;
+			}
+		}
+	}
+
 	&-wrapper {
 		display: flex;
 		flex-direction: column-reverse;

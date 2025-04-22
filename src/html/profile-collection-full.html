@@ -1,8 +1,32 @@
-@@include( 'template-parts/header/header.html', { title: 'Личный кабинет - Коллекция(empty)' } )
+@@include( 'template-parts/header/header.html', { title: 'Личный кабинет - Коллекция(full)' } )
 
 <main>
 	<div class="profile">
-		@@include( 'template-parts/sections/profile-collection/profile-top/profile-top.html' )
+		<section class="profile-top">
+			<div class="container">
+				<div class="profile-top-scroll">
+					<div class="profile-top-wrapper">
+						<div class="profile-top-links">
+							<a href="/profile.html" class="profile-link">
+								DAURI КАБИНЕТ
+							</a>
+							<a href="/profile-collection.html" class="profile-link active">
+								МОЯ КОЛЛЕКЦИЯ
+							</a>
+							<a href="/profile-models.html" class="profile-link">
+								ИЗБРАННЫЕ МОДЕЛИ
+							</a>
+							<a href="/profile-articles.html" class="profile-link">
+								ИЗБРАННЫЕ СТАТЬИ
+							</a>
+						</div>
+						<button class="logout">
+							ВЫЙТИ
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
 		@@include( 'template-parts/sections/profile-collection/items/items.html' )
 		@@include( 'template-parts/sections/profile-collection/text-image/text-image.html' )
 	</div>
