@@ -63,6 +63,14 @@
 				margin-bottom: 56px;
 			}
 		}
+
+		a {
+			color: v.$blackA;
+
+			@include m.theme(dark) {
+				color:  v.$white8;
+			}
+		}
 	}
 
 	&-img {
