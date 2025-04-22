@@ -24,11 +24,11 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		margin-bottom: 40px;
+		margin-bottom: 52px;
 
 		@include m.media(md) {
 			max-width: 100%;
-			margin-bottom: 52px;
+			margin-bottom: 97px;
 			align-items: flex-start;
 		}
 
@@ -92,6 +92,7 @@
 	&-items {
 		display: flex;
 		justify-content: center;
+		position: relative;
 
 		@include m.media(md) {
 			justify-content: flex-start;
@@ -147,6 +148,42 @@
 						fill: rgba(249, 249, 249, 0.60);
 					}
 				}
+			}
+		}
+	}
+
+	&-items {
+		width: 100%;
+		display: flex;
+
+		.swiper {
+			width: 220px;
+			overflow: visible;
+			position: static;
+			margin: 0 auto 0 0;
+
+			@include m.media(md) {
+				width: 341px;
+			}
+
+			&-prev, &-next {
+				display: none;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				z-index: 10;
+
+				@include m.media(sm) {
+					display: block;
+				}
+			}
+
+			&-prev {
+				left: 0;
+			}
+
+			&-next {
+				right: 0;
 			}
 		}
 	}

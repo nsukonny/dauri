@@ -18,8 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		autoplayToggleBtnId: 'autoplayToggle1'
 	})
 
-	initDefaultSwiper('.swiper.slides-half-swiper', 1, 1, false, false)
-	initDefaultSwiper('.swiper.swiper-slides', 1, 2, true, true)
+	initDefaultSwiper('.swiper.slides-half-swiper', 20, 20, 20, 1, 1, false, false)
+	initDefaultSwiper('.swiper.collection-items-swiper', 4, 20, 114, 1, 1, false, false)
+	initDefaultSwiper('.swiper.swiper-slides', 20, 20, 20, 1, 2, true, true)
 
 	initFadeSwiper('.swiper.exclusive-swiper', 800, {
 		hasPagination: true,
@@ -125,7 +126,7 @@ const initFadeSwiper = (selector, speed, { hasPagination, paginationType, hasNav
 	})
 }
 
-const initDefaultSwiper = (selector, spvSM, spvXL, initOnMobileOnly = false, startFromLast = false) => {
+const initDefaultSwiper = (selector, spbInit, spbInitSm, spbInitMd, spvSM, spvXL, initOnMobileOnly = false, startFromLast = false) => {
 	const swiperContainers = document.querySelectorAll(selector)
 	const { XL } = WINDOW_WIDTH
 
@@ -137,8 +138,8 @@ const initDefaultSwiper = (selector, spvSM, spvXL, initOnMobileOnly = false, sta
 
 		container.swiperInstance = new Swiper(container, {
 			modules: [Autoplay, Navigation],
-			spaceBetween: 20,
 			speed: 1000,
+			spaceBetween: 20,
 			initialSlide: startFromLast ? lastSlideIndex : 0,
 			navigation: {
 				nextEl: container.querySelector('.swiper-next'),
@@ -150,9 +151,10 @@ const initDefaultSwiper = (selector, spvSM, spvXL, initOnMobileOnly = false, sta
 				},
 				480: {
 					slidesPerView: spvSM,
-					spaceBetween: 20
+					spaceBetween: spbInitSm
 				},
 				768: {
+					spaceBetween: spbInitMd,
 					slidesPerView: spvXL
 				}
 			}
