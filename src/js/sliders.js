@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	initDefaultSwiper('.swiper.slides-half-swiper', 20, 20, 20, 1, 1, false, false)
 	initDefaultSwiper('.swiper.collection-items-swiper', 4, 20, 114, 1, 1, false, false)
 	initDefaultSwiper('.swiper.swiper-slides', 20, 20, 20, 1, 2, true, true)
+	initDefaultSwiper('.swiper.live-swiper', 20, 20, 20, 1, 1, false, false)
 
 	initFadeSwiper('.swiper.exclusive-swiper', 800, {
 		hasPagination: true,

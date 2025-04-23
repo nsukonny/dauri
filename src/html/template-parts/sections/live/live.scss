@@ -20,17 +20,20 @@
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
+		margin-bottom: 37px;
 
 		.link {
 			display: none;
 		}
 
 		@include m.media(md) {
+			gap: 32px;
+			margin-bottom: 86px;
+
 			.link {
 				display: inline-flex;
 			}
-
-			gap: 32px;
+			
 		}
 	}
 
@@ -89,6 +92,67 @@
 
 			@include m.media(md) {
 				padding-left: 7px;
+			}
+		}
+	}
+
+	&-link {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 30px;
+
+		@include m.media(md) {
+			margin-top: 60px;
+		}
+	}
+
+	&-items {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		gap: 40px;
+	}
+
+	&-slides {
+		margin-top: 50px;
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		@include m.media(md) {
+			gap: 60px;
+		}
+
+		h2 {
+			display: flex;
+			flex-direction: column;
+			font-family: v.$ff;
+			font-weight: 250;
+			font-style: italic;
+			@include m.text-gradient265();
+
+			span {
+				font-family: v.$ff-corm;
+				font-weight: v.$fw-semibold;
+				font-size: 26px;
+
+				@include m.media(md) {
+					font-size: 52px;
+				}
+			}
+		}
+
+		.swiper {
+			width: 315px;
+			margin: 0;
+			overflow: visible;
+
+			&-slide {
+				.info-card {
+					width: 100%;
+				}
 			}
 		}
 	}

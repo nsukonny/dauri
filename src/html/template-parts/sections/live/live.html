@@ -1,21 +1,11 @@
 <section class="live">
 	<div class="container">
 		<div class="live-wrapper">
-			<div class="live-top">
-				<div class="live-heading">
-					<h1>
-						DAURI
-						<span>
-							LIVE
-						</span>
-						<span class="live-indicator"></span>
-					</h1>
-					<p>
-						Эксклюзивные вести мира роскоши
-					</p>
-				</div>
-				<button class="link border reverse"><span class="line"></span>Предложить новость</button>
+			@@include('./live-top/live-top.html')
+			@@include('./live-items/live-items.html')
+			<div class="live-link">
+				<a href="#" class="link border"><span class="line"></span>Перейти ко всем статьям</a>
 			</div>
+			@@include('./live-slides/live-slides.html')
 		</div>
-	</div>
 </section>
