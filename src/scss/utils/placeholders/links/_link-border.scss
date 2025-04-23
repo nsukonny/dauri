@@ -13,6 +13,17 @@
 	line-height: normal;
 	letter-spacing: 0.84px;
 
+	&.reverse {
+		flex-direction: row-reverse;
+
+		.line {
+			&::before {
+				right: auto;
+				left: 0;
+			}
+		}
+	}
+
 	@include m.media(md) {
 		gap: 10px;
 		font-size: v.$fs-sm;
