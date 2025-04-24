@@ -52,6 +52,26 @@
 		}
 	}
 
+	&.art {
+		h4 {
+			font-family: v.$ff-gotham;
+			font-size: v.$fs-md;
+			font-style: normal;
+			font-weight: v.$fw-regular;
+			line-height: 100%;
+			letter-spacing: -0.32px;
+
+			@include m.media(md) {
+				font-size: 25px;
+			}
+		}
+
+		p {
+			font-family: v.$ff-gotham;
+			font-style: italic;
+		}
+	}
+
 	&.slide {
 		.info-card-bottom {
 			flex-direction: column;
