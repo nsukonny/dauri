@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	headerScroll(header)
 	footerDropdowns()
 	cookiesBanner()
+	toggle('.searchbar', '#search', '.searchbar-close')
 })
 
 const headerScroll = (header) => {
@@ -37,6 +38,35 @@ const headerScroll = (header) => {
 
 	window.addEventListener('scroll', handleScroll)
 }
+
+const toggle = (selector, btn, closeBtnSelector) => {
+	const toggleSelector = document.querySelector(selector)
+	const toggleBtn = document.querySelector(btn)
+	const closeBtn = toggleSelector?.querySelector(closeBtnSelector)
+
+
+	if (!toggleSelector || !toggleBtn) return
+
+	toggleBtn.addEventListener('click', (e) => {
+		e.stopPropagation()
+		toggleSelector.classList.toggle('opened')
+	})
+
+	closeBtn.addEventListener('click', () => {
+		toggleSelector.classList.remove('opened')
+	})
+
+	document.addEventListener('click', (e) => {
+		if (
+			toggleSelector.classList.contains('opened') &&
+			!toggleSelector.contains(e.target) &&
+			!toggleBtn.contains(e.target)
+		) {
+			toggleSelector.classList.remove('opened')
+		}
+	})
+}
+
 
 const footerDropdowns = () => {
 	document.addEventListener('click', e => {

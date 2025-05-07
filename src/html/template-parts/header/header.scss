@@ -212,6 +212,7 @@
 		justify-content: flex-start;
 		margin-right: 52px;
 		height: 100%;
+		position: relative;
 
 		@include m.media(md) {
 			justify-content: flex-end;
