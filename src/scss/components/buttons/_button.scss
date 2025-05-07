@@ -9,7 +9,13 @@
 		// Big size
 		&.big {
 			border-radius: 15px;
-			padding: 23px 33px;
+			padding: 14px 28px;
+			font-size: v.$fs-xs;
+
+			@include m.media(md) {
+				padding: 23px 33px;
+				font-size: v.$fs-sm;
+			}
 		}
 
 		&.full {
