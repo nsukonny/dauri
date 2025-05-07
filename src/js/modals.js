@@ -55,7 +55,7 @@ const toggleModal = () => {
 		btn.addEventListener('click', closeModal)
 	})
 
-	document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
+	document.querySelectorAll('.modal-wrapper').forEach(backdrop => {
 		backdrop.addEventListener('click', closeModal)
 	})
 
