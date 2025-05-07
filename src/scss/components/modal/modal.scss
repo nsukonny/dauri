@@ -11,28 +11,22 @@
 	justify-content: center;
 	align-items: center;
 	padding: 20px;
-	margin: auto 0;
-	z-index: 100;
+	opacity: 0;
+	z-index: -100;
+	overflow-y: auto;
+	visibility: hidden;
+	transition: opacity ease v.$tr, visibility ease v.$tr;
+
+	&.opened {
+		opacity: 1;
+		visibility: visible;
+		z-index: 100;
+	}
 
 	&.big {
 		.modal {
 			max-width: 824px;
 		}
-	}
-
-	&.not-visible {
-		// opacity: 0;
-		// z-index: -100;
-	}
-
-	&.show {
-		opacity: 1;
-		pointer-events: auto;
-	}
-
-	&.fade-out {
-		opacity: 0;
-		pointer-events: none;
 	}
 
 	.modal {
@@ -46,6 +40,7 @@
 		box-shadow: 0px -2.639px 26.386px 0px rgba(0, 0, 0, 0.15);
 		backdrop-filter: blur(1.2902108430862427px);
 		position: relative;
+		margin: auto 0;
 
 		@include m.media(md) {
 			

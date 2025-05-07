@@ -9,7 +9,6 @@ const toggleModal = () => {
 	const openButtons = document.querySelectorAll('[data-modal-target]')
 	let currentModal = null
 	let currentContent = null
-	let closeTimeout = null
 
 	const openModal = (modalId) => {
 		const modal = document.getElementById(modalId)
@@ -19,31 +18,18 @@ const toggleModal = () => {
 		currentModal = modal
 		currentContent = content
 
-		modal.classList.remove('not-visible')
-		modal.classList.remove('fade-out')
-
-		requestAnimationFrame(() => {
-			modal.classList.add('show')
-			disableBodyScroll(content)
-		})
+		modal.classList.add('opened')
+		disableBodyScroll(content)
 	}
 
 	const closeModal = () => {
 		if (!currentModal || !currentContent) return
 
-		modal.classList.remove('show')
-		modal.classList.add('fade-out')
+		currentModal.classList.remove('opened')
 		enableBodyScroll(currentContent)
 
-		clearTimeout(closeTimeout)
-		closeTimeout = setTimeout(() => {
-			if (currentModal) {
-				currentModal.classList.add('not-visible')
-				currentModal.classList.remove('fade-out')
-				currentModal = null
-				currentContent = null
-			}
-		}, 250)
+		currentModal = null
+		currentContent = null
 	}
 
 	openButtons.forEach(button => {
@@ -55,8 +41,12 @@ const toggleModal = () => {
 		btn.addEventListener('click', closeModal)
 	})
 
-	document.querySelectorAll('.modal-wrapper').forEach(backdrop => {
-		backdrop.addEventListener('click', closeModal)
+	document.querySelectorAll('.modal-wrapper').forEach(wrapper => {
+		wrapper.addEventListener('click', event => {
+			if (event.target === wrapper) {
+				closeModal()
+			}
+		})
 	})
 
 	document.addEventListener('keydown', e => {
