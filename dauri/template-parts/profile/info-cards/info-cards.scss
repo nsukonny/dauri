@@ -1,0 +1,55 @@
+@use '../../../../../scss/vars/vars' as v;
+@use '../../../../../scss/mixins/mixins' as m;
+
+.info-cards {
+	padding: 70px 0 40px;
+
+	@include m.media(md) {
+		padding: 100px 0 75px;
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 40px;
+
+		@include m.media(md) {
+			gap: 50px;
+		}
+
+		h2 {
+			display: flex;
+			flex-direction: column;
+			font-family: v.$ff;
+			font-weight: 250;
+			font-style: italic;
+			@include m.text-gradient265();
+
+			span {
+				font-family: v.$ff-corm;
+				font-weight: v.$fw-semibold;
+				font-size: 26px;
+
+				@include m.media(md) {
+					font-size: 52px;
+				}
+			}
+		}
+	}
+
+	&-items {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 25px;
+		justify-content: space-between;
+
+		@include m.media(lg) {
+			flex-wrap: wrap;
+			flex-direction: row;
+			align-items: flex-start;
+		}
+	}
+}

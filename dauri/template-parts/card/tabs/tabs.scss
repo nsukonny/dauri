@@ -1,0 +1,256 @@
+@use '../../../../../scss/vars/vars' as v;
+@use '../../../../../scss/mixins/mixins' as m;
+
+.card-tabs {
+	padding: 40px 0 30px;
+
+	@include m.media(md) {
+		padding: 93px 0 75px;
+	}
+
+	&-buttons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 32px;
+		position: relative;
+		margin-bottom: 48px;
+		white-space: nowrap;
+		overflow-x: auto;
+		border-bottom: 1px solid rgba(26, 26, 26, 0.30);
+		@include m.minimal-scrollbar();
+
+		.tab-button {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			padding-bottom: 12px;
+			position: relative;
+			min-width: 100px;
+			color: v.$black6;
+			text-align: center;
+			font-size: v.$fs-xs;
+			font-style: normal;
+			font-weight: v.$fw-medium;
+			letter-spacing: 0.6px;
+			line-height: 15px;
+			overflow: visible;
+
+			@include m.media(md) {
+				font-size: v.$fs-md;
+				letter-spacing: 0.8px;
+				min-width: 222px;
+			}
+
+			@include m.theme(dark) {
+				color: v.$white8;
+			}
+
+			&::after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 1px;
+				background-color: v.$brown-light;
+				position: absolute;
+				left: 0;
+				border-radius: v.$br20;
+				bottom: 0;
+				transition: width ease v.$tr;
+
+				@include m.media(md) {
+					height: 2px;
+				}
+			}
+
+			&.active {
+				color: v.$blackA;
+
+				&::after {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	.card-tab-content {
+		display: none;
+
+		&.active {
+			display: flex;
+			animation: f-in 1s forwards ease;
+
+			@keyframes f-in {
+				from {
+					opacity: 0;
+				}
+
+				to {
+					opacity: 1;
+				}
+			}
+		}
+
+		.tab-content-inner {
+			width: 100%;
+		}
+
+		.tab-content-desc {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 60px;
+
+			@include m.media(md) {
+				margin-bottom: 125px;
+			}
+
+			.short-desc {
+				max-width: 900px;
+				color: v.$black6;
+				font-size: 10px;
+				font-style: normal;
+				font-weight: v.$fw-regular;
+				line-height: 15px;
+				letter-spacing: 0.6px;
+				margin-bottom: 20px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+
+				&.viewed {
+					overflow: visible;
+					white-space: wrap;
+					text-overflow: none;
+				}
+
+				@include m.media(md) {
+					font-size: v.$fs-md;
+					letter-spacing: 0.8px;
+				}
+
+				@include m.theme(dark) {
+					color: v.$white;
+				}
+			}
+
+			.dropdown {
+				&-open {
+					height: 0;
+					overflow: hidden;
+					transition: height ease v.$tr;
+				}
+
+				&.opened {
+					.show-more {
+						margin-top: 20px;
+					}
+				}
+
+				.hidden-content-texts {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 4px;
+
+					p {
+						color: v.$black6;
+						font-size: 10px;
+						font-style: normal;
+						font-weight: v.$fw-regular;
+						line-height: 15px;
+						letter-spacing: 0.6px;
+
+						@include m.media(md) {
+							font-size: v.$fs-md;
+							letter-spacing: 0.8px;
+						}
+
+						@include m.theme(dark) {
+							color: v.$white8;
+						}
+					}
+				}
+			}
+		}
+
+		.tab-faq {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+
+			&-wrapper {
+				width: 100%;
+				max-width: 900px;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+
+				h2 {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					line-height: normal;
+					font-family: v.$ff;
+					font-weight: v.$fw-light;
+					margin-bottom: 30px;
+					@include m.text-gradient265();
+
+					@include m.media(md) {
+						line-height: 50px;
+						margin-bottom: 70px;
+					}
+
+					span {
+						font-style: italic;
+						font-family: v.$ff-corm;
+						font-weight: v.$fw-semibold;
+						font-size: 26px;
+
+						@include m.media(md) {
+							font-size: 52px;
+						}
+					}
+				}
+			}
+
+			.dropdowns {
+				width: 100%;
+
+				@include m.media(md) {
+					padding-left: 50px;
+				}
+
+				@include m.media(xl) {
+					padding-left: 100px;
+				}
+			}
+		}
+	}
+
+	[data-floating-link] {
+		width: 100%;
+		max-width: 737px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 30;
+		position: fixed;
+		padding: 0 20px;
+		margin: 0 auto;
+		left: 50%;
+		transform: translate(-50%, 120%);
+		bottom: 5%;
+		transition: opacity ease v.$tr, transform ease v.$tr, visibility ease v.$tr;
+
+		&.scrolling {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(-50%, 0);
+		}
+	}
+}

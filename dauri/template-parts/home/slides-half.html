@@ -1,0 +1,89 @@
+<!-- Class only for text visibility. You should delete it!(@@class) -->
+
+<section class="slides-half @@class">
+	<div class="container">
+		<div class="slides-half-wrapper">
+			<div class="slides-half-left">
+				<div class="title-wrapper">
+					<h2 data-aos="fade-up" data-aos-duration="1000">
+						@@title <span>@@span</span>
+					</h2>
+					<p data-aos="fade-up" data-aos-duration="1200">
+						Погружение в наши новинки – это когда часы показывают время, а чувства невозможно описать. 
+					</p>
+				</div>
+				<a href="#" class="link border" data-aos="fade-up" data-aos-duration="1400"><span class="line"></span>@@link</a>
+			</div>
+			<div class="slides-half-right">
+				<div class="swiper slides-half-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/item-card/item-card.html',
+							{
+							'class': 'new',
+							'src': 'img/w-1.png', 'mark': 'AUDEMARS PIGUET', 'price': '49,900', 'model':
+							'Royal Oak',
+							'size': '42 мм', 'state': 'Как новые', 'text': 'Полный комплект', 'indicator': 'В НАЛИЧИИ'
+							}
+							)
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/item-card/item-card.html',
+							{
+							'class': 'new',
+							'src': 'img/w-2.png', 'mark': 'ROLEX', 'price': '30,500', 'model':
+							'Yacht-Master',
+							'size': '42 мм', 'state': 'Как новые', 'text': 'Полный комплект', 'indicator': 'ПО ЗАПРОСУ'
+							}
+							)
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/item-card/item-card.html',
+							{
+							'class': '',
+							'src': 'img/w-1.png', 'mark': 'AUDEMARS PIGUET', 'price': '49,900', 'model':
+							'Royal Oak',
+							'size': '42 мм', 'state': 'Как новые', 'text': 'Полный комплект', 'indicator': 'ПО ЗАПРОСУ'
+							}
+							)
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/item-card/item-card.html',
+							{
+							'class': 'new',
+							'src': 'img/w-1.png', 'mark': 'AUDEMARS PIGUET', 'price': '49,900', 'model':
+							'Royal Oak',
+							'size': '42 мм', 'state': 'Как новые', 'text': 'Полный комплект', 'indicator': 'В НАЛИЧИИ'
+							}
+							)
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/item-card/item-card.html',
+							{
+							'class': 'new',
+							'src': 'img/w-1.png', 'mark': 'AUDEMARS PIGUET', 'price': '49,900', 'model':
+							'Royal Oak',
+							'size': '42 мм', 'state': 'Как новые', 'text': 'Полный комплект', 'indicator': 'В НАЛИЧИИ'
+							}
+							)
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/item-card/item-card.html',
+							{
+							'class': 'new',
+							'src': 'img/w-1.png', 'mark': 'AUDEMARS PIGUET', 'price': '49,900', 'model':
+							'Royal Oak',
+							'size': '42 мм', 'state': 'Как новые', 'text': 'Полный комплект', 'indicator': 'В НАЛИЧИИ'
+							}
+							)
+						</div>
+					</div>
+					@@include('../../../../components/buttons/swiper-button/swiper-button.html', {'direction': 'prev',
+					'type': 'circle'})
+					@@include('../../../../components/buttons/swiper-button/swiper-button.html', {'direction': 'next',
+					'type': 'circle'})
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

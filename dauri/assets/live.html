@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Dauri Live</title>
+	<link rel="stylesheet" href="css/main.min.css">
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="Dauri">
+	<link rel="manifest" href="/site.webmanifest">
+	<!--  -->
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="container">
+				<div class="header-wrapper">
+					<div class="header-left">
+						<div class="header-left-inner">
+							<button class="burger-button">
+								<img src="img/line.svg" alt="">
+								<img src="img/line.svg" alt="">
+							</button>
+							<button class="contact-button" data-modal-target="contact-modal">
+								<img src="img/phone.svg" alt="">
+							</button>
+						</div>
+						<nav class="header-nav">
+							<ul class="header-menu">
+								<li class="menu-item">
+									<a href="/brands.html">БРЕНДЫ</a>
+								</li>
+								<li class="menu-item">
+									<a href="/services.html">УСЛУГИ</a>
+								</li>
+								<li class="menu-item">
+									<a href="/live.html">LIVE</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<a href="/" class="header-logo">
+						<img src="img/logo.svg" alt="">
+					</a>
+					<div class="header-right">
+						<!-- class: header-btn | dark  -->
+<button class="theme-button header-btn">
+	<img class="lightImg hidden" src="/img/moon.svg" alt="">
+	<img class="darkImg" src="/img/sun.svg" alt="">
+	<span class="theme-text">Ночная тема</span>
+</button>
+
+						<div class="header-right-buttons">
+							<button class="hidden-m">
+								<img src="img/heart.svg" alt="">
+							</button>
+							<button id="search">
+								<img src="img/loupe.svg" alt="">
+							</button>
+							<a href="/login.html">
+								<img src="img/user.svg" alt="">
+							</a>
+						</div>
+						<div class="searchbar" id="searchbar">
+	<div class="searchbar-inner">
+		<div class="searchbar-top">
+			<div class="searchbar-input-wrapper">
+				<input type="search" placeholder="Название, референс или бренд">
+				<button class="find"><img src="img/loupe.svg" alt=""></button>
+			</div>
+			<button class="searchbar-close">
+				<img src="img/close.svg" alt="">
+			</button>
+		</div>
+		<div class="searchbar-result">
+			<a class="fav" href="#">
+				<img src="img/heart.svg" alt="">
+				ПЕРЕЙТИ В ИЗБРАННОЕ
+			</a>
+			<div class="searchbar-tabs">
+				<div class="searchbar-tabs-buttons">
+					<div class="searchbar-buttons-inner">
+						<button class="searchbar-tab-btn active" data-tab-button data-id="1">ШВЕЙЦАРСКИЕ ЧАСЫ</button>
+						<button class="searchbar-tab-btn" data-tab-button data-id="2">ЮВЕЛИРНЫЕ ИЗДЕЛИЯ</button>
+						<button class="searchbar-tab-btn" data-tab-button data-id="3">ЭКСКЛЮЗИВНЫЕ ПРЕДЛОЖЕНИЯ</button>
+					</div>
+				</div>
+				<div class="searchbar-tab-content active" data-tab-content="1">
+					<div class="searchbar-latest">
+						<h4>Недавние запросы:</h4>
+						<div class="latest-items">
+							<div class="searchbar-item">
+								<div class="searchbar-item-info">
+									<div class="searchbar-item-img">
+										<img src="img/rolex.png" alt="">
+									</div>
+									<span class="serial-num">
+										15500ST.OO.1220ST.02
+									</span>
+									<span class="mark">Audemar’s Piguet</span>
+								</div>
+								<button class="item-close"><img src="img/close.svg" alt=""></button>
+							</div>
+						</div>
+					</div>
+					<div class="searchbar-result">
+						<div class="searchbar-item res">
+							<span class="searchbar-mark"><strong>Rol</strong>ex</span>
+							<span class="searchbar-type">Бренд</span>
+							<button class="item-close"><img src="img/close.svg" alt=""></button>
+						</div>
+						<div class="searchbar-item res">
+							<span class="searchbar-mark"><strong>Rol</strong>ex</span>
+							<span class="searchbar-type">Коллекции</span>
+							<button class="item-close"><img src="img/close.svg" alt=""></button>
+						</div>
+					</div>
+				</div>
+				<div class="searchbar-tab-content" data-tab-content="2">
+					<div class="searchbar-result">
+						<div class="searchbar-item res">
+							<span class="searchbar-mark">Rolex</span>
+							<span class="searchbar-type">Бренд</span>
+						</div>
+						<div class="searchbar-item res">
+							<span class="searchbar-mark">Rolex</span>
+							<span class="searchbar-type">Коллекции</span>
+						</div>
+					</div>
+				</div>
+				<div class="searchbar-tab-content" data-tab-content="3">
+					<div class="searchbar-content-links">
+						<a href="#">
+							<img src="img/fire.svg" alt="">
+							<span>VIP OFFERS</span>
+						</a>
+						<a href="#">
+							<img src="img/new.svg" alt="">
+							<span>НОВИНКИ</span>
+						</a>
+						<a href="#">
+							<img src="img/sale.svg" alt="">
+							<span>СКИДКИ</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+<main>
+	<section class="live">
+	<div class="container">
+		<div class="live-wrapper">
+			<div class="live-top">
+	<div class="live-heading">
+		<h1>
+			DAURI
+			<span>
+				LIVE
+			</span>
+			<span class="live-indicator"></span>
+		</h1>
+		<p>
+			Эксклюзивные вести мира роскоши
+		</p>
+	</div>
+	<button class="link border reverse" data-modal-target="article-modal"><span class="line"></span>Предложить новость</button>
+</div>
+			<div class="live-items">
+	<div class="info-card lg" data-aos="fade-up" data-aos-duration="1000">
+		<div class="info-card-inner">
+			<div class="info-card-img" data-aos="fade-up" data-aos-duration="1200">
+				<img src="/img/l1.jpg" alt="">
+			</div>
+			<h4 data-aos="fade-up" data-aos-duration="1400">
+				ROLEX И ЧЕМПИОН
+				<span>УИМБЛДОНА</span>
+			</h4>
+			<p data-aos="fade-up" data-aos-duration="1800">
+				Впервые сыгранный в 1877 году Уимблдон является воплощением элегантности и традиций. А
+				Rolex, в свою очередь, как влиятельный часовой дом, поддерживает приверженность теннисному
+				совершенству и сохранению наследия турнира.
+			</p>
+			<div class="info-card-bottom">
+				<a class="link border" href="@@href" data-aos="fade-up" data-aos-duration="2000">
+					<span class="line"></span> Просмотреть LIVE
+				</a>
+				<span class="publicated">1 месяц назад</span>
+			</div>
+		</div>
+	</div>
+	<div class="info-card lg" data-aos="fade-up" data-aos-duration="1000">
+		<div class="info-card-inner">
+			<div class="info-card-img" data-aos="fade-up" data-aos-duration="1200">
+				<img src="/img/l2.jpg" alt="">
+			</div>
+			<h4 data-aos="fade-up" data-aos-duration="1400">
+				САМЫЕ <br> ЗАПОМИНАЮЩИЕСЯ
+				<span>ВЫХОДЫ ЗВЕЗД</span>
+			</h4>
+			<p data-aos="fade-up" data-aos-duration="1800">
+				Впервые сыгранный в 1877 году Уимблдон является воплощением элегантности и традиций. А
+				Rolex, в свою очередь, как влиятельный часовой дом, поддерживает приверженность теннисному
+				совершенству и сохранению наследия турнира.
+			</p>
+			<div class="info-card-bottom">
+				<a class="link border" href="@@href" data-aos="fade-up" data-aos-duration="2000">
+					<span class="line"></span> Просмотреть LIVE
+				</a>
+				<span class="publicated">1 месяц назад</span>
+			</div>
+		</div>
+	</div>
+	<div class="info-card lg art" data-aos="fade-up" data-aos-duration="1000">
+		<div class="info-card-inner">
+			<div class="info-card-img" data-aos="fade-up" data-aos-duration="1200">
+				<img src="/img/l3.jpg" alt="">
+			</div>
+			<h4 data-aos="fade-up" data-aos-duration="1400">
+				Федерер размышляет:
+			</h4>
+			<p data-aos="fade-up" data-aos-duration="1800">
+				<i>
+					По традиции, действующий чемпион в мужском одиночном разряде Карлос Алькарас начнет игры
+					на Центральном корте в 13:30 (местное время) в понедельник 1 июля. Rolex Testimonee
+					Алькарас, недавно выигравший свой третий титул Большого шлема на Ролан Гаррос, сказал:
+				</i>
+			</p>
+			<p data-aos="fade-up" data-aos-duration="1800">
+				<i>
+					"Честно говоря, тот финал в прошлом году, когда все мои близкие были рядом, и атмосфера
+					вокруг всего дня, был невероятным моментом. <br>
+					Иногда преодолеть свои эмоции казалось более сложной задачей, <br>
+					чем выиграть матч. Победить, представляя Rolex, было еще более особенным, потому что
+					этот бренд является важной частью Уимблдона. <br>
+					Я с нетерпением жду первой игры на Центральном корте на следующей неделе. Это
+					единственный турнир, где действующий чемпион начинает игру
+					в понедельник, поэтому это большая честь."
+				</i>
+			</p>
+			<p data-aos="fade-up" data-aos-duration="1800">
+				<i>
+					Центральный корт Уимблдона на протяжении более века был местом легендарных выступлений и
+					соперничеств. 20 лет назад Роджер Федерер вернулся на этот почитаемый теннисный театр,
+					чтобы успешно защитить
+					свой первый титул Уимблдона. Войдя в семью Rolex в 2001 году, швейцарский маэстро
+					продолжил выдающуюся карьеру, выиграв рекордные восемь одиночных титулов Уимблдона и 20
+					турниров Большого шлема.
+				</i>
+			</p>
+			<div class="info-card-bottom">
+				<a class="link border" href="@@href" data-aos="fade-up" data-aos-duration="2000">
+					<span class="line"></span> Просмотреть LIVE
+				</a>
+				<span class="publicated">1 месяц назад</span>
+			</div>
+		</div>
+	</div>
+	<div class="info-card lg art" data-aos="fade-up" data-aos-duration="1000">
+		<div class="info-card-inner">
+			<div class="info-card-img" data-aos="fade-up" data-aos-duration="1200">
+				<img src="/img/l4.jpg" alt="">
+			</div>
+			<h4 data-aos="fade-up" data-aos-duration="1400">
+				Уимблдон — единственный из четырех турниров Большого шлема, который проводится на траве.
+			</h4>
+			<p data-aos="fade-up" data-aos-duration="1800">
+				<i>
+					"С самого первого раза, когда я вышел на корт в клубе Всей Англии в качестве юниора, я
+					почувствовал, что Уимблдон особенный. Когда ты оглядываешься и видишь корону Rolex, это
+					дает ощущение уюта, словно ты дома. Я помню, как сказал, что поднятие трофея было похоже
+					на удержание солнца, потому что он золотой и сиял в тот прекрасный день в Лондоне. Он
+					кажется особенно тяжелым из-за веса истории, которую он несет."
+				</i>
+			</p>
+			<p data-aos="fade-up" data-aos-duration="1800">
+				<i>
+					Среди тех, кто будет мешать Алькарасу повторить свой успех, есть несколько людей от
+					Rolex, включая Тейлора Фритца, Хольгера Руне, Бена Шелтона, Янника Синнера и Стефаноса
+					Циципаса. После недавней исторической победы на четвертом титуле Ролан Гаррос, Ига
+					Свёнтек будет бороться за трофей Венус Роузвотер вместе с другими, такими как Коко
+					Гауфф, Каролин Возняцки и Циньвень Чжэн в женском одиночном разряде. Этот год также
+					ознаменован важным моментом для чемпионки 2018 года Анжелики Кербер, которая
+					возвращается на Уимблдон впервые после того, как стала матерью.
+				</i>
+			</p>
+			<div class="info-card-bottom">
+				<a class="link border" href="@@href" data-aos="fade-up" data-aos-duration="2000">
+					<span class="line"></span> Просмотреть LIVE
+				</a>
+				<span class="publicated">1 месяц назад</span>
+			</div>
+		</div>
+	</div>
+	<div class="info-card lg art" data-aos="fade-up" data-aos-duration="1000">
+		<div class="info-card-inner">
+			<div class="info-card-img" data-aos="fade-up" data-aos-duration="1200">
+				<img src="/img/l5.jpg" alt="">
+			</div>
+			<h4 data-aos="fade-up" data-aos-duration="1400">
+				Трехкратная чемпионка турниров Большого шлема и амбассадор от Rolex с 2017 года, Кербер
+				говорит:
+			</h4>
+			<p data-aos="fade-up" data-aos-duration="1800">
+				<i>
+					"Я с нетерпением жду соревнований, ощущения атмосферы от зрителей и возможности играть с
+					лучшими игроками мира <br>
+					Для женщин в любом спорте важно чувствовать себя желанными и понимать, что если мечтать
+					и продолжать тренироваться, можно достичь великих вещей. Победа на Уимблдоне в 2018 году
+					показала, что упорный труд и настойчивость окупаются — это действительно была мечта,
+					ставшая реальностью."
+				</i>
+			</p>
+			<p data-aos="fade-up" data-aos-duration="1800">
+				<i>
+					Требуя тщательной круглогодичной подготовки, его безупречные газоны стригутся ежедневно
+					до точной высоты в восемь миллиметров; поверхность, предназначенная для избранных, <br>
+					кто имеет привилегию держать ракетку на этих кортах.
+					Чтобы осуществить свои мечты и стать чемпионом Уимблдона,
+					игроки должны демонстрировать высочайшее мастерство, скорость
+					и техническую точность на протяжении двух недель тенниса.
+				</i>
+			</p>
+			<p data-aos="fade-up" data-aos-duration="1800">
+				<i>
+					Впервые сыгранный в 1877 году, Уимблдон является воплощением элегантности и традиций, и
+					как Официальный Хронометрист,
+					Rolex поддерживает его приверженность теннисному совершенству
+					и сохранению наследия турнира.
+				</i>
+			</p>
+			<div class="info-card-bottom">
+				<a class="link border" href="@@href" data-aos="fade-up" data-aos-duration="2000">
+					<span class="line"></span> Просмотреть LIVE
+				</a>
+				<span class="publicated">1 месяц назад</span>
+			</div>
+		</div>
+	</div>
+</div>
+			<div class="live-link">
+				<a href="#" class="link border"><span class="line"></span>Перейти ко всем статьям</a>
+			</div>
+			<div class="live-slides">
+	<h2>ПОДОБРАЛИ ДЛЯ ВАС</h2>
+	<div class="swiper live-swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="info-card slide" data-aos="fade-up" data-aos-duration="1000">
+					<div class="info-card-inner">
+						<div class="info-card-img" data-aos="fade-up" data-aos-duration="1200">
+							<img src="/img/l1.jpg" alt="">
+						</div>
+						<h4 data-aos="fade-up" data-aos-duration="1400">
+							ROLEX И ЧЕМПИОН
+							<span>УИМБЛДОНА</span>
+						</h4>
+						<p data-aos="fade-up" data-aos-duration="1800">
+							Впервые сыгранный в 1877 году Уимблдон является воплощением элегантности и традиций. А
+							Rolex, в свою очередь, как влиятельный часовой дом, поддерживает приверженность теннисному
+							совершенству и сохранению наследия турнира.
+						</p>
+						<div class="info-card-bottom">
+							<a class="link border" href="@@href" data-aos="fade-up" data-aos-duration="2000">
+								<span class="line"></span> Просмотреть LIVE
+							</a>
+							<span class="publicated">1 месяц назад</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="info-card slide" data-aos="fade-up" data-aos-duration="1000">
+					<div class="info-card-inner">
+						<div class="info-card-img" data-aos="fade-up" data-aos-duration="1200">
+							<img src="/img/l1.jpg" alt="">
+						</div>
+						<h4 data-aos="fade-up" data-aos-duration="1400">
+							ROLEX И ЧЕМПИОН
+							<span>УИМБЛДОНА</span>
+						</h4>
+						<p data-aos="fade-up" data-aos-duration="1800">
+							Впервые сыгранный в 1877 году Уимблдон является воплощением элегантности и традиций. А
+							Rolex, в свою очередь, как влиятельный часовой дом, поддерживает приверженность теннисному
+							совершенству и сохранению наследия турнира.
+						</p>
+						<div class="info-card-bottom">
+							<a class="link border" href="@@href" data-aos="fade-up" data-aos-duration="2000">
+								<span class="line"></span> Просмотреть LIVE
+							</a>
+							<span class="publicated">1 месяц назад</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="info-card slide" data-aos="fade-up" data-aos-duration="1000">
+					<div class="info-card-inner">
+						<div class="info-card-img" data-aos="fade-up" data-aos-duration="1200">
+							<img src="/img/l1.jpg" alt="">
+						</div>
+						<h4 data-aos="fade-up" data-aos-duration="1400">
+							ROLEX И ЧЕМПИОН
+							<span>УИМБЛДОНА</span>
+						</h4>
+						<p data-aos="fade-up" data-aos-duration="1800">
+							Впервые сыгранный в 1877 году Уимблдон является воплощением элегантности и традиций. А
+							Rolex, в свою очередь, как влиятельный часовой дом, поддерживает приверженность теннисному
+							совершенству и сохранению наследия турнира.
+						</p>
+						<div class="info-card-bottom">
+							<a class="link border" href="@@href" data-aos="fade-up" data-aos-duration="2000">
+								<span class="line"></span> Просмотреть LIVE
+							</a>
+							<span class="publicated">1 месяц назад</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="info-card slide" data-aos="fade-up" data-aos-duration="1000">
+					<div class="info-card-inner">
+						<div class="info-card-img" data-aos="fade-up" data-aos-duration="1200">
+							<img src="/img/l1.jpg" alt="">
+						</div>
+						<h4 data-aos="fade-up" data-aos-duration="1400">
+							ROLEX И ЧЕМПИОН
+							<span>УИМБЛДОНА</span>
+						</h4>
+						<p data-aos="fade-up" data-aos-duration="1800">
+							Впервые сыгранный в 1877 году Уимблдон является воплощением элегантности и традиций. А
+							Rolex, в свою очередь, как влиятельный часовой дом, поддерживает приверженность теннисному
+							совершенству и сохранению наследия турнира.
+						</p>
+						<div class="info-card-bottom">
+							<a class="link border" href="@@href" data-aos="fade-up" data-aos-duration="2000">
+								<span class="line"></span> Просмотреть LIVE
+							</a>
+							<span class="publicated">1 месяц назад</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		</div>
+</div></section>
+</main>
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer-wrapper">
+			<a class="footer-logo" href="/">
+				<img alt="" src="/img/logo-full.svg">
+			</a>
+			<div class="footer-cols">
+				<div class="footer-col">
+					<div class="col-title">
+						<span>ЧАСЫ</span>
+						<span class="lines">
+							<img alt="" class="line-1" src="/img/line.svg">
+							<img alt="" class="line-2" src="/img/line.svg">
+						</span>
+					</div>
+					<ul class="menu">
+						<li class="menu-item">
+							<a href="#">КАТАЛОГ ЧАСОВ</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">ПРОДАТЬ ЧАСЫ</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">TRADE-IN</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">VIP ПРЕДЛОЖЕНИЯ</a>
+						</li>
+						<li class="menu-item highlight">
+							<a href="#">ЧАСЫ НА ЗАКАЗ</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<div class="col-title">
+						<span>УСЛУГИ</span>
+						<span class="lines">
+							<img alt="" class="line-1" src="/img/line.svg">
+							<img alt="" class="line-2" src="/img/line.svg">
+						</span>
+					</div>
+					<ul class="menu">
+						<li class="menu-item">
+							<a href="#">СКУПКА</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">ТРЕЙД-ИН</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">РЕМОНТ</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">ЭКСПЕРТИЗА</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">ОНЛАЙН ОЦЕНКА</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">ПОДПИСКА НА ГАРАНТИЮ</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<div class="footer-buttons">
+						<!-- class: header-btn | dark  -->
+<button class="theme-button dark">
+	<img class="lightImg hidden" src="/img/moon.svg" alt="">
+	<img class="darkImg" src="/img/sun.svg" alt="">
+	<span class="theme-text">Ночная тема</span>
+</button>
+
+						<!-- class: dark -->
+
+<button class="button-ico dark">
+	<img src="img/world.svg" alt="">
+	<span>ЯЗЫК/РЕГИОН</span>
+</button>
+					</div>
+					<div class="footer-socials">
+						<a href="#" target="_blank">
+							<img alt="" src="/img/youtoube.svg">
+						</a>
+						<a href="#" target="_blank">
+							<img alt="" src="/img/instagram.svg">
+						</a>
+						<a href="#" target="_blank">
+							<img alt="" src="/img/whatsapp.svg">
+						</a>
+						<a href="#" target="_blank">
+							<img alt="" src="/img/tg.svg">
+						</a>
+					</div>
+				</div>
+				<div class="footer-col">
+					<div class="col-title">
+						<span>КОМПАНИЯ</span>
+						<span class="lines">
+							<img alt="" class="line-1" src="/img/line.svg">
+							<img alt="" class="line-2" src="/img/line.svg">
+						</span>
+					</div>
+					<ul class="menu">
+						<li class="menu-item">
+							<a href="#">О НАС</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">УСЛОВИЯ ПОЛЬЗОВАНИЯ</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<div class="col-title">
+						<span>КОНТАКТЫ</span>
+						<span class="lines">
+							<img alt="" class="line-1" src="/img/line.svg">
+							<img alt="" class="line-2" src="/img/line.svg">
+						</span>
+					</div>
+					<div class="footer-col-contacts">
+						<ul class="menu numbers">
+							<li class="menu-item">
+								<a href="tel: +7 985 508 08 08">+7 985 508 08 08 </a>
+							</li>
+							<li class="menu-item">
+								<a href="tel: +7 989 588 85 85">+7 989 588 85 85 </a>
+							</li>
+						</ul>
+						<ul class="menu messengers">
+							<li class="menu-item">
+								<a href="#" target="_blank">
+									<img alt="" src="/img/whatsapp.svg">
+								</a>
+							</li>
+							<li class="menu-item">
+								<a href="#" target="_blank">
+									<img alt="" src="/img/tg-no-border.svg">
+								</a>
+							</li>
+							<li class="menu-item">
+								<a href="#" target="_blank">
+									<img alt="" src="/img/instagram.svg">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>
+				© 2010-2025, <span>DAURI CLUB</span>. Все права защищены.
+			</p>
+			<p>
+				DESIGNED BY <br>
+				<span>KHAMOKOV AGENCY</span>
+			</p>
+		</div>
+	</div>
+</footer>
+<!-- Global modals, banners, toasts -->
+<div id="cookie-banner" class="cookie-banner">
+	<div class="cookie-banner-wrapper">
+		<p>Мы используем <a href="/privacy.html">cookie.</a> </p>
+		<button id="cookie-btn" class="button gradient">Хорошо</button>
+	</div>
+</div>
+<div id="hightlight-banner" class="highlight-banner">
+	<div class="highlight-banner-wrapper">
+		<button class="highlight-close">
+			<img src="img/close.svg" alt="">
+		</button>
+		<div class="highlight-inner">
+			<div class="highlight-title">
+				БУДЬ В КУРСЕ МИРА <span>РОСКОШИ!</span>
+			</div>
+			<p>Получайте эксклюзивные предложения и следите за миром роскоши в нашем TG канале!</p>
+		</div>
+		<a id="highlight-btn" href="/" class="button gradient">ОЩУТИТЬ ПРИВИЛЕГИИ</a>
+	</div>
+</div>
+<!-- <button data-modal-target="article-modal"></button> For call modal - use data-modal target attr -->
+
+<div id="article-modal" class="modal-wrapper big">
+	<div class="modal">
+		<div class="modal-content">
+			<button class="modal-close" aria-label="Close" alt="Close button">
+				<img src="img/close.svg" alt="">
+			</button>
+			<h2>
+				ПРЕДЛОЖИТЕ ТЕМУ
+				<span>ДЛЯ СТАТЬИ</span>
+			</h2>
+			<p class="i">
+				Какой темой Вы хотите поделиться с участниками клуба?
+			</p>
+			<form>
+				<fieldset>
+					<div class="input-wrapper">
+						<label for="subject">
+							ТЕМА
+						</label>
+						<input id="subject" type="text" placeholder="Введите тематику своей новости">
+					</div>
+					<div class="input-wrapper">
+						<label for="info">
+							ИНФОРМАЦИЯ
+						</label>
+						<input id="info" type="text" placeholder="Введите основную информацию, которой Вы обладаете по этой теме">
+					</div>
+				</fieldset>
+				<button class="button gradient big">ПРЕДЛОЖИТЬ</button>
+			</form>
+		</div>
+	</div>
+
+</div>
+<!-- <button data-modal-target="contact-modal"></button> For call modal - use data-modal target attr.-->
+<!-- a-c class for modal content(for thank you modal). To avoid layout dublicates -->
+<div id="success-modal" class="modal-wrapper big">
+	<div class="modal">
+		<div class="modal-content">
+			<button class="modal-close" aria-label="Close" alt="Close button">
+				<img src="img/close.svg" alt="">
+			</button>
+			<h2>
+				ЗАПРОС <span>ПРИНЯТ!!</span>
+			</h2>
+			<p class="i">
+				Мы свяжемся с Вами в ближайшее время.
+			</p>
+			<a class="button gradient big" href="/">ВЕРНУТЬСЯ НА ГЛАВНУЮ</a>
+		</div>
+	</div>
+
+</div>
+<!-- <button data-modal-target="success-modal"></button> For call modal - use data-modal target attr.-->
+<!-- a-c class for modal content(for thank you modal). For avoid layout dublicates -->
+<div id="contact-modal" class="modal-wrapper sm fc">
+	<div class="modal">
+		<div class="modal-content">
+			<button class="modal-close" aria-label="Close" alt="Close button">
+				<img src="img/close.svg" alt="">
+			</button>
+			<img class="phone" src="img/phone.svg" alt="">
+			<div class="phones">
+				<a href="tel:+7 985 508 08 08">
+					+7 985 508 08 08 
+				</a>
+				<a href="tel:+7 989 588 85 85">
+					+7 989 588 85 85 
+				</a>
+			</div>
+			<div class="contact-socials">
+				<a href="#"><img src="img/instagram.svg" alt=""></a>
+				<a href="#"><img src="img/whatsapp.svg" alt=""></a>
+				<a href="#"><img src="img/tg-no-border.svg" alt=""></a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- SVG GRADIENT DEFS FOR HEART. Don't REMOVE IT -->
+<svg fill="none" height="0" style="opacity: 0; position: absolute; z-index:-10" viewBox="0 0 39 39" width="0" xmlns="http://www.w3.org/2000/svg">
+	<defs>
+		<linearGradient gradientUnits="userSpaceOnUse" id="heart-grad" x1="21.7442" x2="34.8117" y1="2.89462" y2="54.2348">
+			<stop offset="0.15" stop-color="#F6BA83"/>
+			<stop offset="0.49" stop-color="#915D47"/>
+		</linearGradient>
+	</defs>
+</svg>
+</div><!-- .wrapper -->
+
+<script src="/js/main.min.js"></script>
+</body>
+
+</html>

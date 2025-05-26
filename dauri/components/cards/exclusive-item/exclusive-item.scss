@@ -1,0 +1,132 @@
+@use '../../../../scss/vars/vars.scss' as v;
+@use '../../../../scss/mixins/mixins' as m;
+
+.exclusive-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 10px;
+
+	@include m.media(sm) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	@include m.media(lg) {
+		gap: 35px;
+	}
+
+	&-left {
+		width: 170px;
+	}
+
+	&-right {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+
+		@include m.media(md) {
+			justify-content: flex-start;
+		}
+	}
+
+	&-img {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+
+		img {
+			width: auto;
+			height: 164px;
+			object-fit: cover;
+
+			@include m.media(md) {
+				height: 201px;
+			}
+		}
+	}
+
+	&-status {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 8px;
+		margin-bottom: 10px;
+		background-color: rgba(107, 107, 107, 0.05);
+		box-shadow: 0px -1.65px 16.505px 0px rgba(0, 0, 0, 0.15);
+		backdrop-filter: blur(0.6px);
+		border-radius: v.$br20;
+
+		@include m.theme(dark) {
+			background-color: rgba(255, 255, 255, 0.10);
+		}
+
+		span {
+			font-size: 10px;
+			font-style: normal;
+			font-weight: v.$fw-medium;
+			line-height: 120%;
+			@include m.text-gradient();
+
+			@include m.media(md) {
+				font-size: v.$fs-xs;
+			}
+		}
+	}
+
+	&-name {
+		color: v.$black8;
+		font-size: v.$fs-xs;
+		font-style: normal;
+		font-weight: v.$fw-medium;
+		line-height: normal;
+		letter-spacing: 0.6px;
+		margin-bottom: 10px;
+		text-transform: uppercase;
+
+		@include m.media(md) {
+			font-size: v.$fs-md;
+			margin-bottom: 15px;
+			letter-spacing: 0.8px;
+		}
+
+		@include m.theme(dark) {
+			color: rgba(255, 255, 255, 0.80);
+		}
+	}
+
+	&-desc {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 10px;
+
+		@include m.media(md) {
+			margin-bottom: 20px;
+			justify-content: flex-start;
+		}
+
+		p {
+			color: v.$black8;
+			font-size: v.$fs-xs;
+			font-style: normal;
+			font-weight: v.$fw-light;
+			line-height: normal;
+			letter-spacing: 0.6px;
+
+			@include m.media(md) {
+				font-size: v.$fs-md;
+				letter-spacing: 0.8px;
+			}
+
+			@include m.theme(dark) {
+				color: rgba(255, 255, 255, 0.80);
+			}
+		}
+	}
+}
