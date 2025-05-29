@@ -1,0 +1,19 @@
+<?php
+/**
+ * Button with icon component
+ *
+ * @param string $direction Direction of the swiper button, either 'prev' or 'next'.
+ * @param string $type Type of the button, either 'circle'.
+ */
+
+$direction = $args['direction'] ?? 'prev';
+$type      = $args['type'] ?? 'circle';
+?>
+
+<button class="swiper-<?php echo esc_attr( $direction ); ?> <?php echo esc_attr( $type ); ?> flex a-c j-c">
+    <svg fill="none" height="33" viewBox="0 0 16 33" width="16" xmlns="http://www.w3.org/2000/svg">
+        <path
+                d="M3.97122 9.91725C3.58165 9.52768 3.5818 8.89601 3.97155 8.50662C4.361 8.11754 4.99207 8.11763 5.3814 8.50683L12.3611 15.4841C12.4849 15.6072 12.5833 15.7536 12.6503 15.9148C12.7174 16.076 12.752 16.2489 12.752 16.4235C12.752 16.5982 12.7174 16.7711 12.6503 16.9323C12.5833 17.0935 12.4849 17.2399 12.3611 17.363L5.38134 24.3439C4.99212 24.7332 4.36101 24.7333 3.97176 24.344C3.58256 23.9548 3.58253 23.3238 3.9717 22.9346L9.77445 17.1307C10.1639 16.7413 10.1638 16.1099 9.77438 15.7204L3.97122 9.91725Z"
+                fill="black"/>
+    </svg>
+</button>

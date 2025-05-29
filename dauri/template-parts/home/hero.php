@@ -1,5 +1,6 @@
 <?php
-$hero_slider = get_field( 'hero_slider', 'option' );
+$home_page_id = get_option( 'page_on_front' );
+$hero_slider  = get_field( 'hero_slider', $home_page_id );
 if ( ! $hero_slider ) {
 	return;
 }

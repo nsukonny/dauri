@@ -14,7 +14,7 @@ $logo_url  = get_field( 'logo_url', 'option' ) ?? THEME_URL . '/assets/img/logo-
             <div class="header-left">
                 <div class="header-left-inner">
                     <button class="burger-button">
-                        <img src="<?php echo esc_attr( THEME_URL ); ?>/assets<?php echo esc_attr( THEME_URL ); ?>/assets/img/line.svg"
+                        <img src="<?php echo esc_attr( THEME_URL ); ?>/assets/img/line.svg"
                              alt="">
                         <img src="<?php echo esc_attr( THEME_URL ); ?>/assets/img/line.svg" alt="">
                     </button>
