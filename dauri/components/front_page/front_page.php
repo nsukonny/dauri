@@ -5,6 +5,7 @@
 
 get_template_part( 'template-parts/home/hero' );
 get_template_part( 'template-parts/home/new-products' );
+get_template_part( 'template-parts/home/exclusive' );
 /**
  * @@include( 'template-parts/sections/home/hero/hero.html' )
  * @@include( 'template-parts/sections/home/slides-half/slides-half.html', {'class': '','title': 'Новинки', 'span': '', 'link': 'Открыть выбор'} )

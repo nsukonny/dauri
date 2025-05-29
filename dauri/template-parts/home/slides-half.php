@@ -23,7 +23,7 @@ $link        = $args['link'] ?? __( 'Открыть выбор' );
 $link_url    = $args['link_url'] ?? '/';
 $class       = $args['class'] ?? '';
 ?>
-<section class="slides-half @@class">
+<section class="slides-half <?php echo esc_attr( $class ); ?>">
     <div class="container">
         <div class="slides-half-wrapper">
             <div class="slides-half-left">
