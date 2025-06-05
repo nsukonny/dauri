@@ -1,0 +1,54 @@
+<section class="profile-collection">
+	<div class="container">
+		<div class="profile-collection-wrapper" data-aos="fade-in" data-aos-duration="1000">
+			<div class="profile-collection-top">
+				<h2>
+					Моя
+					<span>
+						коллекция
+					</span>
+				</h2>
+				<div class="profile-collection-desc">
+					<p>
+						Выберите часы, чтобы узнать их детали и получить доступ к вашим привилегированным услугам.
+					</p>
+					<button class="button gradient sm">ДОБАВИТЬ ЧАСЫ</button>
+				</div>
+			</div>
+			<div class="profile-collection-items" data-aos="fade-up" data-aos-duration="1400">
+				<div class="swiper collection-items-swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/collection-item/collection-item.html',
+								{'src': '/img/ci1.png', 'date1': '28 декабря 2024 года', 'price1': '34.000$', 'date2': '28 декабря 2026 года', 'price2': '39.500$'})
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/collection-item/collection-item.html',
+								{'src': '/img/ci2.png', 'date1': '28 декабря 2024 года', 'price1': '34.000$', 'date2': '28 декабря 2026 года', 'price2': '39.500$'})
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/collection-item/collection-item.html',
+								{'src': '/img/ci1.png', 'date1': '28 декабря 2024 года', 'price1': '34.000$', 'date2': '28 декабря 2026 года', 'price2': '39.500$'})
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/collection-item/collection-item.html',
+								{'src': '/img/ci2.png', 'date1': '28 декабря 2024 года', 'price1': '34.000$', 'date2': '28 декабря 2026 года', 'price2': '39.500$'})
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/collection-item/collection-item.html',
+								{'src': '/img/ci1.png', 'date1': '28 декабря 2024 года', 'price1': '34.000$', 'date2': '28 декабря 2026 года', 'price2': '39.500$'})
+						</div>
+						<div class="swiper-slide">
+							@@include('../../../../components/cards/collection-item/collection-item.html',
+								{'src': '/img/ci2.png', 'date1': '28 декабря 2024 года', 'price1': '34.000$', 'date2': '28 декабря 2026 года', 'price2': '39.500$'})
+						</div>
+					</div>
+					@@include('../../../../components/buttons/swiper-button/swiper-button.html', {'direction': 'prev',
+					'type': 'circle'})
+					@@include('../../../../components/buttons/swiper-button/swiper-button.html', {'direction': 'next',
+					'type': 'circle'})
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
