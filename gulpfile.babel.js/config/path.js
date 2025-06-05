@@ -1,5 +1,5 @@
 const pathSrc   = './src'
-const pathDest  = './assets'
+const pathDest  = './dauri/assets'
 
 export default {
 	root	: pathDest,

@@ -1,0 +1,83 @@
+@use '../../../scss/vars/vars.scss' as v;
+@use '../../../scss/mixins/mixins' as m;
+
+.c-checkbox {
+	width: 20px;
+	height: 20px;
+	aspect-ratio: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	@include m.media(md) {
+		width: 30px;
+		height: 30px;
+	}
+}
+.checkbox {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	aspect-ratio: 1;
+	cursor: pointer;
+
+	input[type="checkbox"] {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		width: 0;
+		height: 0;
+		visibility: hidden;
+	}
+
+	&::before {
+		content: '';
+		display: block;
+		width: 16px;
+		height: 16px;
+		aspect-ratio: 1;
+		border: 2px solid v.$black8;
+		border-radius: 5px;
+
+		@include m.media(md) {
+			width: 26px;
+			height: 26px;
+			border-radius: 7.5px;
+		}
+
+		@include m.theme(dark) {
+			border-color: v.$white8;
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		display: block;
+		width: 10px;
+		height: 10px;
+		transform: translate(-50%, -50%);
+		border-radius: 2px;
+		opacity: 0;
+		background: v.$grad-main;
+		transition: opacity ease v.$tr;
+
+		@include m.media(md) {
+			width: 16px;
+			height: 16px;
+			border-radius: 4px;
+		}
+	}
+}
+
+.c-checkbox-input:checked + .checkbox::after {
+	opacity: 1
+}
+
+

@@ -1,0 +1,95 @@
+<?php
+
+?>
+<div class="searchbar" id="searchbar">
+    <div class="searchbar-inner">
+        <div class="searchbar-top">
+            <div class="searchbar-input-wrapper">
+                <input type="search" placeholder="Название, референс или бренд">
+                <button class="find"><img src="<?php echo esc_attr( THEME_URL ); ?>/assets/img/loupe.svg" alt="">
+                </button>
+            </div>
+            <button class="searchbar-close">
+                <img src="<?php echo esc_attr( THEME_URL ); ?>/assets/img/close.svg" alt="">
+            </button>
+        </div>
+        <div class="searchbar-result">
+            <a class="fav" href="#">
+                <img src="<?php echo esc_attr( THEME_URL ); ?>/assets/img/heart.svg" alt="">
+                ПЕРЕЙТИ В ИЗБРАННОЕ
+            </a>
+            <div class="searchbar-tabs">
+                <div class="searchbar-tabs-buttons">
+                    <div class="searchbar-buttons-inner">
+                        <button class="searchbar-tab-btn active" data-tab-button data-id="1">ШВЕЙЦАРСКИЕ ЧАСЫ</button>
+                        <button class="searchbar-tab-btn" data-tab-button data-id="2">ЮВЕЛИРНЫЕ ИЗДЕЛИЯ</button>
+                        <button class="searchbar-tab-btn" data-tab-button data-id="3">ЭКСКЛЮЗИВНЫЕ ПРЕДЛОЖЕНИЯ</button>
+                    </div>
+                </div>
+                <div class="searchbar-tab-content active" data-tab-content="1">
+                    <div class="searchbar-latest">
+                        <h4>Недавние запросы:</h4>
+                        <div class="latest-items">
+                            <div class="searchbar-item">
+                                <div class="searchbar-item-info">
+                                    <div class="searchbar-item-img">
+                                        <img src="<?php echo esc_attr( THEME_URL ); ?>/assets/img/rolex.png" alt="">
+                                    </div>
+                                    <span class="serial-num">
+										15500ST.OO.1220ST.02
+									</span>
+                                    <span class="mark">Audemar’s Piguet</span>
+                                </div>
+                                <button class="item-close"><img
+                                            src="<?php echo esc_attr( THEME_URL ); ?>/assets/img/close.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="searchbar-result">
+                        <div class="searchbar-item res">
+                            <span class="searchbar-mark"><strong>Rol</strong>ex</span>
+                            <span class="searchbar-type">Бренд</span>
+                            <button class="item-close"><img
+                                        src="<?php echo esc_attr( THEME_URL ); ?>/assets/img/close.svg" alt=""></button>
+                        </div>
+                        <div class="searchbar-item res">
+                            <span class="searchbar-mark"><strong>Rol</strong>ex</span>
+                            <span class="searchbar-type">Коллекции</span>
+                            <button class="item-close"><img
+                                        src="<?php echo esc_attr( THEME_URL ); ?>/assets/img/close.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchbar-tab-content" data-tab-content="2">
+                    <div class="searchbar-result">
+                        <div class="searchbar-item res">
+                            <span class="searchbar-mark">Rolex</span>
+                            <span class="searchbar-type">Бренд</span>
+                        </div>
+                        <div class="searchbar-item res">
+                            <span class="searchbar-mark">Rolex</span>
+                            <span class="searchbar-type">Коллекции</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="searchbar-tab-content" data-tab-content="3">
+                    <div class="searchbar-content-links">
+                        <a href="#">
+                            <img src="<?php echo esc_attr( THEME_URL ); ?>/assets/img/fire.svg" alt="">
+                            <span>VIP OFFERS</span>
+                        </a>
+                        <a href="#">
+                            <img src="<?php echo esc_attr( THEME_URL ); ?>/assets/img/new.svg" alt="">
+                            <span>НОВИНКИ</span>
+                        </a>
+                        <a href="#">
+                            <img src="<?php echo esc_attr( THEME_URL ); ?>/assets/img/sale.svg" alt="">
+                            <span>СКИДКИ</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

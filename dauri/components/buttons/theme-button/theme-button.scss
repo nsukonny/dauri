@@ -1,0 +1,59 @@
+@use '../../../../scss/mixins/mixins' as m;
+@use '../../../../scss/vars/vars' as v;
+
+.theme-button {
+	min-height: 50px;
+	padding: 0 15px;
+	gap: 15px;
+	border-radius: 37.228px;
+	background-color: rgba(255, 255, 255, 0.10);
+	box-shadow: 0px -2.482px 24.819px 0px rgba(0, 0, 0, 0.15);
+	backdrop-filter: blur(7.5px);
+
+	&.header-btn {
+		height: 100%;
+		padding: 0 30px;
+		
+		display: none;
+
+		@include m.media(lg) {
+			display: flex;
+			min-width: 196px;
+		}
+	}
+
+	span {
+		color: v.$black8;
+		font-size: v.$fs-xs;
+		font-style: normal;
+		font-weight: v.$fw-medium;
+		line-height: normal;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+
+		@include m.theme(dark) {
+			color: #EDF2F5;
+		}
+	}
+
+	img {
+		max-width: 22px;
+		max-height: 22px;
+	}
+
+	&.dark {
+		background: v.$transparent10;
+
+		span {
+			color: v.$greyTransparent;
+		}
+	}
+
+	&.hidden {
+		display: none;
+	}
+
+	&:active {
+		box-shadow: v.$bs-active;
+	}
+}
