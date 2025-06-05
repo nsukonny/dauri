@@ -1,6 +1,0 @@
-<div id="cookie-banner" class="cookie-banner">
-    <div class="cookie-banner-wrapper">
-        <p>Мы используем <a href="/privacy">cookie.</a></p>
-        <button id="cookie-btn" class="button gradient ">Хорошо</button>
-    </div>
-</div>
