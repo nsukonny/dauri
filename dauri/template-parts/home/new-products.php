@@ -15,7 +15,7 @@ get_template_part( 'template-parts/home/slides-half', null, array(
 		'span'        => '',
 		'link'        => $new_products_data['link_title'] ?? __( 'Открыть выбор' ),
 		'link_url'    => $new_products_data['url'] ?? '/',
-		'products'    => $new_products_data['products'],
+		'products'    => array_column( $new_products_data['products'], 'product' ),
 		'description' => $new_products_data['description'] ?? __( 'Погружение в наши новинки – это когда часы показывают время, а чувства невозможно описать.' ),
 	)
 );

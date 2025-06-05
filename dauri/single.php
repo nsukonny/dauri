@@ -17,6 +17,8 @@ if ( empty( $wc_product ) ) {
 get_template_part( 'template-parts/card/card', null, array( 'product' => $wc_product ) );
 get_template_part( 'template-parts/card/perks' );
 get_template_part( 'template-parts/card/tabs', null, array( 'product' => $wc_product ) );
+get_template_part( 'template-parts/card/similar-products', null, array( 'product' => $wc_product ) );
+get_template_part( 'template-parts/card/bottom-cta' );
 /**
  * @@include( 'template-parts/sections/card/card/card.html' )
  * @@include( 'template-parts/sections/card/perks/perks.html' )

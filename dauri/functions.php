@@ -102,4 +102,6 @@ add_action( 'admin_head', 'dauri_fix_svg_display' );
 
 add_image_size( 'dauri-product-thumb', 143, 171, true );
 
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+
 require_once THEME_PATH . '/components/components.php';

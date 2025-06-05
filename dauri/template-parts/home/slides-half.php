@@ -41,13 +41,16 @@ $class       = $args['class'] ?? '';
             <div class="slides-half-right">
                 <div class="swiper slides-half-swiper">
                     <div class="swiper-wrapper">
-						<?php foreach ( $products as $product ) { ?>
+						<?php foreach ( $products as $product ) {
+							$categories       = get_the_terms( $product->get_id(), 'product_cat' );
+							$categories_slugs = ! empty( $categories ) ? array_column( $categories, 'slug' ) : array();
+							?>
                             <div class="swiper-slide">
 								<?php get_template_part( 'components/cards/item-card',
 									null,
 									array(
-										'product' => $product['product'] ?? null,
-										'class'   => 'new'
+										'product' => $product ?? null,
+										'class'   => in_array( 'new-product', $categories_slugs ) ? 'new' : '',
 									)
 								);
 								?>

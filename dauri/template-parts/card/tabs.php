@@ -12,8 +12,8 @@ if ( empty( $wc_product ) ) {
 
 $description            = get_the_content();
 $faqs                   = get_field( 'product_faq', 'option' ) ?? array();
-$delivery_faqs          = get_field( 'delivery_faq', 'option' ) ?? array();
-$guaranty_faqs          = get_field( 'guaranty_faq', 'option' ) ?? array();
+$delivery_faqs          = get_field( 'product_delivery_faq', 'option' ) ?? array();
+$guaranty_faqs          = get_field( 'product_guaranty_faq', 'option' ) ?? array();
 $product_delivery       = get_field( 'product_delivery', 'option' ) ?? '';
 $product_delivery_short = get_field( 'product_delivery_short', 'option' ) ?? '';
 $product_guaranty       = get_field( 'product_guaranty', 'option' ) ?? '';
@@ -21,7 +21,7 @@ $product_guaranty_short = get_field( 'product_guaranty_short', 'option' ) ?? '';
 ?>
 <section class="card-tabs">
     <div class="container">
-        <div class="card-tabs-buttons" data-aos="fade-up" data-aos-duration="1000">
+        <div class="card-tabs-buttons" data-tab-group="card-tabs" data-aos="fade-up" data-aos-duration="1000">
             <button class="tab-button active" data-tab-button data-id="1">
 				<?php _e( 'Описание' ); ?>
             </button>
