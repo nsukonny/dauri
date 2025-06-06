@@ -1,0 +1,129 @@
+@use '../../../scss/vars/vars.scss' as v;
+@use '../../../scss/mixins/mixins' as m;
+
+.filter-modal {
+	width: 100vw;
+	height: 100dvh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	padding: 20px;
+	overflow-y: auto;
+	transform: translateY(-10%);
+	opacity: 0;
+	visibility: hidden;
+	z-index: 100;
+	transition: all ease v.$tr;
+
+
+
+	&.opened {
+		transform: translateY(0);
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.filter-inner {
+		width: 100%;
+		max-width: 1220px;
+		position: relative;
+		background: v.$transparent10;
+		box-shadow: 0px -2.045px 20.451px 0px rgba(0, 0, 0, 0.15);
+		backdrop-filter: blur(75px);
+		padding: 20px;
+		border-radius: 50px;
+
+		@include m.media(md) {
+			padding: 20px 30px;
+		}
+	}
+
+	.filter-top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.clear {
+			color: v.$black;
+			font-family: v.$ff;
+			font-size: 11px;
+			font-style: normal;
+			font-weight: v.$fw-medium;
+			line-height: normal;
+			letter-spacing: 1.6px;
+
+			@include m.theme(dark) {
+				color: v.$grayDark;
+			}
+
+			@include m.media(md) {
+				color: rgba(26, 26, 26, 0.40);
+				font-size: 16px;
+			}
+		}
+
+		.save-filters {
+			width: 70px;
+			height: 60px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 49.745px;
+			background: v.$transparent10;
+			box-shadow: 0px -3.316px 33.164px 0px rgba(0, 0, 0, 0.15);
+			backdrop-filter: blur(4.054054260253906px);
+
+			@include m.theme(dark) {
+				background-color: v.$grayDark;
+				box-shadow: v.$bs-gold;
+			}
+
+			@include m.media(md) {}
+
+			img {
+				width: 20px;
+				height: auto;
+			}
+		}
+
+		.filter-close {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 37px;
+			height: 37px;
+			position: absolute;
+			left: 10px;
+			top: 10px;
+			aspect-ratio: 1;
+			border-radius: 50%;
+			box-shadow: v.$bs-main;
+
+			@include m.theme(dark) {
+				box-shadow: v.$bs-gold;
+				background-color: v.$grayDark;
+			}
+
+			@include m.media(md) {
+				width: 60px;
+				height: 60px;
+				position: static;
+			}
+
+			img {
+				width: 20px;
+				height: 20px;
+			}
+		}
+	}
+
+	.sort-options {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+	}
+}

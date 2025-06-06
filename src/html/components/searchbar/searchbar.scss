@@ -8,7 +8,7 @@
 	left: 0;
 	top: 0;
 	padding: 20px 10px;
-	background-color: white;
+	background-color: v.$white8;
 	box-shadow: 0px -2.434px 24.335px 0px rgba(0, 0, 0, 0.15);
 	backdrop-filter: blur(2.974829912185669px);
 	overflow: hidden;
@@ -17,6 +17,11 @@
 	visibility: hidden;
 	z-index: 100;
 	transition: transform ease v.$tr, visibility ease v.$tr, opacity ease v.$tr;
+
+	@include m.theme(dark) {
+		background-color: v.$darkBlue;
+		box-shadow: v.$bs-gold
+	}
 
 	@include m.media(md) {
 		padding: 0;
@@ -54,6 +59,10 @@
 		gap: 8px;
 		justify-content: space-between;
 		background-color: v.$white8;
+
+		@include m.theme(dark) {
+			background-color: v.$darkBlue;
+		}
 
 		@include m.media(md) {
 			padding-right: 17px;
@@ -167,6 +176,10 @@
 				box-shadow: 0px -2.045px 20.451px 0px rgba(0, 0, 0, 0.15);
 				backdrop-filter: blur(2.5px);
 				z-index: 1;
+
+				@include m.theme(dark) {
+					color: v.$white;
+				}
 
 				@include m.media(xl) {
 					transform: translateX(0);
@@ -330,6 +343,10 @@
 						line-height: 80%;
 						letter-spacing: 0.28px;
 
+						@include m.theme(dark) {
+							color: v.$white8;
+						}
+
 						@include m.media(md) {
 							height: 50px;
 							border-radius: 30.676px;
@@ -364,6 +381,10 @@
 						line-height: 25px;
 						letter-spacing: -0.32px;
 						margin-bottom: 10px;
+
+						@include m.theme(dark) {
+							color: v.$white;
+						}
 
 						@include m.media(md) {
 							font-size: v.$fs-md;
@@ -437,6 +458,10 @@
 						@include m.media(md) {
 							font-size: v.$fs-md;
 						}
+
+						@include m.theme(dark) {
+							color: v.$grayDark;
+						}
 					}
 
 					.mark,
@@ -447,6 +472,10 @@
 						font-weight: v.$fw-regular;
 						line-height: 15px;
 						letter-spacing: -0.32px;
+
+						@include m.theme(dark) {
+							color: v.$grayDark;
+						}
 
 						@include m.media(md) {
 							font-size: v.$fs-md;
@@ -462,6 +491,10 @@
 						line-height: 25px;
 						letter-spacing: -0.32px;
 						margin-right: 10px;
+
+						@include m.theme(dark) {
+							color: v.$white;
+						}
 					}
 
 					.item-close {

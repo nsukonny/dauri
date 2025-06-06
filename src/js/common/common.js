@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	footerDropdowns()
 	cookiesBanner()
 	toggle('.searchbar', '#search', '.searchbar-close', '#searchbar')
+	toggle('.searchbar', '.catalog-button.search', '.searchbar-close', '#searchbar')
+	toggle('.filter-modal', '#filter-button', '.filter-close', '#filter-modal', true)
 })
 
 const headerScroll = (header) => {
@@ -40,26 +42,26 @@ const headerScroll = (header) => {
 	window.addEventListener('scroll', handleScroll)
 }
 
-const toggle = (selector, btn, closeBtnSelector, lock) => {
+const toggle = (selector, btn, closeBtnSelector, lock, allowSelfClickClose = false) => {
 	const toggleSelector = document.querySelector(selector)
 	const toggleBtn = document.querySelector(btn)
 	const closeBtn = toggleSelector?.querySelector(closeBtnSelector)
 
-	if (!toggleSelector || !toggleBtn ) return
+	if (!toggleSelector || !toggleBtn) return
 
 	toggleBtn.addEventListener('click', (e) => {
 		e.stopPropagation()
 		const lockElement = document.querySelector(lock)
-		if(!toggleSelector.classList.contains('opened')) {
+		if (!toggleSelector.classList.contains('opened')) {
 			toggleSelector.classList.add('opened')
-			disableBodyScroll(lockElement, {reserveScrollBarGap: true})
-		} else  {
+			disableBodyScroll(lockElement, { reserveScrollBarGap: true })
+		} else {
 			toggleSelector.classList.remove('opened')
 			enableBodyScroll(lockElement)
 		}
 	})
 
-	closeBtn.addEventListener('click', () => {
+	closeBtn?.addEventListener('click', () => {
 		const lockElement = document.querySelector(lock)
 		toggleSelector.classList.remove('opened')
 		enableBodyScroll(lockElement)
@@ -67,17 +69,22 @@ const toggle = (selector, btn, closeBtnSelector, lock) => {
 
 	document.addEventListener('click', (e) => {
 		const lockElement = document.querySelector(lock)
+		const isClickOutsideSelector = !toggleSelector.contains(e.target)
+		const isClickOutsideBtn = !toggleBtn.contains(e.target)
+		const isClickOnSelf = toggleSelector === e.target
+
 		if (
 			toggleSelector.classList.contains('opened') &&
-			!toggleSelector.contains(e.target) &&
-			!toggleBtn.contains(e.target)
+			(
+				(isClickOutsideSelector && isClickOutsideBtn) ||
+				(allowSelfClickClose && isClickOnSelf)
+			)
 		) {
 			toggleSelector.classList.remove('opened')
 			enableBodyScroll(lockElement)
 		}
 	})
 }
-
 
 const footerDropdowns = () => {
 	document.addEventListener('click', e => {

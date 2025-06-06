@@ -198,7 +198,7 @@
 			<button class="catalog-button sort">
 				<img src="/img/arrows.svg" alt=""> <span>Порядок</span>
 			</button>
-			<button class="catalog-button filter">
+			<button class="catalog-button filter" id="filter-button">
 				<img src="/img/filter.svg" alt=""> <span>Фильтр</span>
 			</button>
 			<button class="catalog-button search">
@@ -560,6 +560,105 @@
 		</div>
 	</div>
 </section>
+		<div class="filter-modal opened" id="filter-modal">
+	<div class="filter-inner">
+		<div class="filter-top">
+			<button class="clear">Очистить</button>
+			<button class="save-filters">
+				<img src="/img/filter.svg" alt="">
+			</button>
+			<button class="filter-close">
+				<img src="img/close-black.svg" alt="">
+			</button>
+		</div>
+		<div class="sort-inner">
+			<div class="filter-title">
+				<span>
+					ПОРЯДОК
+					<img src="/img/arrows.svg" alt="">
+				</span>
+			</div>
+			<div class="sort-options">
+				<label class="radio-input" for="sort-radio-1">
+					<input type="radio" name="sort-radio" id="sort-radio-1" checked="checked">
+					<span>НАШ ВЫБОР</span>
+				</label>
+				<label class="radio-input" for="sort-radio-2">
+					<input type="radio" name="sort-radio" id="sort-radio-2">
+					<span>ПО ВОЗРАСТАНИЮ ЦЕНЫ</span>
+				</label>
+				<label class="radio-input" for="sort-radio-3">
+					<input type="radio" name="sort-radio" id="sort-radio-3">
+					<span>ПО УБЫВАНИЮ ЦЕНЫ</span>
+				</label>
+			</div>
+			<div class="filter-title">
+				<span>
+					ФИЛЬТР
+					<img src="/img/filter.svg" alt="">
+				</span>
+			</div>
+			<div class="filter-dropdowns">
+				<div class="dropdown">
+					<button class="dropdown-button">
+						<span class="dropdown-button-name">КАТЕГОРИЯ</span>
+						<span class="plus"></span>
+					</button>
+					<div class="dropdown-open">
+						<div class="dropdown-inner">
+
+						</div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropdown-button">
+						<span class="dropdown-button-name">БРЕНД</span>
+						<span class="plus"></span>
+					</button>
+					<div class="dropdown-open">
+						<div class="dropdown-inner">
+
+						</div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropdown-button">
+						<span class="dropdown-button-name">СОСТОЯНИЕ</span>
+						<span class="plus"></span>
+					</button>
+					<div class="dropdown-open">
+						<div class="dropdown-inner">
+
+						</div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropdown-button">
+						<span class="dropdown-button-name">КОМПЛЕКТ</span>
+						<span class="plus"></span>
+					</button>
+					<div class="dropdown-open">
+						<div class="dropdown-inner">
+
+						</div>
+					</div>
+				</div>
+				<div class="dropdown">
+					<button class="dropdown-button">
+						<span class="dropdown-button-name">РАЗМЕР</span>
+						<span class="plus"></span>
+					</button>
+					<div class="dropdown-open">
+						<div class="dropdown-inner">
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
 	</div>
 </main>
 
