@@ -104,6 +104,10 @@
 			position: relative;
 			text-align: left;
 
+			span {
+				@include m.text-gradient265;
+			}
+
 			&::after {
 				content: '';
 				display: block;
