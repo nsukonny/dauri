@@ -1,6 +1,6 @@
 node_modules
 .idea
-assets/css
-assets/js
-assets/*.html
+dauri/assets/css
+dauri/assets/js
+dauri/assets/*.html
 woostify
