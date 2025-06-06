@@ -1,4 +1,5 @@
-import AOS from '../../../node_modules/aos/dist/aos'
+import AOS from 'aos'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import { WINDOW_WIDTH } from "./global"
 import { initDOM } from "./global"
 
@@ -16,16 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	headerScroll(header)
 	footerDropdowns()
 	cookiesBanner()
-	toggle('.searchbar', '#search', '.searchbar-close')
+	toggle('.searchbar', '#search', '.searchbar-close', '#searchbar')
 })
 
 const headerScroll = (header) => {
 	if (!header) return
 
-	let lastScrollY = window.pageYOffset
+	let lastScrollY = window.scrollY
 
 	const handleScroll = () => {
-		const currentScrollY = window.pageYOffset
+		const currentScrollY = window.scrollY
 
 		if (currentScrollY > lastScrollY) {
 			header.classList.add('scrolled')
@@ -39,30 +40,40 @@ const headerScroll = (header) => {
 	window.addEventListener('scroll', handleScroll)
 }
 
-const toggle = (selector, btn, closeBtnSelector) => {
+const toggle = (selector, btn, closeBtnSelector, lock) => {
 	const toggleSelector = document.querySelector(selector)
 	const toggleBtn = document.querySelector(btn)
 	const closeBtn = toggleSelector?.querySelector(closeBtnSelector)
 
-
-	if (!toggleSelector || !toggleBtn) return
+	if (!toggleSelector || !toggleBtn ) return
 
 	toggleBtn.addEventListener('click', (e) => {
 		e.stopPropagation()
-		toggleSelector.classList.toggle('opened')
+		const lockElement = document.querySelector(lock)
+		if(!toggleSelector.classList.contains('opened')) {
+			toggleSelector.classList.add('opened')
+			disableBodyScroll(lockElement, {reserveScrollBarGap: true})
+		} else  {
+			toggleSelector.classList.remove('opened')
+			enableBodyScroll(lockElement)
+		}
 	})
 
 	closeBtn.addEventListener('click', () => {
+		const lockElement = document.querySelector(lock)
 		toggleSelector.classList.remove('opened')
+		enableBodyScroll(lockElement)
 	})
 
 	document.addEventListener('click', (e) => {
+		const lockElement = document.querySelector(lock)
 		if (
 			toggleSelector.classList.contains('opened') &&
 			!toggleSelector.contains(e.target) &&
 			!toggleBtn.contains(e.target)
 		) {
 			toggleSelector.classList.remove('opened')
+			enableBodyScroll(lockElement)
 		}
 	})
 }
