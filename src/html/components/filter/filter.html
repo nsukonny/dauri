@@ -1,99 +1,279 @@
-<div class="filter-modal opened" id="filter-modal">
-	<div class="filter-inner">
-		<div class="filter-top">
-			<button class="clear">Очистить</button>
-			<button class="save-filters">
-				<img src="/img/filter.svg" alt="">
-			</button>
-			<button class="filter-close">
-				<img src="img/close-black.svg" alt="">
-			</button>
-		</div>
-		<div class="sort-inner">
-			<div class="filter-title">
-				<span>
-					ПОРЯДОК
-					<img src="/img/arrows.svg" alt="">
-				</span>
-			</div>
-			<div class="sort-options">
-				<label class="radio-input" for="sort-radio-1">
-					<input type="radio" name="sort-radio" id="sort-radio-1" checked />
-					<span>НАШ ВЫБОР</span>
-				</label>
-				<label class="radio-input" for="sort-radio-2">
-					<input type="radio" name="sort-radio" id="sort-radio-2" />
-					<span>ПО ВОЗРАСТАНИЮ ЦЕНЫ</span>
-				</label>
-				<label class="radio-input" for="sort-radio-3">
-					<input type="radio" name="sort-radio" id="sort-radio-3" />
-					<span>ПО УБЫВАНИЮ ЦЕНЫ</span>
-				</label>
-			</div>
-			<div class="filter-title">
-				<span>
-					ФИЛЬТР
-					<img src="/img/filter.svg" alt="">
-				</span>
-			</div>
-			<div class="filter-dropdowns">
-				<div class="dropdown">
-					<button class="dropdown-button">
-						<span class="dropdown-button-name">КАТЕГОРИЯ</span>
-						<span class="plus"></span>
-					</button>
-					<div class="dropdown-open">
-						<div class="dropdown-inner">
+<div class="filter-modal" id="filter-modal">
+    <div class="filter-inner">
+        <div class="filter-top">
+            <button class="clear">Очистить</button>
+            <button class="save-filters">
+                <img src="/img/filter.svg" alt="">
+            </button>
+            <button class="filter-close">
+                <img src="img/close-black.svg" alt="">
+            </button>
+        </div>
+        <div class="sort-inner">
+            <div class="filter-title">
+                <div class="filter-title-inner">
+                    <span>ПОРЯДОК</span>
+                    <img src="/img/arrows.svg" alt="">
+                </div>
+            </div>
+            <div class="filter-options">
+                <label class="radio-input" for="sort-radio-1">
+                    <input type="radio" name="sort-radio" id="sort-radio-1" checked/>
+                    <span>НАШ ВЫБОР</span>
+                </label>
+                <label class="radio-input" for="sort-radio-2">
+                    <input type="radio" name="sort-radio" id="sort-radio-2"/>
+                    <span>ПО ВОЗРАСТАНИЮ ЦЕНЫ</span>
+                </label>
+                <label class="radio-input" for="sort-radio-3">
+                    <input type="radio" name="sort-radio" id="sort-radio-3"/>
+                    <span>ПО УБЫВАНИЮ ЦЕНЫ</span>
+                </label>
+            </div>
+            <div class="filter-title">
+                <div class="filter-title-inner">
+                    <span>ФИЛЬТР</span>
+                    <img src="/img/filter.svg" alt="">
+                </div>
+            </div>
+            <div class="filter-dropdowns">
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown-button">
+                        <span class="dropdown-button-title">КАТЕГОРИЯ</span>
+                        <span class="plus"></span>
+                    </button>
+                    <div class="dropdown-open">
+                        <div class="dropdown-inner">
+                            <div class="dropdown-options">
+                                <label class="radio-input" for="c1">
+                                    <input type="radio" name="c-radio" id="c1" checked/>
+                                    <span>ШВЕЙЦАРСКИЕ ЧАСЫ</span>
+                                </label>
+                                <label class="radio-input" for="c2">
+                                    <input type="radio" name="c-radio" id="c2"/>
+                                    <span>ЮВЕЛИРНЫЕ ИЗДЕЛИЯ</span>
+                                </label>
+                                <label class="radio-input" for="c3">
+                                    <input type="radio" name="c-radio" id="c3"/>
+                                    <span>АКСЕССУАРЫ</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown-button">
+                        <span class="dropdown-button-title">БРЕНД</span>
+                        <span class="plus"></span>
+                    </button>
+                    <div class="dropdown-open">
+                        <div class="dropdown-inner">
+                            <div class="dropdown-options">
+                                <label class="checkbox-input" for="b1">
+                                    <input type="checkbox" name="brand1" id="b1"/>
+                                    <span>Rolex</span>
+                                </label>
+                                <label class="checkbox-input" for="b2">
+                                    <input type="checkbox" name="brand2" id="b2"/>
+                                    <span>AUDEMAR’S PIGUET</span>
+                                </label>
+                                <label class="checkbox-input" for="b3">
+                                    <input type="checkbox" name="brand3" id="b3"/>
+                                    <span>PATEK PHILIPPE</span>
+                                </label>
+                                <label class="checkbox-input" for="b4">
+                                    <input type="checkbox" name="brand4" id="b4"/>
+                                    <span>Rolex</span>
+                                </label>
+                                <label class="checkbox-input" for="b5">
+                                    <input type="checkbox" name="brand5" id="b5"/>
+                                    <span>AUDEMAR’S PIGUET</span>
+                                </label>
+                                <label class="checkbox-input" for="b6">
+                                    <input type="checkbox" name="brand6" id="b6"/>
+                                    <span>PATEK PHILIPPE</span>
+                                </label>
+                                <button class="filter-show-more">Показать еще</button>
+                                <div class="dropdown-options-hidden">
+                                    <label class="checkbox-input" for="b7">
+                                        <input type="checkbox" name="brand7" id="b7"/>
+                                        <span>Rolex</span>
+                                    </label>
+                                    <label class="checkbox-input" for="b8">
+                                        <input type="checkbox" name="brand8" id="b8"/>
+                                        <span>AUDEMAR’S PIGUET</span>
+                                    </label>
+                                    <label class="checkbox-input" for="b9">
+                                        <input type="checkbox" name="brand9" id="b9"/>
+                                        <span>PATEK PHILIPPE</span>
+                                    </label>
+                                    <label class="checkbox-input" for="b10">
+                                        <input type="checkbox" name="brand10" id="b10"/>
+                                        <span>Rolex</span>
+                                    </label>
+                                    <label class="checkbox-input" for="b11">
+                                        <input type="checkbox" name="brand11" id="b11"/>
+                                        <span>AUDEMAR’S PIGUET</span>
+                                    </label>
+                                    <label class="checkbox-input" for="b12">
+                                        <input type="checkbox" name="brand12" id="b12"/>
+                                        <span>PATEK PHILIPPE</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown-button">
+                        <span class="dropdown-button-title">Цена</span>
+                        <span class="plus"></span>
+                    </button>
+                    <div class="dropdown-open">
+                        <div class="dropdown-inner">
+                            <div class="dropdown-options">
+                                <label class="radio-input" for="p-radio-1">
+                                    <input type="radio" name="p-radio" id="p-radio-1" checked/>
+                                    <span>ДО $20.000</span>
+                                </label>
+                                <label class="radio-input" for="p-radio-2">
+                                    <input type="radio" name="p-radio" id="p-radio-2"/>
+                                    <span>$20.000 - $50.000</span>
+                                </label>
+                                <label class="radio-input" for="p-radio-3">
+                                    <input type="radio" name="sort-radio" id="p-radio-3"/>
+                                    <span>$50.000 - $100.000</span>
+                                </label>
+                                <label class="radio-input" for="p-radio-4">
+                                    <input type="radio" name="sort-radio" id="p-radio-4"/>
+                                    <span>$100.000+</span>
+                                </label>
+                                <button class="filter-show-range">Задать диапозон</button>
+                                <div class="price-range-slider-container" style="display: none;">
+                                    <div class="price-range-slider">
+                                        <div class="price-slider-track"></div>
+                                        <div class="price-slider-range"></div>
+                                        <input type="range" class="price-slider-min" min="250" max="365000" value="250" step="50">
+                                        <input type="range" class="price-slider-max" min="250" max="365000" value="365000" step="50">
+                                    </div>
+                                    <div class="price-inputs">
+                                        <div class="price-input-container cur">
+                                            <span class="price-currency">$</span>
+                                            <input type="number" class="price-input price-input-min" value="250" min="250" max="365000">
+                                        </div>
+                                        <div class="price-input-container">
+                                            <span class="price-currency">$</span>
+                                            <input type="number" class="price-input price-input-max" value="365000" min="250" max="365000">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown-button">
+                        <span class="dropdown-button-title">СОСТОЯНИЕ</span>
+                        <span class="plus"></span>
+                    </button>
+                    <div class="dropdown-open">
+                        <div class="dropdown-inner">
+                            <div class="dropdown-options">
+                                <label class="checkbox-input" for="s1">
+                                    <input type="checkbox" name="s1" id="s1"/>
+                                    <span>НОВЫЕ</span>
+                                </label>
+                                <label class="checkbox-input" for="s2">
+                                    <input type="checkbox" name="s2" id="s2"/>
+                                    <span>КАК НОВЫЕ</span>
+                                </label>
+                                <label class="checkbox-input" for="s3">
+                                    <input type="checkbox" name="s3" id="s3"/>
+                                    <span>ИДЕАЛЬНОЕ СОСТОЯНИЕ</span>
+                                </label>
+                                <label class="checkbox-input" for="s4">
+                                    <input type="checkbox" name="s4" id="s4"/>
+                                    <span>ОТЛИЧНОЕ СОСТОЯНИЕ</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown-button">
+                        <span class="dropdown-button-title">КОМПЛЕКТ</span>
+                        <span class="plus"></span>
+                    </button>
+                    <div class="dropdown-open">
+                        <div class="dropdown-inner">
+                            <div class="dropdown-options">
+                                <label class="radio-input" for="k1">
+                                    <input type="radio" name="k-radio" id="k1" checked/>
+                                    <span>ПОЛНЫЙ КОМПЛЕКТ</span>
+                                </label>
+                                <label class="radio-input" for="k2">
+                                    <input type="radio" name="k-radio" id="k2"/>
+                                    <span>КОРОБКА</span>
+                                </label>
+                                <label class="radio-input" for="k3">
+                                    <input type="radio" name="k-radio" id="k3"/>
+                                    <span>ДОКУМЕНТЫ</span>
+                                </label>
+                                <label class="radio-input" for="k4">
+                                    <input type="radio" name="k-radio" id="k4"/>
+                                    <span>ТОЛЬКО ЧАСЫ</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-dropdown">
+                    <button class="filter-dropdown-button">
+                        <span class="dropdown-button-title">РАЗМЕР</span>
+                        <span class="plus"></span>
+                    </button>
+                    <div class="dropdown-open">
+                        <div class="dropdown-inner">
+                            <div class="dropdown-options">
+                                <label class="checkbox-input" for="si1">
+                                    <input type="checkbox" name="si1" id="si1"/>
+                                    <span>БОЛЬШОЙ</span> <em>(от 42 мм)</em>
+                                </label>
+                                <label class="checkbox-input" for="si2">
+                                    <input type="checkbox" name="si2" id="si2"/>
+                                    <span>СРЕДНИЙ</span> <em>(38-41 мм)</em>
+                                </label>
+                                <label class="checkbox-input" for="si3">
+                                    <input type="checkbox" name="si3" id="si3"/>
+                                    <span>МАЛЕНЬКИЙ</span> <em>(до 37 мм)</em>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-						</div>
-					</div>
-				</div>
-				<div class="dropdown">
-					<button class="dropdown-button">
-						<span class="dropdown-button-name">БРЕНД</span>
-						<span class="plus"></span>
-					</button>
-					<div class="dropdown-open">
-						<div class="dropdown-inner">
-
-						</div>
-					</div>
-				</div>
-				<div class="dropdown">
-					<button class="dropdown-button">
-						<span class="dropdown-button-name">СОСТОЯНИЕ</span>
-						<span class="plus"></span>
-					</button>
-					<div class="dropdown-open">
-						<div class="dropdown-inner">
-
-						</div>
-					</div>
-				</div>
-				<div class="dropdown">
-					<button class="dropdown-button">
-						<span class="dropdown-button-name">КОМПЛЕКТ</span>
-						<span class="plus"></span>
-					</button>
-					<div class="dropdown-open">
-						<div class="dropdown-inner">
-
-						</div>
-					</div>
-				</div>
-				<div class="dropdown">
-					<button class="dropdown-button">
-						<span class="dropdown-button-name">РАЗМЕР</span>
-						<span class="plus"></span>
-					</button>
-					<div class="dropdown-open">
-						<div class="dropdown-inner">
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</div>
+            </div>
+            <div class="filter-title">
+                <div class="filter-title-inner">
+                    <span>VIP OFFERS</span>
+                    <span class="count">(3)</span>
+                    <img src="/img/fire.svg" alt="">
+                </div>
+            </div>
+            <div class="filter-options">
+                <label class="checkbox-input" for="v1">
+                    <input type="checkbox" name="sort-radio" id="v1"/>
+                    <span>ЭКСКЛЮЗИВНЫЕ ПРЕДЛОЖЕНИЯ</span>
+                </label>
+                <label class="checkbox-input" for="v2">
+                    <input type="checkbox" name="sort-radio" id="v2"/>
+                    <span>НОВИНКИ</span>
+                </label>
+                <label class="checkbox-input" for="v3">
+                    <input type="checkbox" name="sort-radio" id="v3"/>
+                    <span>СКИДКИ</span>
+                </label>
+            </div>
+        </div>
+    </div>
 </div>

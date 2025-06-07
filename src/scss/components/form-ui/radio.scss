@@ -1,6 +1,7 @@
 @use '../../vars/vars' as v;
+@use '../../mixins/mixins' as m;
 
-.radio-input {
+.radio-input, .checkbox-input {
   position: relative;
   display: flex;
   align-items: center;
@@ -33,7 +34,6 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      border-radius: 50%;
     }
 
     &::before {
@@ -53,7 +53,42 @@
     }
   }
 
+  em {
+    color: rgba(26, 26, 26, 0.60);
+    font-family: v.$ff;
+    font-size: 10px;
+    font-weight: v.$fw-light;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    font-style: normal;
+
+    @include m.media(xl) {
+      font-size: 12px;
+    }
+  }
+
   input:checked + span::after {
     opacity: 1;
+  }
+}
+
+.radio-input {
+  span {
+    &:before, &:after {
+      border-radius: 50%;
+    }
+  }
+    border-radius: 50%;
+}
+
+.checkbox-input {
+  span {
+    &:before {
+      border-radius: 5px;
+    }
+
+    &:after {
+      border-radius: 2px;
+    }
   }
 }
