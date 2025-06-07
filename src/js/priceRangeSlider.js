@@ -47,27 +47,33 @@ const setupRangeSlider = (container) => {
   setRangeValues(minSlider, maxSlider, rangeElement)
   
   minSlider.addEventListener('input', () => {
-    if (parseInt(minSlider.value) > parseInt(maxSlider.value)) {
-      minSlider.value = maxSlider.value
+    const minVal = parseInt(minSlider.value)
+    const maxVal = parseInt(maxSlider.value)
+    
+    if (minVal > maxVal) {
+      minSlider.value = maxVal
     }
     
-    minInput.value = formatPrice(minSlider.value)
+    minInput.value = formatPrice(parseInt(minSlider.value))
     
     setRangeValues(minSlider, maxSlider, rangeElement)
   })
   
   maxSlider.addEventListener('input', () => {
-    if (parseInt(maxSlider.value) < parseInt(minSlider.value)) {
-      maxSlider.value = minSlider.value
+    const minVal = parseInt(minSlider.value)
+    const maxVal = parseInt(maxSlider.value)
+    
+    if (maxVal < minVal) {
+      maxSlider.value = minVal
     }
     
-    maxInput.value = formatPrice(maxSlider.value)
+    maxInput.value = formatPrice(parseInt(maxSlider.value))
     
     setRangeValues(minSlider, maxSlider, rangeElement)
   })
   
   minInput.addEventListener('input', () => {
-    const value = parseInt(minInput.value.replace(/[^\d]/g, '')) || minValue
+    const value = parseInt(minInput.value.replace(/\D/g, '')) || minValue
     
     const limitedValue = Math.max(minValue, Math.min(parseInt(maxSlider.value), value))
     
@@ -88,8 +94,8 @@ const setupRangeSlider = (container) => {
     setRangeValues(minSlider, maxSlider, rangeElement)
   })
   
-  minInput.value = formatPrice(minSlider.value)
-  maxInput.value = formatPrice(maxSlider.value)
+  minInput.value = formatPrice(parseInt(minSlider.value))
+  maxInput.value = formatPrice(parseInt(maxSlider.value))
 }
 
 const setRangeValues = (minSlider, maxSlider, rangeElement) => {
@@ -103,5 +109,19 @@ const setRangeValues = (minSlider, maxSlider, rangeElement) => {
 }
 
 const formatPrice = (value) => {
-  return parseInt(value).toLocaleString('en-US')
+  const num = parseInt(value)
+  
+  if (num >= 1000) {
+    const thousands = Math.floor(num / 1000)
+    const remainder = num % 1000
+    
+    let remainderStr = remainder.toString()
+    while (remainderStr.length < 3) {
+      remainderStr = '0' + remainderStr
+    }
+    
+    return `${thousands}.${remainderStr}`
+  }
+  
+  return num.toString()
 }

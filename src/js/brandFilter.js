@@ -1,3 +1,5 @@
+import {reCalculateDropdownHeight} from "./common/common"
+
 document.addEventListener('DOMContentLoaded', () => {
   initBrandFilter()
 })

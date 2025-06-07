@@ -10,14 +10,22 @@
   position: fixed;
   left: 0;
   top: 0;
-  background: transparent;
-  padding: 160px 0 60px;
+  background: v.$white8;
   overflow-y: auto;
   transform: translateY(-10%);
   visibility: hidden;
   z-index: 100;
   opacity: 0;
   transition: all ease v.$tr;
+
+  @include m.media(md) {
+    padding: 120px 0 60px;
+    background: transparent;
+  }
+
+  @include m.media(xl) {
+    padding: 160px 0 60px;
+  }
 
   &.opened {
     transform: translateY(0);
@@ -36,11 +44,14 @@
     background: v.$white;
     box-shadow: 0px -2.045px 20.451px 0px rgba(0, 0, 0, 0.15);
     padding: 20px;
-    border-radius: 50px;
     margin: auto 0;
     opacity: 0;
     overflow: hidden;
     transition: all ease v.$tr;
+
+    @include m.media(md) {
+      border-radius: 50px;
+    }
 
     @include m.media(md) {
       padding: 20px 30px 60px 20px;
@@ -54,13 +65,14 @@
     margin-bottom: 40px;
 
     .clear {
-      color: v.$black;
+      color: v.$grayDark;
       font-family: v.$ff;
       font-size: 11px;
       font-style: normal;
       font-weight: v.$fw-medium;
       line-height: normal;
       letter-spacing: 1.6px;
+      order: 3;
 
       @include m.theme(dark) {
         color: v.$grayDark;
@@ -69,19 +81,49 @@
       @include m.media(md) {
         color: rgba(26, 26, 26, 0.40);
         font-size: 16px;
+        order: 1;
       }
     }
 
     .save-filters {
-      width: 70px;
-      height: 60px;
+      width: 37px;
+      height: 37px;
       display: flex;
       justify-content: center;
       align-items: center;
-      border-radius: 49.745px;
+      border-radius: 30px;
+      order: 2;
       background: v.$transparent10;
       box-shadow: 0px -3.316px 33.164px 0px rgba(0, 0, 0, 0.15);
       backdrop-filter: blur(4.054054260253906px);
+
+      @include m.media(xl) {
+        width: 70px;
+        height: 60px;
+        border-radius: 49.745px;
+
+      }
+
+      span {
+        color: rgba(26, 26, 26, 0.80);
+        font-family: v.$ff;
+        font-size: 12px;
+        font-weight: v.$fw-medium;
+        letter-spacing: 1.2px;
+      }
+
+      &.save {
+        width: auto;
+        gap: 15px;
+        height: auto;
+        padding: 12px;
+
+        @include m.media(xl) {
+          padding: 22px;
+          width: 100%;
+          max-width: 386px;
+        }
+      }
 
       @include m.theme(dark) {
         background-color: v.$grayDark;
@@ -103,12 +145,10 @@
       align-items: center;
       width: 37px;
       height: 37px;
-      position: absolute;
-      left: 10px;
-      top: 10px;
       aspect-ratio: 1;
       border-radius: 50%;
-      box-shadow: v.$bs-main;
+
+      order: 1;
 
       @include m.theme(dark) {
         box-shadow: v.$bs-gold;
@@ -119,6 +159,8 @@
         width: 60px;
         height: 60px;
         position: static;
+        order: 3;
+        box-shadow: v.$bs-main;
       }
 
       img {
@@ -133,7 +175,11 @@
     display: inline-flex;
     align-items: center;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+
+    @include m.media(xl) {
+      margin-bottom: 30px;
+    }
 
     &-inner {
       display: flex;
@@ -157,9 +203,14 @@
     span {
       color: #1A1A1A;
       font-family: v.$ff;
-      font-size: 14px;
-      font-weight: v.$fw-medium;
+      font-size: 12px;
+      font-weight: v.$fw-regular;
       letter-spacing: 1.4px;
+
+      @include m.media(xl) {
+        font-size: 14px;
+        font-weight: v.$fw-medium;
+      }
     }
 
     &:after {
@@ -173,8 +224,12 @@
     }
 
     img {
-      width: 20px;
+      width: 15px;
       height: auto;
+
+      @include m.media(xl) {
+        width: 20px;
+      }
     }
   }
 
@@ -235,6 +290,7 @@
           font-weight: v.$fw-regular;
           letter-spacing: 0.6px;
           text-align: left;
+          text-transform: uppercase;
 
           @include m.media(xl) {
             color: rgba(26, 26, 26, 0.60);
