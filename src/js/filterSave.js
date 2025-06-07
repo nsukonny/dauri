@@ -128,8 +128,6 @@ const initFilterSave = () => {
   
   saveButton.addEventListener('click', (e) => {
     e.preventDefault()
-    
-    updateFilterState()
   })
   applyFiltersFromUrl()
   
