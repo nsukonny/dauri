@@ -1,6 +1,7 @@
 @use '../../vars/vars' as v;
+@use '../../mixins/mixins' as m;
 
-.radio-input {
+.radio-input, .checkbox-input {
   position: relative;
   display: flex;
   align-items: center;
@@ -20,12 +21,16 @@
     position: relative;
     padding-left: 29px;
     font-family: v.$ff;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: v.$fw-regular;
     letter-spacing: 0.7px;
     text-transform: uppercase;
     color: #1A1A1A;
     z-index: 2;
+
+    @include m.media(xl) {
+      font-size: 14px;
+    }
 
     &::before,
     &::after {
@@ -33,27 +38,72 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      border-radius: 50%;
     }
 
     &::before {
-      width: 20px;
-      height: 20px;
+      width: 12px;
+      height: 12px;
       border: 1px solid #1A1A1A;
       left: 0;
+
+      @include m.media(xl) {
+        width: 20px;
+        height: 20px;
+      }
     }
 
     &::after {
-      width: 10px;
-      height: 10px;
-      left: 6px;
+      width: 6px;
+      height: 6px;
+      left: 4px;
       background: v.$grad-main;
       opacity: 0;
       transition: opacity 0.2s ease;
+
+      @include m.media(xl) {
+        width: 10px;
+        height: 10px;
+        left: 6px;
+      }
+    }
+  }
+
+  em {
+    color: rgba(26, 26, 26, 0.60);
+    font-family: v.$ff;
+    font-size: 10px;
+    font-weight: v.$fw-light;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    font-style: normal;
+
+    @include m.media(xl) {
+      font-size: 12px;
     }
   }
 
   input:checked + span::after {
     opacity: 1;
+  }
+}
+
+.radio-input {
+  span {
+    &:before, &:after {
+      border-radius: 50%;
+    }
+  }
+    border-radius: 50%;
+}
+
+.checkbox-input {
+  span {
+    &:before {
+      border-radius: 5px;
+    }
+
+    &:after {
+      border-radius: 2px;
+    }
   }
 }

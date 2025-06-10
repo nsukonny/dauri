@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	'use strict'
 
 	toggleDropdown('.dropdown', '.dropdown-button')
+	toggleDropdown('.filter-dropdown', '.filter-dropdown-button')
 })
 
 const toggleDropdown = (selector, button) => {
