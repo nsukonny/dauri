@@ -10,5 +10,5 @@ if (mix.inProduction()) {
 mix.setPublicPath('assets/dist')
     .setResourceRoot('/wp-content/themes/dauri/assets/dist');
 
-mix.js('assets/src/js/app.js', 'app.js')
-    .less('assets/src/less/styles.less', 'styles.css');
+mix.js('assets/js/app.js', 'app.js')
+    .less('assets/less/styles.less', 'styles.css');

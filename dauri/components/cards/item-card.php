@@ -2,7 +2,7 @@
 /**
  * Card of product
  *
- * @param string $class CSS class for the button.
+ * @param string $class CSS class for the button. new | hot | sale.
  * @param WC_Product $product Product object.
  */
 $product_wp_post = $args['product'] ?? null;

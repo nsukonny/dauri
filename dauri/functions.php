@@ -42,6 +42,16 @@ function add_theme_styles(): void {
 
 	wp_enqueue_style( 'dauri-style' );
 
+	wp_register_style(
+		'dauri-app-style',
+		THEME_URL . '/assets/dist/styles.css',
+		null,
+		filemtime( THEME_PATH . '/assets/dist/styles.css' ),
+		false
+	);
+
+	wp_enqueue_style( 'dauri-app-style' );
+
 	wp_register_script(
 		'dauri-script',
 		THEME_URL . '/assets/js/main.min.js',
@@ -51,6 +61,16 @@ function add_theme_styles(): void {
 	);
 
 	wp_enqueue_script( 'dauri-script' );
+
+	wp_register_script(
+		'dauri-app',
+		THEME_URL . '/assets/dist/app.js',
+		null,
+		filemtime( THEME_PATH . '/assets/dist/app.js' ),
+		true
+	);
+
+	wp_enqueue_script( 'dauri-app' );
 }
 
 add_action( 'wp_enqueue_scripts', 'add_theme_styles' );

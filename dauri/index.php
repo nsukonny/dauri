@@ -7,8 +7,12 @@
 
 get_header();
 
-if ( is_front_page() || is_home() ) {
-	get_template_part( 'components/front_page/front_page' );
+if ( 404 === get_query_var( 'pagename' ) || is_404() ) {
+	get_template_part( '404' );
+
+	return;
 }
+
+get_template_part( 'components/catalog/catalog' );
 
 get_footer();

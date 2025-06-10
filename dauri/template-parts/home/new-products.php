@@ -9,13 +9,20 @@ if ( empty( $new_products_data['products'] ) ) {
 	return;
 }
 
+$products = array();
+foreach ( $new_products_data['products'] as $product ) {
+	if ( ! empty( $product['product'] ) ) {
+		$products[] = wc_get_product( $product['product'] );
+	}
+}
+
 get_template_part( 'template-parts/home/slides-half', null, array(
 		'class'       => '',
 		'title'       => $new_products_data['title'] ?? __( 'Новинки' ),
 		'span'        => '',
 		'link'        => $new_products_data['link_title'] ?? __( 'Открыть выбор' ),
 		'link_url'    => $new_products_data['url'] ?? '/',
-		'products'    => array_column( $new_products_data['products'], 'product' ),
+		'products'    => $products,
 		'description' => $new_products_data['description'] ?? __( 'Погружение в наши новинки – это когда часы показывают время, а чувства невозможно описать.' ),
 	)
 );
