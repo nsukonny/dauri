@@ -70,6 +70,8 @@ function add_theme_styles(): void {
 		true
 	);
 
+	wp_localize_script( 'dauri-app', 'ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+
 	wp_enqueue_script( 'dauri-app' );
 }
 
